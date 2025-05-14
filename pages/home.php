@@ -1,32 +1,80 @@
+<style>
+    .glide__slide {
+        position: relative;
+        text-align: center;
+    }
+
+    .glide__slide img {
+        width: 100%;
+        height: auto;
+    }
+
+    .caption {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .caption h5 {
+        margin: 0 0 10px 0;
+    }
+
+    .btn-success {
+        background-color: #28a745;
+        border: none;
+        padding: 10px 20px;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .btn-success:hover {
+        background-color: #218838;
+    }
+</style>
+
+</style>
+
 <!-- Container principal -->
-<div class="container-fluid pt-0" style="margin-top: 56px;">
+<div class="container-fluid pt-0">
     <!-- Hero principal -->
     <section class="hero d-flex align-items-center justify-content-center flex-column">
-        <img src="./assets/img/iphone16.png" alt="Iphone 16">
+        <div class="hero-img">
+            <img src="./assets/img/iphone-m-16.jpg" alt="Iphone 16">
+        </div>
         <div class="hero-content">
-            <h2>Iphone 16</h2>
+            <h2>iPhone 16</h2>
             <h3>A melhor câmera na sua mão</h3>
             <p>Disponível agora com ofertas exclusivas.</p>
 
         </div>
         <div class="buttons">
-            <a href="#" class="btn-saiba-mais me-5">Saiba mais</a>
-            <a href="#" class="btn-comprar">Comprar</a>
+            <a href="#" class="btn-saiba-mais">Saiba mais</a>
+            <!-- <a href="#" class="btn-comprar">Comprar</a> -->
         </div>
     </section>
 
+
     <!-- Grid de produtos -->
-    <div class="row g-3 mx-0">
-        <div class="col-md-6">
+    <div class="row g-3 mx-0 mb-3 phones">
+        <div class="col-md-6 phone">
             <div class="product-item">
-                <h2>Xiaomi</h2>
-                <h3>Redmi Note 13 Pro</h3>
-                <p>Performance extraordinária com preço acessível.</p>
-                <div class="mt-4">
-                    <a href="#" class="btn-saiba-mais">Saiba mais</a>
-                    <a href="#" class="btn-comprar">Comprar</a>
+                <div class="row-img">
+                    <img src="./assets/img/s25ultra.png" alt="Xiaomi Redmi Note 13 Pro" class="img-fluid mt-4">
                 </div>
-                <img src="/api/placeholder/400/300" alt="Xiaomi Redmi Note 13 Pro" class="img-fluid mt-4">
+                <div>
+                    <h2>Samsung</h2>
+                    <h3>s25 ultra</h3>
+                    <p>A câmera com o melhor zoom.</p>
+                </div>
+                <div class="buttons">
+                    <a href="#" class="btn-saiba-mais">Saiba mais</a>
+                </div>
             </div>
         </div>
         <div class="col-md-6">
@@ -68,3 +116,56 @@
         </div>
     </div>
 </div>
+
+<div class="glide">
+    <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+            <!-- Slide 1 -->
+            <li class="glide__slide">
+                <img src="assets/img/iphone16.png" alt="Celular 1" class="img-fluid">
+                <div class="caption">
+                    <h5>Celular Top 1</h5>
+                    <p>Alta performance e ótimo custo-benefício.</p>
+                    <a href="#" class="btn btn-success">Comprar</a>
+                </div>
+            </li>
+            <!-- Slide 2 -->
+            <li class="glide__slide">
+                <img src="https://via.placeholder.com/800x400?text=Celular+2" alt="Celular 2" class="img-fluid">
+                <div class="caption">
+                    <h5>Celular Top 2</h5>
+                    <p>Câmera de alta definição e bateria duradoura.</p>
+                    <a href="#" class="btn btn-success">Comprar</a>
+                </div>
+            </li>
+            <!-- Slide 3 -->
+            <li class="glide__slide">
+                <img src="https://via.placeholder.com/800x400?text=Celular+3" alt="Celular 3" class="img-fluid">
+                <div class="caption">
+                    <h5>Celular Top 3</h5>
+                    <p>Design moderno e excelente desempenho.</p>
+                    <a href="#" class="btn btn-success">Comprar</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Controles de Navegação -->
+    <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">Anterior</button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">Próximo</button>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        new Glide('.glide', {
+            type: 'carousel',
+            autoplay: 3000,
+            hoverpause: true,
+            perView: 1,
+            animationDuration: 800,
+            rewind: true
+        }).mount();
+    });
+</script>
