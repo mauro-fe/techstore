@@ -2,13 +2,11 @@
 /* Apenas estilos mínimos para manter a estética Apple */
 * {
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
 body {
   font-family: "Inter", sans-serif;
-  color: #1d1d1f;
-}
+  color: #1d1d1f; }
 
 .navbar {
   background-color: #000;
@@ -16,164 +14,111 @@ body {
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   box-shadow: 2px 2px 10px var();
   height: 45px;
-  box-shadow: 0 0 10px 5px #000;
-}
-.navbar-brand {
-  font-weight: 600;
-  font-size: 22px;
-}
-
-img {
-  width: 50px;
-}
-img .nav-link {
-  color: rgba(255, 255, 255, 0.8) !important;
-  font-size: 14px;
-  transition: color 0.3s;
-}
+  box-shadow: 0 0 10px 5px #000; }
+  .navbar-brand {
+    font-weight: 600;
+    font-size: 22px; }
+  .navbar img {
+    width: 50px; }
+    .navbar img .nav-link {
+      color: rgba(255, 255, 255, 0.8) !important;
+      font-size: 14px;
+      transition: color 0.3s; }
 
 .nav-link:hover {
-  color: #00abff !important;
-}
+  color: #00abff !important; }
 
 .hero {
-  margin-top: 220px;
   text-align: center;
-}
-.hero-img {
-  max-width: 650px;
-}
-.hero img {
-  width: 100%;
-}
-.hero-content {
-  position: absolute;
-  top: 70px;
-}
-
-.buttons {
-  margin: 20px 0 30px;
-}
+  padding-top: 100px; }
+  .hero img {
+    width: 100px; }
 
 .btn-comprar,
 .btn-saiba-mais {
   text-decoration: none;
   border-radius: 5px;
-  padding: 8px;
-}
+  padding: 8px; }
 
 .btn-comprar {
   text-decoration: none;
   background-color: #00abff;
   color: #fff;
   border-radius: 5px;
-  padding: 8px;
-}
+  padding: 8px; }
 
 .btn-saiba-mais {
   background-color: #000;
   color: #fff;
-  margin: 0;
-}
+  margin: 0; }
 
 .btn-comprar:hover {
   background-color: #00abff;
-  color: #fff;
-}
+  color: #fff; }
 
 .hero-content h2 {
   font-size: 56px;
   font-weight: 600;
-  margin-bottom: 5px;
-}
+  margin-bottom: 5px; }
 
 .hero-content h3 {
   font-size: 28px;
   font-weight: 400;
-  margin-bottom: 15px;
-}
+  margin-bottom: 15px; }
 
 .hero-content p {
   font-size: 17px;
-  margin-bottom: 20px;
-}
+  margin-bottom: 20px; }
 
-.cta-link {
-  color: #0066cc;
-  font-size: 21px;
-  text-decoration: none;
-  margin: 0 15px;
-  display: inline-flex;
-  align-items: center;
-}
-.cta-link:hover {
-  text-decoration: underline;
-}
-.cta-link::after {
-  content: ">";
-  margin-left: 8px;
-}
-
-.product-item {
-  padding: 80px 20px;
+.cell .cell-container {
   text-align: center;
   background-color: #f5f5f7;
-  height: 100%;
-}
-.product-item h2 {
-  font-size: 40px;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-.product-item h3 {
-  font-size: 21px;
-  font-weight: 400;
-  margin-bottom: 10px;
-}
+  padding-bottom: 20px; }
+  .cell .cell-container h2 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 5px; }
+  .cell .cell-container h3 {
+    font-size: 21px;
+    font-weight: 400;
+    margin: 0; }
+  .cell .cell-container img {
+    max-height: 300px; }
 
 .footer {
   background-color: #f5f5f7;
   padding: 40px 0;
   font-size: 12px;
-  color: #86868b;
-}
-.footer h5 {
-  font-size: 12px;
-  margin-bottom: 15px;
-  color: #1d1d1f;
-}
-.footer ul {
-  list-style: none;
-  padding-left: 0;
-}
-.footer ul li {
-  margin-bottom: 10px;
-}
-.footer a {
-  color: #86868b;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-.footer a:hover {
-  color: #1d1d1f;
-  text-decoration: none;
-}
-.footer-divider {
-  border-top: 1px solid #d2d2d7;
-  margin: 30px 0 20px;
-}
+  color: #86868b; }
+  .footer h5 {
+    font-size: 12px;
+    margin-bottom: 15px;
+    color: #1d1d1f; }
+  .footer ul {
+    list-style: none;
+    padding-left: 0; }
+  .footer ul li {
+    margin-bottom: 10px; }
+  .footer a {
+    color: #86868b;
+    text-decoration: none;
+    transition: color 0.3s; }
+  .footer a:hover {
+    color: #1d1d1f;
+    text-decoration: none; }
+  .footer-divider {
+    border-top: 1px solid #d2d2d7;
+    margin: 30px 0 20px; }
 
 /* Ajustes responsivos já inclusos no Bootstrap */
-.hero h2 {
-  font-size: 32px;
-}
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 32px; }
 
-.hero h3 {
-  font-size: 21px;
-}
+  .hero h3 {
+    font-size: 21px; }
 
-.product-item {
-  padding: 60px 20px;
-}
+  .product-item {
+    padding: 60px 20px; } }
 
 /*# sourceMappingURL=style.css.map */
