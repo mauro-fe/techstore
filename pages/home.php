@@ -41,29 +41,28 @@
 </style>
 
 <!-- Container principal -->
-<div class="container-fluid pt-0">
+<div class="container-fluid container">
     <!-- Hero principal -->
     <section class="hero d-flex align-items-center justify-content-center flex-column">
         <h2>iPhone 16 Pro Max</h2>
         <h3>A melhor câmera na sua mão.</h3>
-        <img src="./assets/img/iphone-m-16.jpg" class="w-100" alt="Iphone 16">
-        <p>Disponível agora com ofertas exclusivas.</p>
+        <img src="./assets/img/iphone16promaxtitanium.webp" class="w-100" alt="Iphone 16">
+        <p class="m-3">Disponível agora com ofertas exclusivas.</p>
 
         <a href="#" class="btn-saiba-mais">Saiba mais</a>
         <!-- <a href="#" class="btn-comprar">Comprar</a> -->
     </section>
 
-
     <!-- Grid de produtos -->
     <div class="cell row g-3 mx-0 mb-3">
         <div class="col-md-6">
             <div class="cell-container">
-                <h2>Samsung</h2>
-                <h3>s25 ultra</h3>
+                <h2>Realme</h2>
+                <h3>C75</h3>
                 <div class="cell-img">
-                    <img src="./assets/img/s-s25ultra.png" alt="Xiaomi Redmi Note 13 Pro" class="img-fluid mt-2">
+                    <img src="./assets/img/r-c75-dourado.jpg" alt="Xiaomi Redmi Note 13 Pro" class="img-fluid mt-2">
                 </div>
-                <p>A câmera com o melhor zoom.</p>
+                <p class="m-3">A prova de água e resistente à queda.</p>
                 <a href="#" class="btn-saiba-mais">Saiba mais</a>
             </div>
         </div>
@@ -71,22 +70,60 @@
             <div class="cell-container">
                 <h2>Xiaomi</h2>
                 <h3>15 ultra</h3>
-                <img src="./assets/img/x-15ultra.jpg" alt="Motorola Edge 50 Ultra" class="img-fluid mt-2">
+                <img src="./assets/img/x-15ultra-branco.jpg" alt="Motorola Edge 50 Ultra" class="img-fluid mt-2">
 
-                <p>Com o processador Snapdragon 8 Elite.</p>
+                <p class="m-3">Com o processador Snapdragon 8 Elite.</p>
                 <a href="#" class="btn-saiba-mais">Saiba mais</a>
             </div>
         </div>
     </div>
     <section class="hero d-flex align-items-center justify-content-center flex-column">
-        <h2>iPhone 16 Pro Max</h2>
-        <h3>A melhor câmera na sua mão.</h3>
-        <img src="./assets/img/iphone-m-16.jpg" alt="Iphone 16">
-        <p>Disponível agora com ofertas exclusivas.</p>
-
-        <a href="#" class="btn-saiba-mais">Saiba mais</a>
-        <!-- <a href="#" class="btn-comprar">Comprar</a> -->
+        <div class="cell-container">
+            <h2>Samsung</h2>
+            <h3>s25 ultra</h3>
+            <div class="cell-img">
+                <img src="./assets/img/samsung-galaxy-s25-ultra-cinta-titanio.webp" alt="Xiaomi Redmi Note 13 Pro"
+                    class="img-fluid mt-2">
+            </div>
+            <p class="m-3">A câmera com o melhor zoom.</p>
+            <a href="#" class="btn-saiba-mais">Saiba mais</a>
+        </div>
     </section>
+</div>
+
+<div class="glide">
+    <h3 class="text-center m-5">Acessórios</h3>
+    <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+            <!-- Slide 1 -->
+            <li class="glide__slide">
+                <img src="./assets/img/carregador-iphone-tipo-c.jpg" alt="Celular 1" class="img-fluid">
+                <div>
+                    <h5>Carregador de iphone tipo C</h5>
+                    <p>Alta performance e ótimo custo-benefício.</p>
+                    <a href="#" class="btn btn-success">Comprar</a>
+                </div>
+            </li>
+            <!-- Slide 2 -->
+            <li class="glide__slide">
+                <img src="./assets/img/iphone-m-15.png" alt="Celular 2" class="img-fluid">
+                <div>
+                    <h5>Celular Top 2</h5>
+                    <p>Câmera de alta definição e bateria duradoura.</p>
+                    <a href="#" class="btn btn-success">Comprar</a>
+                </div>
+            </li>
+            <!-- Slide 3 -->
+            <li class="glide__slide">
+                <img src="./assets/img/s-s25ultra.png" alt="Celular 3" class="img-fluid">
+                <div>
+                    <h5>Celular Top 3</h5>
+                    <p>Design moderno e excelente desempenho.</p>
+                    <a href="#" class="btn btn-success">Comprar</a>
+                </div>
+            </li>
+        </ul>
+    </div>
 
     <!-- Grid de produtos 2 -->
     <div class="row g-3 mx-0">
@@ -111,40 +148,6 @@
             </div>
         </div>
     </div>
-</div>
-
-<div class="glide">
-    <div class="glide__track" data-glide-el="track">
-        <ul class="glide__slides">
-            <!-- Slide 1 -->
-            <li class="glide__slide">
-                <img src="assets/img/iphone16.png" alt="Celular 1" class="img-fluid">
-                <div class="caption">
-                    <h5>Celular Top 1</h5>
-                    <p>Alta performance e ótimo custo-benefício.</p>
-                    <a href="#" class="btn btn-success">Comprar</a>
-                </div>
-            </li>
-            <!-- Slide 2 -->
-            <li class="glide__slide">
-                <img src="https://via.placeholder.com/800x400?text=Celular+2" alt="Celular 2" class="img-fluid">
-                <div class="caption">
-                    <h5>Celular Top 2</h5>
-                    <p>Câmera de alta definição e bateria duradoura.</p>
-                    <a href="#" class="btn btn-success">Comprar</a>
-                </div>
-            </li>
-            <!-- Slide 3 -->
-            <li class="glide__slide">
-                <img src="https://via.placeholder.com/800x400?text=Celular+3" alt="Celular 3" class="img-fluid">
-                <div class="caption">
-                    <h5>Celular Top 3</h5>
-                    <p>Design moderno e excelente desempenho.</p>
-                    <a href="#" class="btn btn-success">Comprar</a>
-                </div>
-            </li>
-        </ul>
-    </div>
 
     <!-- Controles de Navegação -->
     <div class="glide__arrows" data-glide-el="controls">
@@ -157,9 +160,9 @@
     document.addEventListener('DOMContentLoaded', function() {
         new Glide('.glide', {
             type: 'carousel',
-            autoplay: 3000,
+            autoplay: 2000,
             hoverpause: true,
-            perView: 1,
+            perView: 4,
             animationDuration: 800,
             rewind: true
         }).mount();
