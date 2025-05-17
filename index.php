@@ -27,7 +27,7 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <div class="navbar-logo">
                 <a class="navbar-brand" href="#">
@@ -65,6 +65,9 @@
 
     <main>
         <?php
+
+        require 'Dados.php';
+
         if (isset($_GET["param"])) {
             $p = explode("/", $_GET["param"]);
         }
@@ -79,71 +82,10 @@
         ?>
     </main>
 
-    <footer class="footer mt-5">
-        <div class="container">
+    <footer class="footer">
+        <div class="container d-flex justify-content-center">
             <div class="row">
-                <div class="col-md-4 col-lg">
-                    <h5>Produtos</h5>
-                    <ul>
-                        <li><a href="#">Smartphones</a></li>
-                        <li><a href="#">Tablets</a></li>
-                        <li><a href="#">Acessórios</a></li>
-                        <li><a href="#">Lançamentos</a></li>
-                        <li><a href="#">Ofertas</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 col-lg">
-                    <h5>Serviços</h5>
-                    <ul>
-                        <li><a href="#">TechCell Pro</a></li>
-                        <li><a href="#">Garantia Estendida</a></li>
-                        <li><a href="#">Assistência Técnica</a></li>
-                        <li><a href="#">Trade-in</a></li>
-                        <li><a href="#">Financiamento</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 col-lg">
-                    <h5>Loja</h5>
-                    <ul>
-                        <li><a href="#">Encontre uma Loja</a></li>
-                        <li><a href="#">Eventos</a></li>
-                        <li><a href="#">Trabalhe Conosco</a></li>
-                        <li><a href="#">Contato</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-6 col-lg">
-                    <h5>Sobre</h5>
-                    <ul>
-                        <li><a href="#">Nossa História</a></li>
-                        <li><a href="#">Sustentabilidade</a></li>
-                        <li><a href="#">Relações com Investidores</a></li>
-                        <li><a href="#">Notícias</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-6 col-lg">
-                    <h5>Suporte</h5>
-                    <ul>
-                        <li><a href="#">Central de Ajuda</a></li>
-                        <li><a href="#">Manuais</a></li>
-                        <li><a href="#">Atualizações</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Fale Conosco</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-divider"></div>
-
-            <div class="row">
-                <div class="col-md-6">
-                    <p class="mb-1">Copyright © 2025 TechCell Ltda. Todos os direitos reservados.</p>
-                    <p>Brasil</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <a href="#" class="me-3">Política de Privacidade</a>
-                    <a href="#" class="me-3">Termos de Uso</a>
-                    <a href="#">Mapa do Site</a>
-                </div>
+                <p class="mb-1">Copyright © 2025 MegaTech. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
