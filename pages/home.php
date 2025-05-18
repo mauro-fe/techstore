@@ -121,8 +121,7 @@
     </div>
 </div>
 <div class="container">
-    <section class="assistencia-section">
-
+    <section class="assistencia-section m-5">
         <h2>Assistência Técnica Especializada</h2>
         <p class="text-center text-muted m-2">Consertos rápidos, peças originais e garantia estendida para seu
             smartphone.</p>
@@ -132,7 +131,7 @@
                 <div class="assistencia-box text-center">
                     <i class="fas fa-tools"></i>
                     <h5 class="mt-3">Reparos em celulares</h5>
-                    <p>Troca de tela, bateria, conector de carga, botão power e outros serviços.</p>
+                    <p>Troca de tela, bateria, conector de carga, botão power entre outros serviços.</p>
                 </div>
             </div>
             <div class="col-md-4">
@@ -149,11 +148,12 @@
                     <p>Equipe treinada e pronta para tirar dúvidas e oferecer o melhor suporte.</p>
                 </div>
             </div>
+
+        </div>
+        <div class="text-center m-5">
+            <a href="#" class="btn-saiba-mais">Saiba mais</a>
         </div>
 
-        <div class="text-center mt-5">
-            <a href="#" class="btn btn-primary px-4 py-2">Agendar atendimento</a>
-        </div>
     </section>
 </div>
 

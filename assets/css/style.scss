@@ -3,6 +3,10 @@
 $primaryColor: #00abff;
 $secundaryColor: #fff;
 $tertiaryColor: #000;
+$boxShadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+$linearGradientTop: linear-gradient(to top, #e0f2ff, #f9f9f9);
+$linearGradientBottom: linear-gradient(to bottom, #e0f2ff, #f9f9f9);
+
 * {
   margin: 0;
   padding: 0;
@@ -63,9 +67,8 @@ body {
   padding: 15px 0;
   margin-bottom: 30px;
   border-radius: 10px;
-  background: linear-gradient(to top, #e0f2ff, #ffffff);
-  box-shadow: 0 0 10px 5px #000;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  background: $linearGradientTop;
+  box-shadow: $boxShadow;
   & h2 {
     font-weight: bold;
     font-size: 42px;
@@ -126,7 +129,7 @@ body {
 .cell {
   .cell-container {
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: $boxShadow;
     padding: 60px 0;
     border-radius: 10px;
     & h2 {
@@ -144,10 +147,10 @@ body {
     }
   }
   & .a {
-    background: linear-gradient(to bottom, #e9e9e9, #fff);
+    background: $linearGradientTop;
   }
   & .b {
-    background: linear-gradient(to top, #e9e9e9, #fff);
+    background: $linearGradientBottom;
   }
 }
 
@@ -175,7 +178,8 @@ body {
 // Começa swiper
 
 .carousel {
-  background: linear-gradient($secundaryColor, #eaf8ff);
+  background: $linearGradientTop;
+  box-shadow: $boxShadow;
   margin: 50px 0;
   .swiper {
     padding: 40px 0;
@@ -217,14 +221,15 @@ body {
 
 .assistencia-section {
   padding: 1rem 1rem;
-  background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+  background: $linearGradientTop;
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: $boxShadow;
   & img {
     border-radius: 10px;
     max-width: 900px;
-    height: 400px;
+    height: 360px;
     margin: 20px 0;
   }
 }
@@ -233,10 +238,10 @@ body {
   text-align: center;
 }
 .assistencia-box {
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 12px;
   background: white;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  box-shadow: $boxShadow;
   transition: all 0.3s ease;
 }
 .assistencia-box:hover {
@@ -245,5 +250,4 @@ body {
 .assistencia-box i {
   font-size: 2.5rem;
   color: #0071e3;
-  margin-bottom: 1rem;
 }
