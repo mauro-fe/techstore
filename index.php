@@ -83,9 +83,17 @@
     </main>
 
     <footer class="footer">
-        <div class="container d-flex justify-content-center">
+        <div class="container">
             <div class="row">
-                <p class="mb-1">Copyright © 2025 MegaTech. Todos os direitos reservados.</p>
+                <div class="navbar-logo">
+                    <a class="navbar-brand" href="#">
+                        <img src="assets/img/logo.png" alt="Logo">
+                    </a>
+                    <a class="navbar-brand" href="#">MegaTech</a>
+                </div>
+                <div>
+                    <p class="mb-1">Copyright © 2025 MegaTech. Todos os direitos reservados.</p>
+                </div>
             </div>
         </div>
     </footer>
@@ -96,18 +104,18 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
-    window.addEventListener('scroll', function() {
-        const header = document.querySelector('.navbar');
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.navbar');
 
-        if (window.scrollY > 50) {
-            header.classList.add('transparent');
-        } else {
-            header.classList.remove('transparent');
-        }
-    });
+            if (window.scrollY > 50) {
+                header.classList.add('transparent');
+            } else {
+                header.classList.remove('transparent');
+            }
+        });
 
-    // Aplica a classe no carregamento da página
-    window.dispatchEvent(new Event('scroll'));
+        // Aplica a classe no carregamento da página
+        window.dispatchEvent(new Event('scroll'));
     </script>
 </body>
 

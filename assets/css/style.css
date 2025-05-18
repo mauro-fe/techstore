@@ -13,7 +13,11 @@ body {
   backdrop-filter: saturate(180%) blur(20px);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   height: 45px;
-  box-shadow: 0 0 10px 3px #000; }
+  box-shadow: 0 0 10px 3px #000;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; }
+  .navbar.transparent {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    box-shadow: none; }
   .navbar-logo .navbar-brand {
     color: #00abff;
     font-weight: bold;
@@ -26,15 +30,6 @@ body {
     color: #fff !important;
     font-size: 14px;
     transition: color 0.3s; }
-
-/* Header fixo */
-.navbar {
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; }
-
-/* navbar transparente ao rolar */
-.navbar.transparent {
-  background-color: rgba(0, 0, 0, 0.8) !important;
-  box-shadow: none; }
 
 .container-fluid {
   margin-top: 45px; }
@@ -65,12 +60,20 @@ body {
   border-radius: 40px;
   border: none;
   font-weight: 500;
-  transition: background 0.3s;
+  max-width: max-content;
+  margin: auto;
   text-decoration: none; }
+  .btn-comprar a,
+  .btn-saiba-mais a {
+    text-decoration: none;
+    color: #fff; }
 
 .btn-saiba-mais {
   background-color: #000;
-  color: #fff; }
+  transition: all 0.5s; }
+  .btn-saiba-mais:hover {
+    transform: translateY(-5px);
+    background-color: #0009; }
 
 .btn-comprar {
   background-color: #00abff;
@@ -78,8 +81,7 @@ body {
   transition: 0.5s; }
 
 .btn-comprar:hover {
-  background-color: #006598;
-  color: #fff; }
+  background-color: #006598; }
 
 .hero-content h2 {
   font-size: 56px;
@@ -96,18 +98,10 @@ body {
   margin-bottom: 20px; }
 
 .cell .cell-container {
-  text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   padding: 60px 0;
-  border-radius: 10px; }
-  .cell .cell-container h2 {
-    font-size: 40px;
-    font-weight: 600;
-    margin-bottom: 5px; }
-  .cell .cell-container h3 {
-    font-size: 21px;
-    font-weight: 400;
-    margin: 0; }
+  border-radius: 10px;
+  text-align: center; }
   .cell .cell-container img {
     max-height: 300px; }
 .cell .a {
@@ -115,23 +109,6 @@ body {
 .cell .b {
   background: linear-gradient(to bottom, #e0f2ff, #f9f9f9); }
 
-.footer {
-  background-color: #f5f5f7;
-  padding: 40px 0;
-  font-size: 12px;
-  color: #86868b;
-  text-align: center; }
-
-/* Ajustes responsivos já inclusos no Bootstrap */
-@media (max-width: 768px) {
-  .hero h2 {
-    font-size: 32px; }
-
-  .hero h3 {
-    font-size: 21px; }
-
-  .product-item {
-    padding: 60px 20px; } }
 .carousel {
   background: linear-gradient(to top, #e0f2ff, #f9f9f9);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -163,7 +140,7 @@ body {
           padding: 20px; }
 
 .assistencia-section {
-  padding: 1rem 1rem;
+  padding: 2rem 1rem;
   background: linear-gradient(to top, #e0f2ff, #f9f9f9);
   display: flex;
   flex-direction: column;
@@ -173,7 +150,13 @@ body {
     border-radius: 10px;
     max-width: 900px;
     height: 360px;
-    margin: 20px 0; }
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: 0.5s transform; }
+    .assistencia-section img:hover {
+      transform: translateY(-10px); }
+  .assistencia-section .details {
+    margin-bottom: 20px; }
 
 .assistencia-section h2 {
   font-weight: bold;
@@ -192,5 +175,15 @@ body {
 .assistencia-box i {
   font-size: 2.5rem;
   color: #0071e3; }
+
+.footer {
+  background-color: #000;
+  padding: 40px 0;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 0 10px 3px #000; }
+  .footer img {
+    width: 40px; }
 
 /*# sourceMappingURL=style.css.map */
