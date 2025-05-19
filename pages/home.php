@@ -46,7 +46,7 @@
         </div>
     </section>
 
-    <div class="pt-5 carousel">
+    <div class="mt-5 mb-5 carousel">
         <h2 class="text-center">Acessórios</h2>
         <!-- Swiper HTML -->
         <div class="swiper mySwiper">
@@ -119,42 +119,40 @@
             <div class="swiper-pagination mt-4"></div>
         </div>
     </div>
-    <div class="container">
-        <section class="assistencia-section m-5">
-            <h2>Assistência Técnica Especializada</h2>
-            <p class="text-center text-muted m-2">Consertos rápidos, peças originais e garantia estendida para seu
-                smartphone.</p>
-            <img src="./assets/img/assistencia-tecnica.png" alt="Assitência Tecnica" class="w-100">
-            <div class="row g-4 details">
-                <div class="col-md-4">
-                    <div class="assistencia-box text-center">
-                        <i class="fas fa-tools"></i>
-                        <h5 class="mt-3">Reparos em celulares</h5>
-                        <p>Troca de tela, bateria, conector de carga, botão power entre outros serviços.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="assistencia-box text-center">
-                        <i class="fas fa-shield-alt"></i>
-                        <h5 class="mt-3">Garantia e segurança</h5>
-                        <p>Peças com garantia de até 12 meses. Serviço com nota fiscal e suporte técnico.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="assistencia-box text-center">
-                        <i class="fas fa-headset"></i>
-                        <h5 class="mt-3">Atendimento especializado</h5>
-                        <p>Equipe treinada e pronta para tirar dúvidas e oferecer o melhor suporte.</p>
-                    </div>
+    <section class="assistencia-section">
+        <h2>Assistência Técnica Especializada</h2>
+        <p class="text-center text-muted m-2">Consertos rápidos, peças originais e garantia estendida para seu
+            smartphone.</p>
+        <img src="./assets/img/assistencia-tecnica.png" alt="Assitência Tecnica" class="w-100">
+        <div class="row g-4 details">
+            <div class="col-md-4">
+                <div class="assistencia-box text-center">
+                    <i class="fas fa-tools"></i>
+                    <h5 class="mt-3">Reparos em celulares</h5>
+                    <p>Troca de tela, bateria, conector de carga, botão power entre outros serviços.</p>
                 </div>
             </div>
-            <div class="btn-saiba-mais">
-                <a href="#">Saiba mais</a>
+            <div class="col-md-4">
+                <div class="assistencia-box text-center">
+                    <i class="fas fa-shield-alt"></i>
+                    <h5 class="mt-3">Garantia e segurança</h5>
+                    <p>Peças com garantia de até 12 meses. Serviço com nota fiscal e suporte técnico.</p>
+                </div>
             </div>
-        </section>
-    </div>
+            <div class="col-md-4">
+                <div class="assistencia-box text-center">
+                    <i class="fas fa-headset"></i>
+                    <h5 class="mt-3">Atendimento especializado</h5>
+                    <p>Equipe treinada e pronta para tirar dúvidas e oferecer o melhor suporte.</p>
+                </div>
+            </div>
+        </div>
+        <div class="btn-saiba-mais">
+            <a href="#">Saiba mais</a>
+        </div>
+    </section>
     <!-- Swiper HTML -->
-    <section class="avaliacoes m-5">
+    <section class="avaliacoes mt-5 mb-5">
         <h2 class="text-center mb-2">O que dizem nossos clientes</h2>
         <div class="swiper mySwiper avaliacoesSwiper">
             <div class="swiper-wrapper">
@@ -247,7 +245,15 @@
             <div class="swiper-pagination"></div>
         </div>
     </section>
-
+    <section class="mt-5 mb-5">
+        <h3 class="text-center m-4">Localização</h3>
+        <div class="mapa-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3627.8581469493733!2d-52.806227799999995!3d-24.5940913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f20c1e2461ce1f%3A0xbd8b47b891450334!2sAv.%20Brasil%2C%20910%20-%20Centro%2C%20Campina%20da%20Lagoa%20-%20PR%2C%2087345-000!5e0!3m2!1spt-BR!2sbr!4v1747614477445!5m2!1spt-BR!2sbr"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

@@ -77,7 +77,7 @@
         if (file_exists($pages)) {
             include $pages;
         } else {
-            include "pages/erro.php";
+            include "pages/404.php";
         }
         ?>
     </main>

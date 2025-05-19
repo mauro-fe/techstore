@@ -266,6 +266,17 @@ body {
 }
 // Fim carrossel de testemunhas
 
+// Localicação
+.mapa-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+// Fim localização
+
 // Inicio footer
 .footer {
   background-color: $tertiaryColor;
