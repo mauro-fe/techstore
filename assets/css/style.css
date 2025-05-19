@@ -8,51 +8,8 @@ body {
   font-family: "Inter", sans-serif;
   color: #1d1d1f; }
 
-.navbar {
-  background-color: #000;
-  backdrop-filter: saturate(180%) blur(20px);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  height: 45px;
-  box-shadow: 0 0 10px 3px #000;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; }
-  .navbar.transparent {
-    background-color: rgba(0, 0, 0, 0.8) !important;
-    box-shadow: none; }
-  .navbar-logo .navbar-brand {
-    color: #00abff;
-    font-weight: bold;
-    transition: 0.5s; }
-    .navbar-logo .navbar-brand:hover {
-      color: #fff; }
-  .navbar img {
-    width: 50px; }
-  .navbar .nav-link {
-    color: #fff !important;
-    font-size: 14px;
-    transition: color 0.3s; }
-
 .container-fluid {
   margin-top: 45px; }
-
-.nav-link:hover {
-  color: #00abff !important; }
-
-.hero {
-  text-align: center;
-  padding: 15px 0;
-  margin-bottom: 30px;
-  border-radius: 10px;
-  background: linear-gradient(to top, #e0f2ff, #f9f9f9);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); }
-  .hero h2 {
-    font-weight: bold;
-    font-size: 42px; }
-  .hero h3 {
-    font-weight: 500;
-    font-size: 24px; }
-  .hero img {
-    max-width: 230px !important;
-    border-radius: 10px; }
 
 .btn-comprar,
 .btn-saiba-mais {
@@ -83,19 +40,50 @@ body {
 .btn-comprar:hover {
   background-color: #006598; }
 
-.hero-content h2 {
-  font-size: 56px;
-  font-weight: 600;
-  margin-bottom: 5px; }
+.navbar {
+  background-color: #000;
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  height: 45px;
+  box-shadow: 0 0 10px 3px #000;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; }
+  .navbar.transparent {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    box-shadow: none; }
+  .navbar-logo .navbar-brand {
+    color: #00abff;
+    font-weight: bold;
+    transition: 0.5s; }
+    .navbar-logo .navbar-brand:hover {
+      color: #fff; }
+  .navbar img {
+    width: 50px; }
+  .navbar .nav-link {
+    color: #fff !important;
+    font-size: 14px;
+    transition: color 0.3s; }
+    .navbar .nav-link:hover {
+      color: #00abff !important; }
 
-.hero-content h3 {
-  font-size: 28px;
-  font-weight: 400;
-  margin-bottom: 15px; }
-
-.hero-content p {
-  font-size: 17px;
-  margin-bottom: 20px; }
+.hero {
+  text-align: center;
+  padding: 15px 0;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  background: linear-gradient(to top, #e0f2ff, #f9f9f9);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); }
+  .hero h2 {
+    font-weight: bold;
+    font-size: 42px; }
+  .hero h3 {
+    font-weight: 500;
+    font-size: 24px; }
+  .hero img {
+    max-width: 230px !important;
+    border-radius: 10px;
+    transition: 0.7s; }
+    .hero img:hover {
+      transform: translate(5px, -10px); }
 
 .cell .cell-container {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -103,14 +91,16 @@ body {
   border-radius: 10px;
   text-align: center; }
   .cell .cell-container img {
-    max-height: 300px; }
+    max-height: 300px;
+    transition: 0.7s; }
+    .cell .cell-container img:hover {
+      transform: translate(5px, -10px); }
 .cell .a {
   background: linear-gradient(to top, #e0f2ff, #f9f9f9); }
 .cell .b {
   background: linear-gradient(to bottom, #e0f2ff, #f9f9f9); }
 
 .carousel {
-  background: linear-gradient(to top, #e0f2ff, #f9f9f9);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   margin: 50px 0; }
   .carousel .swiper {
@@ -121,7 +111,7 @@ body {
       justify-content: center;
       transition: transform 0.3s ease; }
       .carousel .swiper-slide.swiper-slide-active .card {
-        transform: scale(1.1);
+        transform: scale(1.06);
         z-index: 2;
         background-color: #fff; }
       .carousel .swiper-slide .card {
@@ -133,7 +123,7 @@ body {
         background-color: #f1f1f1;
         transform: scale(0.9); }
         .carousel .swiper-slide .card:hover {
-          transform: scale(1.05); }
+          transform: scale(1.02); }
         .carousel .swiper-slide .card-img-top {
           height: 240px;
           object-fit: contain;
@@ -146,6 +136,9 @@ body {
   flex-direction: column;
   align-items: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); }
+  .assistencia-section h2 {
+    font-weight: bold;
+    text-align: center; }
   .assistencia-section img {
     border-radius: 10px;
     max-width: 900px;
@@ -157,24 +150,43 @@ body {
       transform: translateY(-10px); }
   .assistencia-section .details {
     margin-bottom: 20px; }
+  .assistencia-section .assistencia-box {
+    padding: 1rem;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease; }
+    .assistencia-section .assistencia-box:hover {
+      transform: translateY(-5px); }
+    .assistencia-section .assistencia-box i {
+      font-size: 2.5rem;
+      color: #0071e3; }
 
-.assistencia-section h2 {
-  font-weight: bold;
-  text-align: center; }
-
-.assistencia-box {
-  padding: 1rem;
-  border-radius: 12px;
-  background: white;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease; }
-
-.assistencia-box:hover {
-  transform: translateY(-5px); }
-
-.assistencia-box i {
-  font-size: 2.5rem;
-  color: #0071e3; }
+.avaliacoesSwiper {
+  width: 100%;
+  padding: 40px 0; }
+  .avaliacoesSwiper .swiper-slide {
+    display: flex;
+    justify-content: center; }
+    .avaliacoesSwiper .swiper-slide .card {
+      width: 280px;
+      border-radius: 15px;
+      border: none;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      background-color: #fff;
+      padding-bottom: 15px;
+      transition: transform 0.5s ease; }
+      .avaliacoesSwiper .swiper-slide .card:hover {
+        transform: scale(1.1); }
+      .avaliacoesSwiper .swiper-slide .card .avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); }
+      .avaliacoesSwiper .swiper-slide .card .stars {
+        color: #ffc107;
+        font-size: 1.1rem; }
 
 .footer {
   background-color: #000;

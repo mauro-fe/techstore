@@ -115,8 +115,8 @@
                         </div>
                     </div>
                 </div>
-
             </div>
+            <div class="swiper-pagination mt-4"></div>
         </div>
     </div>
     <div class="container">
@@ -153,6 +153,100 @@
             </div>
         </section>
     </div>
+    <!-- Swiper HTML -->
+    <section class="avaliacoes m-5">
+        <h2 class="text-center mb-2">O que dizem nossos clientes</h2>
+        <div class="swiper mySwiper avaliacoesSwiper">
+            <div class="swiper-wrapper">
+
+                <!-- Avaliação 1 -->
+                <div class="swiper-slide">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" class="avatar m-3" alt="Maria">
+                            <div class="stars mb-2">★★★★★</div>
+                            <p class="card-text">"Comprei uma película e fui muito bem atendida. Chegou rápido e com
+                                qualidade!"</p>
+                            <h5 class="card-title mt-3 mb-1">Maria Oliveira</h5>
+                            <small class="text-muted">Cliente de São Paulo</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Avaliação 2 -->
+                <div class="swiper-slide">
+                    <div class="card text-center">
+
+                        <div class="card-body">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" class="avatar m-3" alt="João">
+                            <div class="stars mb-2">★★★★☆</div>
+                            <p class="card-text">"Produtos bons e originais, recomendo! Só achei o frete um pouco
+                                demorado."</p>
+                            <h5 class="card-title mt-3 mb-1">João Lima</h5>
+                            <small class="text-muted">Comprador via Instagram</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Avaliação 3 -->
+                <div class="swiper-slide">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <img src="https://randomuser.me/api/portraits/women/45.jpg" class="avatar m-3" alt="Ana">
+                            <div class="stars mb-2">★★★★★</div>
+                            <p class="card-text">"Atendimento incrível, resolveram minha dúvida pelo WhatsApp em
+                                minutos."</p>
+                            <h5 class="card-title mt-3 mb-1">Ana Paula</h5>
+                            <small class="text-muted">Cliente fiel</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Avaliação 4 -->
+                <div class="swiper-slide">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <img src="https://randomuser.me/api/portraits/women/45.jpg" class="avatar m-3" alt="Ana">
+                            <div class="stars mb-2">★★★★★</div>
+                            <p class="card-text">"Atendimento incrível, resolveram minha dúvida pelo WhatsApp em
+                                minutos."</p>
+                            <h5 class="card-title mt-3 mb-1">Ana Paula</h5>
+                            <small class="text-muted">Cliente fiel</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Avaliação 5 -->
+                <div class="swiper-slide">
+                    <div class="card text-center">
+                        <div class="card-body"> <img src="https://randomuser.me/api/portraits/women/45.jpg"
+                                class="avatar m-3" alt="Ana">
+                            <div class="stars mb-2">★★★★★</div>
+                            <p class="card-text">"Atendimento incrível, resolveram minha dúvida pelo WhatsApp em
+                                minutos."</p>
+                            <h5 class="card-title mt-3 mb-1">Ana Paula</h5>
+                            <small class="text-muted">Cliente fiel</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Avaliação 6 -->
+                <div class="swiper-slide">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <img src="https://randomuser.me/api/portraits/women/45.jpg" class="avatar m-3" alt="Ana">
+                            <div class="stars mb-2">★★★★★</div>
+                            <p class="card-text">"Atendimento incrível, resolveram minha dúvida pelo WhatsApp em
+                                minutos."</p>
+                            <h5 class="card-title mt-3 mb-1">Ana Paula</h5>
+                            <small class="text-muted">Cliente fiel</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
 
 </div>
 
