@@ -6,6 +6,8 @@ $tertiaryColor: #000;
 $boxShadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 $linearGradientTop: linear-gradient(to top, #e0f2ff, #f9f9f9);
 $linearGradientBottom: linear-gradient(to bottom, #e0f2ff, #f9f9f9);
+$boxShadowCell: drop-shadow(-3px 3px 5px #000);
+$boxShadowHoverCell: drop-shadow(-8px 8px 7px #000);
 
 * {
   margin: 0;
@@ -24,7 +26,7 @@ body {
 
 .btn-comprar,
 .btn-saiba-mais {
-  padding: 5px 10px;
+  padding: 5px 15px;
   border-radius: 40px;
   border: none;
   font-weight: 500;
@@ -101,7 +103,7 @@ body {
   padding: 15px 0;
   margin-bottom: 30px;
   border-radius: 10px;
-  background: $linearGradientTop;
+  // background: $linearGradientTop;
   box-shadow: $boxShadow;
   & h2 {
     font-weight: bold;
@@ -115,8 +117,12 @@ body {
     max-width: 230px !important;
     border-radius: 10px;
     transition: 0.7s;
+    // filter: $boxShadowCell;
+    // box-shadow: 5px 5px 5px #000;
+
     &:hover {
       transform: translate(5px, -10px);
+      filter: $boxShadowHoverCell;
     }
   }
 }
@@ -127,11 +133,14 @@ body {
     padding: 60px 0;
     border-radius: 10px;
     text-align: center;
+
     img {
       max-height: 300px;
       transition: 0.7s;
+      // filter: $boxShadowCell;
       &:hover {
         transform: translate(5px, -10px);
+        filter: $boxShadowHoverCell;
       }
     }
   }
@@ -139,7 +148,7 @@ body {
     background: $linearGradientTop;
   }
   & .b {
-    background: $linearGradientBottom;
+    // background: $linearGradientBottom;
   }
 }
 
@@ -149,32 +158,35 @@ body {
 .carousel {
   box-shadow: $boxShadow;
   margin: 50px 0;
+  box-shadow: 0 0 #000;
   .swiper {
-    padding: 40px 0;
+    padding: 50px 0;
     width: 100%;
 
     &-slide {
       display: flex;
       justify-content: center;
-      transition: transform 0.3s ease;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
 
       &.swiper-slide-active .card {
         transform: scale(1.06); // Destaque no item central
         z-index: 2;
         background-color: #fff;
+        box-shadow: 0 0 10px 5px #0006;
       }
 
       .card {
         width: 260px;
+        border: none;
         border-radius: 15px;
         overflow: hidden;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        transition: transform 0.3s ease;
+        transition: transform 0.5s ease, box-shadow 0.5s ease;
         background-color: #f1f1f1;
         transform: scale(0.9);
 
         &:hover {
           transform: scale(1.02);
+          box-shadow: 0 0 6px 2px #0006;
         }
 
         &-img-top {
@@ -235,7 +247,7 @@ body {
 // Carrossel de testemunhas
 .avaliacoesSwiper {
   width: 100%;
-  padding: 40px 0;
+  padding: 50px 0;
   & .swiper-slide {
     display: flex;
     justify-content: center;
@@ -243,11 +255,12 @@ body {
       width: 280px;
       border-radius: 15px;
       border: none;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.09);
       background-color: #fff;
       padding-bottom: 15px;
-      transition: transform 0.5s ease;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
       &:hover {
+        box-shadow: 0 0 8px 2px #0007;
         transform: scale(1.1);
       }
       & .avatar {

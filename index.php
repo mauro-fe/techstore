@@ -30,10 +30,10 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <div class="navbar-logo">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="home">
                     <img src="assets/img/logo.png" alt="Logo">
                 </a>
-                <a class="navbar-brand" href="#">MegaTech</a>
+                <a class="navbar-brand" href="home">MegaTech</a>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -41,10 +41,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link me-4" href="#">Loja</a>
+                        <a class="nav-link me-4" href="home">Loja</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link me-4" href="#">Celulares</a>
+                        <a class="nav-link me-4" href="celulares">Celulares</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link me-4" href="#">Acessórios</a>
