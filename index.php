@@ -46,9 +46,16 @@
                     <li class="nav-item">
                         <a class="nav-link me-4" href="home">Loja</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link me-4" href="celulares">Celulares</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link me-4" href="#">Celulares</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="celulares/iphone">iPhone</a></li>
+                            <li><a href="celulares/samsung">Samsung</a></li>
+                            <li><a href="celulares/xiaomi">Xiaomi</a></li>
+                            <li><a href="celulares/realme">Realme</a></li>
+                        </ul>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link me-4" href="#">Acessórios</a>
                     </li>
