@@ -21,7 +21,10 @@
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- aos master -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <!-- style css -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -102,8 +105,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Script do Swiper.js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script>
+        // Efeito scroll do header
         window.addEventListener('scroll', function() {
             const header = document.querySelector('.navbar');
 
@@ -116,6 +121,87 @@
 
         // Aplica a classe no carregamento da página
         window.dispatchEvent(new Event('scroll'));
+
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        let scrollDirection = "down";
+        let lastScroll = window.scrollY;
+
+        // Detecta a direção do scroll global
+        window.addEventListener("scroll", () => {
+            const currentScroll = window.scrollY;
+            scrollDirection = (currentScroll > lastScroll) ? "down" : "up";
+            lastScroll = currentScroll <= 0 ? 0 : currentScroll;
+        });
+
+        // 🔥 Efeito que depende da direção (cima/baixo)
+        gsap.utils.toArray('.effect').forEach(box => {
+            ScrollTrigger.create({
+                trigger: box,
+                start: "top 110%",
+                once: false,
+                onEnter: () => animateY(box, scrollDirection),
+                onEnterBack: () => animateY(box, scrollDirection)
+            });
+        });
+
+        // 🔥 Efeito da esquerda para direita
+        gsap.utils.toArray('.effect-left').forEach(box => {
+            ScrollTrigger.create({
+                trigger: box,
+                start: "top 80%",
+                once: false,
+                onEnter: () => animateX(box, "left"),
+                onEnterBack: () => animateX(box, "left")
+            });
+        });
+
+        // 🔥 Efeito da direita para esquerda
+        gsap.utils.toArray('.effect-right').forEach(box => {
+            ScrollTrigger.create({
+                trigger: box,
+                start: "top 80%",
+                once: false,
+                onEnter: () => animateX(box, "right"),
+                onEnterBack: () => animateX(box, "right")
+            });
+        });
+
+        // Função para efeito vertical (cima/baixo)
+        function animateY(box, direction) {
+            gsap.fromTo(box, {
+                y: direction === "down" ? 150 : -150,
+                opacity: 0,
+                scale: 0.9,
+                filter: "blur(10px)"
+            }, {
+                y: 0,
+                opacity: 1,
+                scale: 1,
+                filter: "blur(0px)",
+                duration: 1.8,
+                ease: "power4.out"
+            });
+        }
+
+        // Função para efeito horizontal (esquerda/direita)
+        function animateX(box, side) {
+            const distance = side === "left" ? -200 : 200;
+            gsap.fromTo(box, {
+                x: distance,
+                opacity: 0,
+                scale: 0.9,
+                filter: "blur(10px)"
+            }, {
+                x: 0,
+                opacity: 1,
+                scale: 1,
+                filter: "blur(0px)",
+                duration: 1.8,
+                ease: "power4.out"
+            });
+        }
     </script>
 </body>
 

@@ -98,32 +98,21 @@ body {
 // Fim header
 
 // Seções de celulares
-.hero {
-  text-align: center;
-  padding: 15px 0;
-  margin-bottom: 30px;
-  border-radius: 10px;
-  // background: $linearGradientTop;
-  box-shadow: $boxShadow;
-  & h2 {
-    font-weight: bold;
-    font-size: 42px;
-  }
-  & h3 {
-    font-weight: 500;
-    font-size: 24px;
-  }
-  & img {
-    max-width: 230px !important;
+
+.swiperCell {
+  padding: 20px;
+  & .swiper-slide img {
+    width: 220px;
+    height: 350px;
     border-radius: 10px;
     transition: 0.7s;
-    // filter: $boxShadowCell;
-    // box-shadow: 5px 5px 5px #000;
-
     &:hover {
-      transform: translate(5px, -10px);
+      transform: translate(5px, -10px) rotate(-5deg);
       filter: $boxShadowHoverCell;
     }
+  }
+  .swiper-wrapper {
+    margin: 20px 0;
   }
 }
 
@@ -152,13 +141,18 @@ body {
   }
 }
 
+.hero {
+  & img {
+    max-width: 250px;
+  }
+}
+
 // Fim seção celulares
 
 // Carrossel de acessórios
 .carousel {
   box-shadow: $boxShadow;
   margin: 50px 0;
-  box-shadow: 0 0 #000;
   .swiper {
     padding: 50px 0;
     width: 100%;

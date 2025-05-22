@@ -1,23 +1,47 @@
 <!-- Container principal -->
 <div class="container-fluid container">
-    <!-- Hero principal -->
-    <section class="hero d-flex align-items-center justify-content-center flex-column">
-        <h2><?= $products[1]->marca ?></h2>
-        <h3><?= $products[1]->nome ?></h3>
-        <img src="<?= $products[1]->imagem ?>" class="w-100" alt="<?= $products[1]->nome ?>">
-        <p class="m-3">Disponível agora com ofertas exclusivas.</p>
+    <div class="swiperCell text-center">
+        <h2><strong><?= $iphone[1]->marca ?></strong></h2>
+        <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+                <h3><?= $iphone[1]->nome ?></h3>
+                <img src="<?= $iphone[1]->imagem ?>" alt="<?= $iphone[1]->nome ?>" class="img-fluid">
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide ">
+                <h3><?= $iphone[2]->nome ?></h3>
+                <img src="<?= $iphone[2]->imagem ?>" alt="<?= $iphone[2]->nome ?>" class="img-fluid">
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide ">
+                <h3><?= $iphone[3]->nome ?></h3>
+                <img src="<?= $iphone[3]->imagem ?>" alt="<?= $iphone[3]->nome ?>" class="img-fluid">
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="swiper-slide ">
+                <h3><?= $iphone[4]->nome ?></h3>
+                <img src="<?= $iphone[4]->imagem ?>" alt="<?= $iphone[4]->nome ?>" class="img-fluid">
+            </div>
+        </div>
+        <p>Disponível agora com ofertas exclusivas.</p>
         <div class="btn-saiba-mais">
             <a href="#">Saiba mais</a>
         </div>
+    </div>
+
     </section>
 
     <!-- Grid de produtos -->
     <section class="cell row g-3 mb-3">
         <div class="col-md-6">
-            <div class="cell-container a">
-                <h2><?= $products[2]->marca ?></h2>
-                <h3><?= $products[2]->nome ?></h3>
-                <img src="<?= $products[2]->imagem ?>" alt="<?= $products[2]->nome ?>" class=" mt-2">
+            <div class="cell-container a effect-left">
+                <h2><?= $xiaomi[1]->marca ?></h2>
+                <h3><?= $xiaomi[1]->nome ?></h3>
+                <img src="<?= $xiaomi[1]->imagem ?>" alt="<?= $iphone[1]->nome ?>" class=" mt-2">
                 <p class="m-3">A prova de água e resistente à queda.</p>
                 <div class="btn-saiba-mais">
                     <a href="#">Saiba mais</a>
@@ -25,10 +49,10 @@
             </div>
         </div>
         <div class="col-md-6">
-            <div class="cell-container b">
-                <h2><?= $products[3]->marca ?></h2>
-                <h3><?= $products[3]->nome ?></h3>
-                <img src="<?= $products[3]->imagem ?>" alt="<?= $products[3]->nome ?>" class="mt-2">
+            <div class="cell-container b effect-right">
+                <h2><?= $realme[1]->marca ?></h2>
+                <h3><?= $realme[1]->nome ?></h3>
+                <img src="<?= $realme[1]->imagem ?>" alt="<?= $realme[1]->nome ?>" class="mt-2">
                 <p class="m-3">Com o processador Snapdragon 8 Elite.</p>
                 <div class="btn-saiba-mais">
                     <a href="#">Saiba mais</a>
@@ -36,10 +60,10 @@
             </div>
         </div>
     </section>
-    <section class="hero d-flex align-items-center justify-content-center flex-column">
-        <h2><?= $products[4]->marca ?></h2>
-        <h3><?= $products[4]->nome ?></h3>
-        <img src="<?= $products[4]->imagem ?>" class="w-100" alt="<?= $products[4]->nome ?>">
+    <section class="hero d-flex align-items-center justify-content-center flex-column effect">
+        <h2><?= $samsung[1]->marca ?></h2>
+        <h3><?= $samsung[1]->nome ?></h3>
+        <img src="<?= $samsung[1]->imagem ?>" alt="<?= $samsung[1]->nome ?>">
         <p class="m-3">A câmera com o melhor zoom.</p>
         <div class="btn-saiba-mais">
             <a href="#">Saiba mais</a>
@@ -51,7 +75,7 @@
         <!-- Swiper HTML -->
         <div class="swiper mySwiper">
 
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper effect">
                 <div class="swiper-slide">
                     <div class="card">
                         <img src="./assets/img/carregador-iphone-tipo-c.jpg" class="card-img-top" alt="Fone">
@@ -119,7 +143,7 @@
             <div class="swiper-pagination mt-4"></div>
         </div>
     </div>
-    <section class="assistencia-section">
+    <section class="assistencia-section effect">
         <h2>Assistência Técnica Especializada</h2>
         <p class="text-center text-muted m-2">Consertos rápidos, peças originais e garantia estendida para seu
             smartphone.</p>
@@ -155,7 +179,7 @@
     <section class="avaliacoes mt-5 mb-5">
         <h2 class="text-center mb-2">O que dizem nossos clientes</h2>
         <div class="swiper mySwiper avaliacoesSwiper">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper effect">
 
                 <!-- Avaliação 1 -->
                 <div class="swiper-slide">
@@ -247,7 +271,7 @@
     </section>
     <section class="mt-5 mb-5">
         <h3 class="text-center m-4">Localização</h3>
-        <div class="mapa-container">
+        <div class="mapa-container effect">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3627.8581469493733!2d-52.806227799999995!3d-24.5940913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f20c1e2461ce1f%3A0xbd8b47b891450334!2sAv.%20Brasil%2C%20910%20-%20Centro%2C%20Campina%20da%20Lagoa%20-%20PR%2C%2087345-000!5e0!3m2!1spt-BR!2sbr!4v1747614477445!5m2!1spt-BR!2sbr"
                 width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
@@ -285,6 +309,17 @@
             1200: {
                 slidesPerView: 4
             }
+        }
+    });
+    const swiperCell = new Swiper('.swiperCell', {
+        effect: 'fade',
+        loop: true,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false
+        },
+        fadeEffect: {
+            crossFade: true
         }
     });
 </script>
