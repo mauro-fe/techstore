@@ -1,30 +1,30 @@
 <!-- Container principal -->
 <div class="container-fluid container">
-    <div class="swiperCell text-center">
-        <h2><strong><?= $iphone[1]->marca ?></strong></h2>
+    <div class="swiperCell text-center effect-fade">
+        <h2><strong><?= $iphones[1]->marca ?></strong></h2>
         <div class="swiper-wrapper">
             <!-- Slide 1 -->
             <div class="swiper-slide">
-                <h3><?= $iphone[1]->nome ?></h3>
-                <img src="<?= $iphone[1]->imagem ?>" alt="<?= $iphone[1]->nome ?>" class="img-fluid">
+                <h3><?= $iphones[1]->nome ?></h3>
+                <img src="<?= $iphones[1]->imagem ?>" alt="<?= $iphones[1]->nome ?>" class="img-fluid">
             </div>
 
             <!-- Slide 2 -->
             <div class="swiper-slide ">
-                <h3><?= $iphone[2]->nome ?></h3>
-                <img src="<?= $iphone[2]->imagem ?>" alt="<?= $iphone[2]->nome ?>" class="img-fluid">
+                <h3><?= $iphones[2]->nome ?></h3>
+                <img src="<?= $iphones[2]->imagem ?>" alt="<?= $iphones[2]->nome ?>" class="img-fluid">
             </div>
 
             <!-- Slide 3 -->
             <div class="swiper-slide ">
-                <h3><?= $iphone[3]->nome ?></h3>
-                <img src="<?= $iphone[3]->imagem ?>" alt="<?= $iphone[3]->nome ?>" class="img-fluid">
+                <h3><?= $iphones[3]->nome ?></h3>
+                <img src="<?= $iphones[3]->imagem ?>" alt="<?= $iphones[3]->nome ?>" class="img-fluid">
             </div>
 
             <!-- Slide 4 -->
             <div class="swiper-slide ">
-                <h3><?= $iphone[4]->nome ?></h3>
-                <img src="<?= $iphone[4]->imagem ?>" alt="<?= $iphone[4]->nome ?>" class="img-fluid">
+                <h3><?= $iphones[4]->nome ?></h3>
+                <img src="<?= $iphones[4]->imagem ?>" alt="<?= $iphones[4]->nome ?>" class="img-fluid">
             </div>
         </div>
         <p>Disponível agora com ofertas exclusivas.</p>
@@ -33,15 +33,14 @@
         </div>
     </div>
 
-    </section>
 
     <!-- Grid de produtos -->
     <section class="cell row g-3 mb-3">
         <div class="col-md-6">
-            <div class="cell-container a effect-left">
-                <h2><?= $xiaomi[1]->marca ?></h2>
-                <h3><?= $xiaomi[1]->nome ?></h3>
-                <img src="<?= $xiaomi[1]->imagem ?>" alt="<?= $iphone[1]->nome ?>" class=" mt-2">
+            <div class="cell-container effect-left">
+                <h2><?= $xiaomis[1]->marca ?></h2>
+                <h3><?= $xiaomis[1]->nome ?></h3>
+                <img src="<?= $xiaomis[1]->imagem ?>" alt="<?= $xiaomis[1]->nome ?>" class="mt-2">
                 <p class="m-3">A prova de água e resistente à queda.</p>
                 <div class="btn-saiba-mais">
                     <a href="#">Saiba mais</a>
@@ -49,10 +48,10 @@
             </div>
         </div>
         <div class="col-md-6">
-            <div class="cell-container b effect-right">
-                <h2><?= $realme[1]->marca ?></h2>
-                <h3><?= $realme[1]->nome ?></h3>
-                <img src="<?= $realme[1]->imagem ?>" alt="<?= $realme[1]->nome ?>" class="mt-2">
+            <div class="cell-container effect-right">
+                <h2><?= $realmes[1]->marca ?></h2>
+                <h3><?= $realmes[1]->nome ?></h3>
+                <img src="<?= $realmes[1]->imagem ?>" alt="<?= $realmes[1]->nome ?>" class="mt-2">
                 <p class="m-3">Com o processador Snapdragon 8 Elite.</p>
                 <div class="btn-saiba-mais">
                     <a href="#">Saiba mais</a>
@@ -60,22 +59,22 @@
             </div>
         </div>
     </section>
-    <section class="hero d-flex align-items-center justify-content-center flex-column effect">
-        <h2><?= $samsung[1]->marca ?></h2>
-        <h3><?= $samsung[1]->nome ?></h3>
-        <img src="<?= $samsung[1]->imagem ?>" alt="<?= $samsung[1]->nome ?>">
+    <section class="hero d-flex align-items-center justify-content-center flex-column effect-fade">
+        <h2><?= $samsungs[1]->marca ?></h2>
+        <h3><?= $samsungs[1]->nome ?></h3>
+        <img src="<?= $samsungs[1]->imagem ?>" alt="<?= $samsungs[1]->nome ?>">
         <p class="m-3">A câmera com o melhor zoom.</p>
         <div class="btn-saiba-mais">
             <a href="#">Saiba mais</a>
         </div>
     </section>
 
-    <div class="mt-5 mb-5 carousel">
+    <div class="mt-5 mb-5 carousel effect-fade">
         <h2 class="text-center">Acessórios</h2>
         <!-- Swiper HTML -->
         <div class="swiper mySwiper">
 
-            <div class="swiper-wrapper effect">
+            <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="card">
                         <img src="./assets/img/carregador-iphone-tipo-c.jpg" class="card-img-top" alt="Fone">
