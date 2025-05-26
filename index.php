@@ -71,15 +71,11 @@
                             <li><a href="celulares/realme">Realme</a></li>
                         </ul>
                     </li>
-
-                    <li class="nav-item ">
-                        <a class="nav-link me-4" href="#">Acessórios</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link me-4" href="#">Contato</a>
-                    </li>
                     <li class="nav-item ">
                         <a class="nav-link me-4" href="assistencia-tecnica">Assistência Técnica</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link me-4" href="contato">Contato</a>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link me-4 btn-comprar-nav" href="#">Comprar</a>
