@@ -1,6 +1,6 @@
 <!-- Container principal -->
 <div class="container-fluid container">
-    <div class="swiperCell text-center effect-fade">
+    <div class="swiperCell text-center effect">
         <h2><strong><?= $iphones[1]->marca ?></strong></h2>
         <div class="swiper-wrapper">
             <!-- Slide 1 -->
@@ -59,7 +59,7 @@
             </div>
         </div>
     </section>
-    <section class="hero d-flex align-items-center justify-content-center flex-column effect-fade">
+    <section class="hero d-flex align-items-center justify-content-center flex-column effect">
         <h2><?= $samsungs[1]->marca ?></h2>
         <h3><?= $samsungs[1]->nome ?></h3>
         <img src="<?= $samsungs[1]->imagem ?>" alt="<?= $samsungs[1]->nome ?>">
@@ -69,7 +69,7 @@
         </div>
     </section>
 
-    <div class="mt-5 mb-5 carousel effect-fade">
+    <div class="mt-5 mb-5 carousel effect">
         <h2 class="text-center">Acessórios</h2>
         <!-- Swiper HTML -->
         <div class="swiper mySwiper">
