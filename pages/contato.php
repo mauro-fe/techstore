@@ -9,9 +9,9 @@
     }
 
     :root {
-        --primary-color: #667eea;
-        --secondary-color: #764ba2;
-        --accent-color: #4ecdc4;
+        --primary-color: #00abff;
+        --secondary-color: #00abff;
+        --accent-color: #00abff;
         --success-color: #2ecc71;
         --warning-color: #f39c12;
         --danger-color: #e74c3c;
@@ -36,76 +36,6 @@
         background: var(--gray-100);
     }
 
-    /* Header */
-    .navbar {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(20px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        z-index: 1000;
-        transition: all 0.3s ease;
-        padding: 1rem 0;
-    }
-
-    .navbar.scrolled {
-        background: rgba(255, 255, 255, 0.98);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    .nav-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 2rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .logo {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: var(--primary-color);
-        text-decoration: none;
-    }
-
-    .nav-links {
-        display: flex;
-        list-style: none;
-        gap: 2rem;
-    }
-
-    .nav-links a {
-        text-decoration: none;
-        color: var(--gray-700);
-        font-weight: 500;
-        transition: color 0.3s ease;
-        position: relative;
-    }
-
-    .nav-links a:hover {
-        color: var(--primary-color);
-    }
-
-    .nav-links a::after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 2px;
-        bottom: -5px;
-        left: 50%;
-        background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-        transition: all 0.3s ease;
-        transform: translateX(-50%);
-    }
-
-    .nav-links a:hover::after {
-        width: 100%;
-    }
 
     /* Hero Section */
     .hero {
@@ -115,7 +45,7 @@
         align-items: center;
         position: relative;
         overflow: hidden;
-        margin-top: 80px;
+        padding: 100px 0;
     }
 
     .hero::before {
@@ -752,7 +682,7 @@
 <section class="hero" id="home">
     <div class="hero-container">
         <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
-            <h1>Entre em <span style="color: var(--accent-color);">Contato</span></h1>
+            <h1>Entre em <span style="color: #000;">Contato</span></h1>
             <p>Estamos aqui para ajudar! Entre em contato conosco através do formulário ou pelos nossos canais de
                 atendimento.</p>
 
@@ -919,9 +849,10 @@
         </div>
         <div class="map-container">
             <div class="map-placeholder">
-                <i class="fas fa-map-marker-alt"></i>
-                <p>Rua da Tecnologia, 123 - Centro<br>São Paulo/SP - CEP: 01234-567</p>
-                <p style="margin-top: 1rem; opacity: 0.8;">Mapa interativo será carregado aqui</p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3627.8581469493733!2d-52.806227799999995!3d-24.5940913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f20c1e2461ce1f%3A0xbd8b47b891450334!2sAv.%20Brasil%2C%20910%20-%20Centro%2C%20Campina%20da%20Lagoa%20-%20PR%2C%2087345-000!5e0!3m2!1spt-BR!2sbr!4v1747614477445!5m2!1spt-BR!2sbr"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </div>
