@@ -7,7 +7,7 @@ $iphones = [
         1,
         'Apple',
         'iPhone 16',
-        './assets/img/iphone-16-preto2.png',
+        './assets/img/iphone/16/iphone-16-preto2.png',
         [
             'tela' => '6.1 Liquid Retina LCD',
 
@@ -26,7 +26,7 @@ $iphones = [
         2,
         'Apple',
         'iPhone 16 Pro',
-        './assets/img/iphone-16-pro-titanio-deserto.png',
+        './assets/img/iphone/16/iphone-16-pro-titanio-deserto.png',
         [
             'tela' => '6.1 Liquid Retina LCD',
 
@@ -44,7 +44,7 @@ $iphones = [
         3,
         'Apple',
         'iPhone 16 Pro Max',
-        './assets/img/iphone-15-pro-max-dourado.png',
+        './assets/img/iphone/16/iphone-16-pro-max-douradof.png',
         [
             'tela' => '6.1 Liquid Retina LCD',
 
@@ -62,7 +62,7 @@ $iphones = [
         4,
         'Apple',
         'iPhone 16 Plus',
-        './assets/img/iphone-16-plus-branco.png',
+        './assets/img/iphone/16/iphone-16-plus-branco.png',
         [
             'tela' => '6.1 Liquid Retina LCD',
 
@@ -373,7 +373,7 @@ $iphones = [
         9,
         'Apple',
         'iPhone 11',
-        './assets/img/iphone-16-preto2.png',
+        './assets/img/iphone/11/iphone-11-branco.jpg',
         [
             'tela' => '6.1 Liquid Retina LCD',
 

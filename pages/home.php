@@ -268,12 +268,6 @@
             <div class="swiper-pagination"></div>
         </div>
     </section>
-    <section class="mt-5 mb-5">
-        <h3 class="text-center m-4">Localização</h3>
-        <div class="mapa-container effect">
-
-        </div>
-    </section>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

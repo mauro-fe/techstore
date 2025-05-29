@@ -97,7 +97,7 @@
         $file = $p[1] ?? "index";
 
         if ($folder === "celulares") {
-            $path = "celulares/{$file}.php";
+            $path = "pages/celulares/{$file}.php";
         } else {
             $path = "pages/{$folder}.php";
         }
