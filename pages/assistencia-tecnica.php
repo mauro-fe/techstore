@@ -1000,8 +1000,9 @@
         </div>
 
         <div class="contact-grid">
-
             <div class="contact-form" data-aos="fade-left" data-aos-delay="200">
+                <h3 class="text-center">Email</h3>
+
                 <form>
                     <div class="form-group">
                         <label for="name">Nome Completo</label>
@@ -1023,7 +1024,41 @@
                         <textarea id="problem" name="problem" class="form-control textarea" required></textarea>
                     </div>
 
-                    <button type="submit" class="submit-btn">Solicitar Orçamento</button>
+                    <button type="submit" class="submit-btn"><i class="fa-solid fa-envelope me-2"></i> Solicitar
+                        orçamento
+                        via email</button>
+                </form>
+            </div>
+            <div class="contact-form" data-aos="fade-left" data-aos-delay="200">
+                <h3 class="text-center">WhatsApp</h3>
+                <form id="entrarEmContato">
+                    <div class="form-group">
+                        <label for="nameWhats">Nome Completo</label>
+                        <input type="text" id="nameWhats" name="nameWhats" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="emailWhats">Email</label>
+                        <input type="email" id="emailWhats" name="emailWhats" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="deviceWhats">Modelo do Dispositivo</label>
+                        <input type="text" id="deviceWhats" name="deviceWhats" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="problemWhats">Descrição do Problema</label>
+                        <textarea id="problemWhats" name="problemWhats" class="form-control textarea"
+                            required></textarea>
+                    </div>
+
+                    <div class="modal-footer">
+                        <a href="#" id="linkWhatsapp" target="_blank" class="btn w-100 submit-btn">
+                            <i class="fab fa-whatsapp me-2"></i>
+                            Finalizar Compra no WhatsApp
+                        </a>
+                    </div>
                 </form>
             </div>
         </div>
@@ -1172,19 +1207,7 @@ document.querySelectorAll('.service-btn').forEach(btn => {
     });
 });
 
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
+
 
 // Counter animation for stats
 function animateCounter(element, start, end, duration) {
@@ -1246,4 +1269,75 @@ window.addEventListener('load', function() {
         document.body.style.opacity = '1';
     }, 100);
 });
+
+// Função para WhatsApp dinâmico
+function initWhatsAppIntegration() {
+    const linkWhatsapp = document.getElementById('linkWhatsapp');
+    const form = document.getElementById('entrarEmContato');
+
+    function updateWhatsAppLink() {
+        const nameWhats = document.getElementById('nameWhats').value;
+        const emailWhats = document.getElementById('emailWhats').value;
+        const deviceWhats = document.getElementById('deviceWhats').value;
+        const problemWhats = document.getElementById('problemWhats').value;
+
+        if (deviceWhats && problemWhats && nameWhats && emailWhats) {
+            const mensagem =
+                `Olá! Me chamo *${nameWhats}*\n` +
+                `Meu email é: *${emailWhats}*\n` +
+                `Modelo do dispositivo: *${deviceWhats}*\n` +
+                `Descrição do problema: *${problemWhats}*\n\n` +
+                `Poderia me passar mais informações sobre disponibilidade de conserto e formas de pagamento?`;
+
+            const numero = '5544998170770';
+            const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+
+            linkWhatsapp.href = url;
+            linkWhatsapp.style.opacity = '1';
+            linkWhatsapp.style.transform = 'scale(1)';
+        } else {
+            linkWhatsapp.href = '#';
+            linkWhatsapp.style.opacity = '0.6';
+            linkWhatsapp.style.transform = 'scale(0.95)';
+        }
+    }
+
+    // Atualiza link a cada digitação
+    form.addEventListener('input', updateWhatsAppLink);
+
+    // Impede envio incompleto
+    linkWhatsapp.addEventListener('click', function(e) {
+        if (this.href === '#' || this.href.includes('#')) {
+            e.preventDefault();
+
+            this.style.animation = 'pulse 0.5s ease-in-out';
+
+            const emailWhats = document.getElementById('emailWhats');
+            const deviceWhats = document.getElementById('deviceWhats');
+
+            if (!emailWhats.value) {
+                emailWhats.style.borderColor = '#dc3545';
+                emailWhats.style.animation = 'pulse 0.5s ease-in-out';
+            }
+            if (!deviceWhats.value) {
+                deviceWhats.style.borderColor = '#dc3545';
+                deviceWhats.style.animation = 'pulse 0.5s ease-in-out';
+            }
+
+            setTimeout(() => {
+                emailWhats.style.borderColor = '';
+                deviceWhats.style.borderColor = '';
+                this.style.animation = '';
+            }, 500);
+        }
+    });
+
+    // Evita envio padrão do form
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+    });
+}
+
+// Ativar após carregamento da página
+window.addEventListener('DOMContentLoaded', initWhatsAppIntegration);
 </script>

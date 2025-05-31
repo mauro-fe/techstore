@@ -725,7 +725,7 @@
                     <p>Preencha o formulário abaixo e entraremos em contato o mais breve possível</p>
                 </div>
 
-                <form class="contact-form" id="contactForm">
+                <form action="enviar.php" method="post" class="contact-form" id="contactForm">
                     <div class="form-row">
                         <div class="form-group form-floating-label">
                             <input type="text" id="fullName" name="fullName" class="form-control" placeholder=" "
@@ -774,6 +774,7 @@
                         <i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i>
                         Enviar Mensagem
                     </button>
+
                 </form>
             </div>
 
@@ -914,7 +915,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
             field.style.borderColor = 'var(--danger-color)';
             isValid = false;
         } else {
-            field.style.borderColor = 'var (--gray-300);'
+            field.style.borderColor = 'var(--gray-300);'
         }
     });
 
@@ -935,23 +936,36 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin" style="margin-right: 0.5rem;"></i>Enviando...';
     submitBtn.disabled = true;
 
-    setTimeout(() => {
-        // Get form data
-        const formData = new FormData(this);
-        const data = Object.fromEntries(formData);
+    const formData = new FormData(this);
 
-        console.log('Form Data:', data);
+    fetch('enviar.php', {
+            method: 'POST',
+            body: new FormData(this)
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.text();
+            } else {
+                throw new Error('Erro no envio');
+            }
+        })
+        .then(text => {
+            if (text.trim() === 'ok') {
+                showSuccessMessage();
+                this.reset();
+            } else {
+                alert('Erro ao enviar a mensagem. Tente novamente.');
+            }
+        })
+        .catch(error => {
+            console.error('Erro:', error);
+            alert('Erro ao enviar a mensagem. Verifique sua conexão.');
+        })
+        .finally(() => {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+        });
 
-        // Show success message
-        showSuccessMessage();
-
-        // Reset form
-        this.reset();
-
-        // Reset button
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
-    }, 2000);
 });
 
 // Success message functions
