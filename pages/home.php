@@ -1,6 +1,6 @@
 <!-- Container principal -->
 <div class="container-fluid container">
-    <div class="swiperCell text-center effect">
+    <div class="swiperCell text-center" data-aos="zoom-in" data-aos-delay="100">
         <h2><strong><?= $iphones[1]->marca ?></strong></h2>
         <div class="swiper-wrapper">
             <!-- Slide 1 -->
@@ -29,15 +29,15 @@
         </div>
         <p>Disponível agora com ofertas exclusivas.</p>
         <div class="btn-saiba-mais">
-            <a href="#">Saiba mais</a>
+            <a href="celulares/iphone">Saiba mais</a>
         </div>
     </div>
 
 
     <!-- Grid de produtos -->
-    <section class="cell row g-3 mb-3">
+    <section class="cell row g-3 mb-3 ">
         <div class="col-md-6">
-            <div class="cell-container effect-left">
+            <div class="cell-container" data-aos="fade-right" data-aos-delay="100">
                 <h2><?= $xiaomis[1]->marca ?></h2>
                 <h3><?= $xiaomis[1]->nome ?></h3>
                 <img src="<?= $xiaomis[1]->imagem ?>" alt="<?= $xiaomis[1]->nome ?>" class="mt-2">
@@ -48,7 +48,7 @@
             </div>
         </div>
         <div class="col-md-6">
-            <div class="cell-container effect-right">
+            <div class="cell-container" data-aos="fade-left" data-aos-delay="100">
                 <h2><?= $realmes[1]->marca ?></h2>
                 <h3><?= $realmes[1]->nome ?></h3>
                 <img src="<?= $realmes[1]->imagem ?>" alt="<?= $realmes[1]->nome ?>" class="mt-2">
@@ -59,7 +59,8 @@
             </div>
         </div>
     </section>
-    <section class="hero d-flex align-items-center justify-content-center flex-column effect">
+    <section class="hero d-flex align-items-center justify-content-center flex-column" data-aos="zoom-in"
+        data-aos-delay="100">
         <h2><?= $samsungs[1]->marca ?></h2>
         <h3><?= $samsungs[1]->nome ?></h3>
         <img src="<?= $samsungs[1]->imagem ?>" alt="<?= $samsungs[1]->nome ?>">
@@ -69,10 +70,10 @@
         </div>
     </section>
 
-    <div class="mt-5 mb-5 carousel effect">
+    <div class="mt-5 mb-5 carousel">
         <h2 class="text-center">Acessórios</h2>
         <!-- Swiper HTML -->
-        <div class="swiper mySwiper">
+        <div class="swiper mySwiper" data-aos="fade-up" data-aos-delay="100">
 
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -142,12 +143,15 @@
             <div class="swiper-pagination mt-4"></div>
         </div>
     </div>
-    <section class="assistencia-section effect">
-        <h2>Assistência Técnica Especializada</h2>
-        <p class="text-center text-muted m-2">Consertos rápidos, peças originais e garantia estendida para seu
-            smartphone.</p>
-        <img src="./assets/img/assistencia-tecnica.png" alt="Assitência Tecnica" class="w-100">
-        <div class="row g-4 details">
+    <section class="assistencia-section">
+        <div data-aos="fade-up" data-aos-delay="100">
+            <h2>Assistência Técnica Especializada</h2>
+            <p class="text-center text-muted m-2">Consertos rápidos, peças originais e garantia estendida para seu
+                smartphone.</p>
+        </div>
+        <img src="./assets/img/assistencia-tecnica.png" alt="Assitência Tecnica" class="w-100" data-aos="fade-up"
+            data-aos-delay="200">
+        <div class="row g-4 details" data-aos="fade-up" data-aos-delay="300">
             <div class="col-md-4">
                 <div class="assistencia-box text-center">
                     <i class="fas fa-tools"></i>
@@ -170,15 +174,15 @@
                 </div>
             </div>
         </div>
-        <div class="btn-saiba-mais">
-            <a href="#">Saiba mais</a>
+        <div class="btn-saiba-mais" data-aos="fade-up" data-aos-delay="350">
+            <a href="assistencia-tecnica">Saiba mais</a>
         </div>
     </section>
     <!-- Swiper HTML -->
     <section class="avaliacoes mt-5 mb-5">
-        <h2 class="text-center mb-2">O que dizem nossos clientes</h2>
-        <div class="swiper mySwiper avaliacoesSwiper">
-            <div class="swiper-wrapper effect">
+        <h2 class="text-center mb-2" data-aos="fade-up" data-aos-delay="100">O que dizem nossos clientes</h2>
+        <div class="swiper mySwiper avaliacoesSwiper" data-aos="fade-up" data-aos-delay="300">
+            <div class="swiper-wrapper">
 
                 <!-- Avaliação 1 -->
                 <div class="swiper-slide">
@@ -272,44 +276,44 @@
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-    const swiper = new Swiper(".mySwiper", {
-        slidesPerView: 4, // mostra 3, mas centralizado
-        centeredSlides: true,
-        spaceBetween: 30,
-        loop: true,
-        speed: 1000,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
+const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 4, // mostra 3, mas centralizado
+    centeredSlides: true,
+    spaceBetween: 30,
+    loop: true,
+    speed: 1000,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 1
         },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
+        576: {
+            slidesPerView: 2
         },
-        breakpoints: {
-            0: {
-                slidesPerView: 1
-            },
-            576: {
-                slidesPerView: 2
-            },
-            992: {
-                slidesPerView: 3
-            },
-            1200: {
-                slidesPerView: 4
-            }
+        992: {
+            slidesPerView: 3
+        },
+        1200: {
+            slidesPerView: 4
         }
-    });
-    const swiperCell = new Swiper('.swiperCell', {
-        effect: 'fade',
-        loop: true,
-        autoplay: {
-            delay: 4000,
-            disableOnInteraction: false
-        },
-        fadeEffect: {
-            crossFade: true
-        }
-    });
+    }
+});
+const swiperCell = new Swiper('.swiperCell', {
+    effect: 'fade',
+    loop: true,
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false
+    },
+    fadeEffect: {
+        crossFade: true
+    }
+});
 </script>
