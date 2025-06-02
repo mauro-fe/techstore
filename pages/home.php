@@ -3,7 +3,7 @@
 
 <!-- Container principal -->
 <div class="container-fluid container">
-    <div class="text-center" data-aos="zoom-in" data-aos-delay="100">
+    <div class="text-center mb-5" data-aos="zoom-in" data-aos-delay="100">
         <h2><strong><?= $iphones[1]->marca ?></strong></h2>
 
         <!-- Swiper container -->
@@ -321,14 +321,6 @@
                     centeredSlides: true
                 }
             }
-        });
-    });
-
-    document.querySelectorAll('.btn-comprar').forEach(btn => {
-        btn.addEventListener('click', e => {
-            e.stopPropagation(); // impede que o clique afete o Swiper
-            // aqui você pode abrir um modal, enviar pro WhatsApp etc
-            console.log('Botão comprar clicado!');
         });
     });
 </script>

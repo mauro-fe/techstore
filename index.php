@@ -58,7 +58,7 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto">
+                    <ul class="navbar-nav mx-auto text-center">
                         <li class="nav-item" data-aos="fade-left" data-aos-delay="100">
                             <a class="nav-link me-4" href="home">Loja</a>
                         </li>
@@ -148,7 +148,7 @@
         AOS.init({
             duration: 1000,
             easing: 'ease-in-out',
-            once: true, // 🟢 Melhora performance e evita reanimações que podem causar flicker
+            once: false, // 🟢 Melhora performance e evita reanimações que podem causar flicker
             offset: 100
         });
 
