@@ -49,14 +49,23 @@ body {
   background-color: #006598;
 }
 
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
 .navbar {
   background-color: #000 !important;
   backdrop-filter: saturate(180%) blur(20px);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
-  height: 45px;
+  height: 50px;
   box-shadow: 0 0 10px 3px #000;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   /* Dropdown container */
+}
+.navbar .navbar-toggler {
+  margin: 0 !important;
 }
 .navbar .nav-item {
   position: relative;
@@ -74,7 +83,6 @@ body {
   box-shadow: 0 0 10px 3px #000;
   border-radius: 0 0 8px 8px;
   min-width: 100px;
-  z-index: 1000;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
@@ -130,6 +138,10 @@ body {
     background-color: black !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
+  }
+  .navbar-toggler {
+    background-color: #00abff !important;
+    padding: 2px;
   }
   .navbar .navbar-collapse {
     background-color: black !important;

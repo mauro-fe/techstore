@@ -44,7 +44,7 @@
 <body>
     <!-- Navbar -->
     <header>
-        <nav class="navbar navbar-expand-lg fixed-top header">
+        <nav class="navbar navbar-expand-lg  header">
             <div class="container">
                 <div class="navbar-logo" data-aos="fade-right" data-aos-delay="100">
                     <a class="navbar-brand" href="home">

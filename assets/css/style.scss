@@ -61,15 +61,22 @@ body {
 // Fim botões
 
 // Header
-
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 .navbar {
   background-color: $tertiaryColor !important;
   backdrop-filter: saturate(180%) blur(20px);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
-  height: 45px;
+  height: 50px;
   box-shadow: 0 0 10px 3px #000;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   /* Dropdown container */
+  & &-toggler {
+    margin: 0 !important;
+  }
   .nav-item {
     position: relative;
     & .dropdown-menu {
@@ -85,7 +92,6 @@ body {
       box-shadow: 0 0 10px 3px #000;
       border-radius: 0 0 8px 8px;
       min-width: 100px;
-      z-index: 1000;
       opacity: 0;
       visibility: hidden;
       transition: all 0.3s ease;
@@ -146,7 +152,12 @@ body {
     background-color: rgba(0, 0, 0, 1) !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
-    & .navbar-collapse {
+
+    &-toggler {
+      background-color: $primaryColor !important;
+      padding: 2px;
+    }
+    & &-collapse {
       background-color: rgba(0, 0, 0, 1) !important;
       border-radius: 0 0 12px 12px;
       padding: 10px 20px;
