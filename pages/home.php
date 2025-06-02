@@ -181,7 +181,7 @@
     <section class="avaliacoes mt-5 mb-5">
         <h2 class="text-center mb-2" data-aos="fade-up" data-aos-delay="100">O que dizem nossos clientes</h2>
         <div class="swiper mySwiper avaliacoesSwiper" data-aos="fade-up" data-aos-delay="300">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper pt-5 pb-5">
 
                 <!-- Avaliação 1 -->
                 <div class="swiper-slide">
