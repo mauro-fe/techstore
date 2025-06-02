@@ -1,7 +1,5 @@
 <?php
 
-include "Products.php";
-
 $iphones = [
     1 => new Product(
         1,
@@ -428,37 +426,4 @@ $iphones = [
         '11-pro-max'
     ),
 
-];
-
-$samsungs = [
-    1 => new Product(
-        1,
-        'Samsung',
-        's24 ultra',
-        './assets/img/samsung/samsung-galaxy-s25-ultra-cinza.png',
-        [],
-        ''
-    )
-];
-
-$xiaomis = [
-    1 => new Product(
-        1,
-        'Xiaomi',
-        '15 Ultra',
-        './assets/img/xiaomi-15-ultra-preto.png',
-        [],
-        ''
-    )
-];
-
-$realmes = [
-    1 => new Product(
-        1,
-        'Realme',
-        'c75',
-        './assets/img/realme-c75-dourado-2.png',
-        [],
-        ''
-    )
 ];

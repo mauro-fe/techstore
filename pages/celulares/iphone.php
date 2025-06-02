@@ -45,6 +45,8 @@
 
 /* Card Flip Melhorado */
 .card-flip {
+    height: 100%;
+    position: relative;
     perspective: 1000px;
     opacity: 0;
     transform: translateY(50px);
@@ -99,7 +101,8 @@
 .card-front,
 .card-back {
     width: 100%;
-    height: 100%;
+    min-height: 420px;
+    /* ou igual à .card */
     backface-visibility: hidden;
     border-radius: var(--border-radius);
     position: absolute;
@@ -116,10 +119,12 @@
 }
 
 .card-back {
+    position: absolute !important;
     background: linear-gradient(135deg, var(--dark-color) 0%, #495057 100%);
     color: white;
     transform: rotateY(180deg);
     box-shadow: var(--shadow-medium);
+    box-sizing: border-box;
 }
 
 .card {
@@ -131,6 +136,10 @@
     border: none !important;
     position: relative;
     overflow: hidden;
+}
+
+.card-body {
+    width: 100%;
 }
 
 /* Efeito Hover na Card */
@@ -319,8 +328,9 @@
     color: white;
     width: 30px;
     backdrop-filter: blur(10px);
-    top: 0;
-    left: 15px;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
 }
 
 .btn-voltar:hover {
@@ -571,15 +581,24 @@
                                     </div>
                                 </div>
 
-                                <button class="btn btn-enhanced btn-voltar mt-4">
+                                <button class="btn btn-enhanced btn-voltar">
                                     <i class="fas fa-arrow-left me-2"></i>
                                 </button>
 
                             </div>
                             <div class="card-body d-flex align-items-center">
-                                <button class="btn btn-enhanced btn-ver-detalhes p-2">
+
+                                <!-- Botão "Ver mais detalhes" (aciona o modal) -->
+
+                                <button class="btn btn-enhanced btn-ver-detalhes" data-bs-toggle="modal"
+                                    data-bs-target="#modalDetalhes" data-nome="<?= $iphone->nome ?>"
+                                    data-id="<?= $iphone->id ?>" data-pasta="<?= $iphone->pastaImagens ?>"
+                                    data-processador="<?= $iphone->especificacoes['Processador'] ?? '' ?>"
+                                    data-camera="<?= $iphone->especificacoes['camera'] ?? '' ?>"
+                                    data-bateria="<?= $iphone->especificacoes['Bateria'] ?? '' ?>">
                                     <i class="fas fa-info-circle"></i> Ver mais detalhes
                                 </button>
+
                                 <button class="btn btn-enhanced btn-comprar p-2" data-nome="<?= $iphone->nome ?>"
                                     data-id="<?= $iphone->id ?>">
                                     <i class="fas fa-shopping-cart"></i> Comprar
@@ -595,7 +614,7 @@
         </div>
     </div>
 
-    <!-- Modal Melhorado -->
+    <!-- Modal comprar -->
     <div class="modal fade" id="modalComprar" tabindex="-1" aria-labelledby="modalComprarLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -654,102 +673,209 @@
             </div>
         </div>
     </div>
+
+
+
+    <!-- Modal Bonito com Detalhes do Produto -->
+    <div class="modal fade" id="modalDetalhes" tabindex="-1" aria-labelledby="modalDetalhesLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalDetalhesLabel">Detalhes do Produto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- Carousel de imagens -->
+
+                            <div id="carouselDetalhes" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner" id="carouselDetalhesInner">
+                                </div>
+
+                                <?php if (count($imagens) > 1): ?>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselDetalhes"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Anterior</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselDetalhes"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Próximo</span>
+                                </button>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h4 id="detalheTitulo"></h4>
+                            <ul class="list-group list-group-flush mt-3" id="listaEspecificacoes">
+                                <!-- Especificações adicionadas dinamicamente -->
+                            </ul>
+
+                            <button class="btn btn-success w-100 mt-4" id="btnIrParaCompra">
+                                <i class="fas fa-shopping-cart me-2"></i>Comprar Agora
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-// Função para flip dos cards
-function initCardFlip() {
-    document.querySelectorAll('.btn-ver-detalhes').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            const cardInner = btn.closest('.card-flip').querySelector('.card-inner');
-            cardInner.classList.add('is-flipped');
+// Versão otimizada com melhor performance e tratamento de erros
 
-            // Adiciona pequena vibração no celular se disponível
-            if (navigator.vibrate) {
-                navigator.vibrate(50);
+class IPhoneStore {
+    constructor() {
+        this.modal = null;
+        this.debounceTimer = null;
+        this.init();
+    }
+
+    init() {
+        this.initModal();
+        this.initCardFlip();
+        this.initPurchaseModal();
+        this.initWhatsAppIntegration();
+        this.preloadImages();
+    }
+
+    initModal() {
+        try {
+            this.modal = new bootstrap.Modal(document.getElementById('modalComprar'));
+        } catch (error) {
+            console.error('Erro ao inicializar modal:', error);
+        }
+    }
+
+    initCardFlip() {
+        // Usar delegação de eventos para melhor performance
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.btn-ver-detalhes')) {
+                e.preventDefault();
+                this.handleCardFlip(e.target);
             }
 
-            // Trigger das animações dos specs
+            if (e.target.closest('.btn-voltar')) {
+                e.preventDefault();
+                this.handleCardBack(e.target);
+            }
+        });
+    }
+
+    handleCardFlip(btn) {
+        const cardInner = btn.closest('.card-flip')?.querySelector('.card-inner');
+        if (!cardInner) return;
+
+        cardInner.classList.add('is-flipped');
+        this.vibrate(50);
+
+        // Otimizar animações dos specs
+        requestAnimationFrame(() => {
             setTimeout(() => {
                 const specItems = cardInner.querySelectorAll('.spec-item');
-                specItems.forEach(item => {
-                    item.style.animation = 'slideInLeft 0.5s ease-out forwards';
+                specItems.forEach((item, index) => {
+                    setTimeout(() => {
+                        item.style.animation = 'slideInLeft 0.5s ease-out forwards';
+                    }, index * 100);
                 });
             }, 400);
         });
-    });
+    }
 
-    document.querySelectorAll('.btn-voltar').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            const cardInner = btn.closest('.card-flip').querySelector('.card-inner');
-            cardInner.classList.remove('is-flipped');
+    handleCardBack(btn) {
+        const cardInner = btn.closest('.card-flip')?.querySelector('.card-inner');
+        if (!cardInner) return;
 
-            if (navigator.vibrate) {
-                navigator.vibrate(30);
+        cardInner.classList.remove('is-flipped');
+        this.vibrate(30);
+    }
+
+    initPurchaseModal() {
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.btn-comprar')) {
+                e.preventDefault();
+                this.handlePurchaseClick(e.target.closest('.btn-comprar'));
             }
         });
-    });
-}
+    }
 
-// Função para modal de compra
-function initPurchaseModal() {
-    const modal = new bootstrap.Modal(document.getElementById('modalComprar'));
+    async handlePurchaseClick(btn) {
+        if (btn.classList.contains('loading')) return;
 
-    document.querySelectorAll('.btn-comprar').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault();
+        btn.classList.add('loading');
 
-            // Animação de loading no botão
-            btn.classList.add('loading');
+        try {
+            // Simular carregamento (pode ser substituído por API call)
+            await this.delay(800);
 
-            setTimeout(() => {
-                btn.classList.remove('loading');
+            const nome = btn.getAttribute('data-nome');
+            const id = btn.getAttribute('data-id');
 
-                const nome = btn.getAttribute('data-nome');
-                const id = btn.getAttribute('data-id');
+            this.openPurchaseModal(nome, id);
+        } catch (error) {
+            console.error('Erro ao processar compra:', error);
+        } finally {
+            btn.classList.remove('loading');
+        }
+    }
 
-                document.getElementById('nomeProduto').textContent = nome;
-                document.getElementById('produtoId').value = id;
+    openPurchaseModal(nome, id) {
+        const nomeEl = document.getElementById('nomeProduto');
+        const idEl = document.getElementById('produtoId');
 
-                // Reset form
-                document.getElementById('corProduto').value = '';
-                document.getElementById('armazenamentoProduto').value = '';
-                document.getElementById('quantidadeProduto').value = 1;
+        if (nomeEl && idEl) {
+            nomeEl.textContent = nome;
+            idEl.value = id;
+            this.resetForm();
+            this.modal?.show();
+        }
+    }
 
-                // Reset WhatsApp link
-                document.getElementById('linkWhatsapp').href = '#';
+    resetForm() {
+        const form = document.getElementById('formCompra');
+        if (form) {
+            form.reset();
+            document.getElementById('quantidadeProduto').value = 1;
+            document.getElementById('linkWhatsapp').href = '#';
+        }
+    }
 
-                modal.show();
+    initWhatsAppIntegration() {
+        const form = document.getElementById('formCompra');
+        const linkWhatsapp = document.getElementById('linkWhatsapp');
 
-                // Animação de entrada do modal
-                setTimeout(() => {
-                    document.querySelector('.modal-content').style.animation =
-                        'fadeInUp 0.3s ease-out';
-                }, 150);
+        if (!form || !linkWhatsapp) return;
 
-            }, 800);
+        // Debounce para otimizar performance
+        form.addEventListener('input', () => {
+            clearTimeout(this.debounceTimer);
+            this.debounceTimer = setTimeout(() => {
+                this.updateWhatsAppLink();
+            }, 300);
         });
-    });
-}
 
-// Função para WhatsApp dinâmico
-function initWhatsAppIntegration() {
-    const linkWhatsapp = document.getElementById('linkWhatsapp');
-    const form = document.getElementById('formCompra');
+        form.addEventListener('change', () => this.updateWhatsAppLink());
 
-    function updateWhatsAppLink() {
-        const nome = document.getElementById('nomeProduto').textContent;
-        const cor = document.getElementById('corProduto').value;
-        const armazenamento = document.getElementById('armazenamentoProduto').value;
-        const quantidade = document.getElementById('quantidadeProduto').value;
+        linkWhatsapp.addEventListener('click', (e) => {
+            this.handleWhatsAppClick(e, linkWhatsapp);
+        });
+    }
 
-        if (cor && armazenamento) {
-            const mensagem =
-                `Olá! Tenho interesse no *${nome}*.\n\n📱 Produto: *${nome}*\n🎨 Cor: *${cor}*\n💾 Armazenamento: *${armazenamento}*\n📦 Quantidade: *${quantidade}*\n\nPoderia me passar mais informações sobre disponibilidade e formas de pagamento?`;
+    updateWhatsAppLink() {
+        const nome = document.getElementById('nomeProduto')?.textContent;
+        const cor = document.getElementById('corProduto')?.value;
+        const armazenamento = document.getElementById('armazenamentoProduto')?.value;
+        const quantidade = document.getElementById('quantidadeProduto')?.value;
+        const linkWhatsapp = document.getElementById('linkWhatsapp');
 
+        if (!linkWhatsapp) return;
+
+        if (cor && armazenamento && nome) {
+            const mensagem = this.buildWhatsAppMessage(nome, cor, armazenamento, quantidade);
             const numero = '5544998170770';
             const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
 
@@ -763,58 +889,174 @@ function initWhatsAppIntegration() {
         }
     }
 
-    // Event listeners para atualizar o link
-    form.addEventListener('input', updateWhatsAppLink);
-    form.addEventListener('change', updateWhatsAppLink);
+    buildWhatsAppMessage(nome, cor, armazenamento, quantidade) {
+        return `Olá! Tenho interesse no *${nome}*.
 
-    // Adiciona feedback visual quando link está pronto
-    linkWhatsapp.addEventListener('click', function(e) {
-        if (this.href === '#' || this.href.includes('#')) {
+📱 Produto: *${nome}*
+🎨 Cor: *${cor}*
+💾 Armazenamento: *${armazenamento}*
+📦 Quantidade: *${quantidade}*
+
+Poderia me passar mais informações sobre disponibilidade e formas de pagamento?`;
+    }
+
+    handleWhatsAppClick(e, linkWhatsapp) {
+        if (linkWhatsapp.href === '#' || linkWhatsapp.href.includes('#')) {
             e.preventDefault();
-
-            // Shake animation para indicar campos incompletos
-            this.style.animation = 'pulse 0.5s ease-in-out';
-
-            // Highlight campos vazios
-            const cor = document.getElementById('corProduto');
-            const armazenamento = document.getElementById('armazenamentoProduto');
-
-            if (!cor.value) {
-                cor.style.borderColor = '#dc3545';
-                cor.style.animation = 'pulse 0.5s ease-in-out';
-            }
-            if (!armazenamento.value) {
-                armazenamento.style.borderColor = '#dc3545';
-                armazenamento.style.animation = 'pulse 0.5s ease-in-out';
-            }
-
-            setTimeout(() => {
-                cor.style.borderColor = '';
-                armazenamento.style.borderColor = '';
-                this.style.animation = '';
-            }, 500);
+            this.showFormValidationFeedback();
         }
-    });
+    }
+
+    showFormValidationFeedback() {
+        const linkWhatsapp = document.getElementById('linkWhatsapp');
+        const cor = document.getElementById('corProduto');
+        const armazenamento = document.getElementById('armazenamentoProduto');
+
+        // Animação de erro no botão
+        linkWhatsapp.style.animation = 'pulse 0.5s ease-in-out';
+
+        // Highlight campos vazios
+        [cor, armazenamento].forEach(field => {
+            if (field && !field.value) {
+                field.style.borderColor = '#dc3545';
+                field.style.animation = 'pulse 0.5s ease-in-out';
+            }
+        });
+
+        // Reset após animação
+        setTimeout(() => {
+            [cor, armazenamento, linkWhatsapp].forEach(el => {
+                if (el) {
+                    el.style.borderColor = '';
+                    el.style.animation = '';
+                }
+            });
+        }, 500);
+    }
+
+    async preloadImages() {
+        const images = document.querySelectorAll('.card-img-top');
+        const imagePromises = Array.from(images).map(img => {
+            return new Promise((resolve, reject) => {
+                const imageLoader = new Image();
+                imageLoader.onload = resolve;
+                imageLoader.onerror = reject;
+                imageLoader.src = img.src;
+            });
+        });
+
+        try {
+            await Promise.allSettled(imagePromises);
+            console.log('Imagens pré-carregadas com sucesso');
+        } catch (error) {
+            console.warn('Algumas imagens falharam ao pré-carregar:', error);
+        }
+    }
+
+    vibrate(duration) {
+        if (navigator.vibrate) {
+            navigator.vibrate(duration);
+        }
+    }
+
+    delay(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
 }
 
-
-// Inicialização quando DOM estiver carregado
-document.addEventListener('DOMContentLoaded', function() {
-    initCardFlip();
-    initPurchaseModal();
-    initWhatsAppIntegration();
-
+// Inicialização
+document.addEventListener('DOMContentLoaded', () => {
+    new IPhoneStore();
 });
 
-// Preload de imagens para melhor performance
-function preloadImages() {
-    const images = document.querySelectorAll('.card-img-top');
-    images.forEach(img => {
-        const imageLoader = new Image();
-        imageLoader.src = img.src;
+// Service Worker para cache (opcional)
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+            .then(registration => console.log('SW registrado'))
+            .catch(error => console.log('SW falhou:', error));
     });
 }
 
-// Chama preload após um pequeno delay
-setTimeout(preloadImages, 1000);
+
+// script para modal de mais detalhes
+document.querySelectorAll('[data-bs-target="#modalDetalhes"]').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const nome = this.getAttribute('data-nome');
+        const id = this.getAttribute('data-id');
+        const pasta = this.getAttribute('data-pasta'); // vem do PHP
+
+        document.getElementById('detalheTitulo').textContent = nome;
+
+        // Chama o PHP que retorna as imagens da pasta
+        fetch(`getImages.php?pasta=${pasta}`)
+            .then(res => res.json())
+            .then(imagens => {
+                const carouselInner = document.getElementById('carouselDetalhesInner');
+                const carousel = document.getElementById('carouselDetalhes');
+
+                // Limpa conteúdo antigo
+                carouselInner.innerHTML = '';
+                // Remove controles antigos se existirem
+                carousel.querySelectorAll('.carousel-control-prev, .carousel-control-next').forEach(
+                    ctrl => ctrl.remove());
+
+                // Adiciona imagens
+                carouselInner.innerHTML = imagens.map((img, index) => `
+                    <div class="carousel-item ${index === 0 ? 'active' : ''}">
+                        <img src="${img}" class="d-block w-100 rounded" alt="${nome} imagem ${index + 1}">
+                    </div>
+                `).join('');
+
+                // Adiciona botões de navegação se houver mais de uma imagem
+                if (imagens.length > 1) {
+                    carousel.insertAdjacentHTML('beforeend', `
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselDetalhes" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselDetalhes" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Próximo</span>
+                        </button>
+                    `);
+                }
+
+                // Atualiza especificações
+                const specs = [{
+                        label: 'Processador',
+                        valor: this.getAttribute('data-processador') || 'N/A'
+                    },
+                    {
+                        label: 'Câmera',
+                        valor: this.getAttribute('data-camera') || 'N/A'
+                    },
+                    {
+                        label: 'Bateria',
+                        valor: this.getAttribute('data-bateria') || 'N/A'
+                    }
+                ];
+                const listaSpecs = document.getElementById('listaEspecificacoes');
+                listaSpecs.innerHTML = specs.map(spec => `
+    <li class="list-group-item"><strong>${spec.label}:</strong> ${spec.valor}</li>
+`).join('');
+
+
+                // Botão Comprar Agora
+                document.getElementById('btnIrParaCompra').onclick = () => {
+                    bootstrap.Modal.getInstance(document.getElementById('modalDetalhes'))
+                        .hide();
+                    document.getElementById('produtoId').value = id;
+                    document.getElementById('nomeProduto').textContent = nome;
+                    new bootstrap.Modal(document.getElementById('modalComprar')).show();
+                };
+            })
+            .catch(error => {
+                console.error('Erro ao carregar imagens:', error);
+                document.getElementById('carouselDetalhesInner').innerHTML = `
+                    <div class="text-danger">Erro ao carregar imagens.</div>
+                `;
+            });
+    });
+});
 </script>

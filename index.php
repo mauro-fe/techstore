@@ -19,7 +19,8 @@
 
     <base href="http://localhost/megatech2/">
     <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
-    <title>MegaTech - Smartphones Premium | iPhone, Samsung, Xiaomi, Realme</title>
+    <title>MegaTech | Smartphones Premium e Assistência Técnica</title>
+
 
     <!-- Fontes -->
     <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700;800&display=swap"
@@ -51,9 +52,11 @@
                     </a>
                     <a class="navbar-brand" href="home">MegaTech</a>
                 </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item" data-aos="fade-left" data-aos-delay="100">
@@ -84,8 +87,15 @@
     </header>
     <main>
         <?php
+        // ini_set('display_errors', 1);
+        // error_reporting(E_ALL);
 
-        require 'Iphone.php';
+        require_once 'Products.php';
+        require_once 'Iphone.php';
+        require_once 'Xiaomi.php';
+        require_once 'Samsung.php';
+        require_once 'Realme.php';
+
         require_once 'Helpers/utils.php';
 
         if (isset($_GET["param"])) {
@@ -124,8 +134,6 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS Bundle com Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Script do Swiper.js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -136,56 +144,57 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
-    // Initialize AOS
-    AOS.init({
-        duration: 1000,
-        easing: 'ease-in-out',
-        once: false,
-        offset: 100
-    });
-    // jQuery para efeito de opacidade no header durante scroll
-    $(document).ready(function() {
-
-        // Configurações do efeito
-        const scrollStart = 20; // Pixel onde começa a reduzir opacidade
-        const maxScroll = 500; // Pixel onde atinge opacidade mínima
-        const minOpacity = 0.7; // Opacidade mínima (70%)
-
-        // Função que calcula e aplica a opacidade
-        function updateHeaderOpacity() {
-            const scrollTop = $(window).scrollTop();
-            const header = $('.header');
-
-            if (scrollTop <= scrollStart) {
-                // Se ainda não passou do ponto inicial, opacidade total
-                header.css('opacity', '1');
-            } else if (scrollTop >= maxScroll) {
-                // Se passou do ponto máximo, opacidade mínima
-                header.css('opacity', minOpacity);
-            } else {
-                // Calcula opacidade progressiva entre os pontos
-                const scrollProgress = (scrollTop - scrollStart) / (maxScroll - scrollStart);
-                const currentOpacity = 1 - (scrollProgress * (1 - minOpacity));
-                header.css('opacity', currentOpacity);
-            }
-        }
-
-        // Aplica transição CSS suave no header
-        $('.header').css({
-            'transition': 'opacity 0.3s ease',
-            '-webkit-transition': 'opacity 0.3s ease',
-            '-moz-transition': 'opacity 0.3s ease',
-            '-o-transition': 'opacity 0.3s ease'
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true, // 🟢 Melhora performance e evita reanimações que podem causar flicker
+            offset: 100
         });
 
-        // Event listener para scroll
-        $(window).scroll(function() {
+        // jQuery para efeito de opacidade no header durante scroll
+        $(document).ready(function() {
+
+            // Configurações do efeito
+            const scrollStart = 20; // Pixel onde começa a reduzir opacidade
+            const maxScroll = 500; // Pixel onde atinge opacidade mínima
+            const minOpacity = 0.7; // Opacidade mínima (70%)
+
+            // Função que calcula e aplica a opacidade
+            function updateHeaderOpacity() {
+                const scrollTop = $(window).scrollTop();
+                const header = $('.header');
+
+                if (scrollTop <= scrollStart) {
+                    // Se ainda não passou do ponto inicial, opacidade total
+                    header.css('opacity', '1');
+                } else if (scrollTop >= maxScroll) {
+                    // Se passou do ponto máximo, opacidade mínima
+                    header.css('opacity', minOpacity);
+                } else {
+                    // Calcula opacidade progressiva entre os pontos
+                    const scrollProgress = (scrollTop - scrollStart) / (maxScroll - scrollStart);
+                    const currentOpacity = 1 - (scrollProgress * (1 - minOpacity));
+                    header.css('opacity', currentOpacity);
+                }
+            }
+
+            // Aplica transição CSS suave no header
+            $('.header').css({
+                'transition': 'opacity 0.3s ease',
+                '-webkit-transition': 'opacity 0.3s ease',
+                '-moz-transition': 'opacity 0.3s ease',
+                '-o-transition': 'opacity 0.3s ease'
+            });
+
+            // Event listener para scroll
+            $(window).scroll(function() {
+                updateHeaderOpacity();
+            });
+
+            // Aplica efeito inicial
             updateHeaderOpacity();
         });
-
-        // Aplica efeito inicial
-        updateHeaderOpacity();
-    });
     </script>
 </body>
 

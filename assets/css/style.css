@@ -150,21 +150,26 @@ body {
     color: #00abff !important;
   }
 }
-.swiperCell {
-  padding: 20px;
+.mySwiperIphones {
+  max-width: 320px;
+  margin: auto;
+  padding: 20px 0;
 }
-.swiperCell .swiper-slide img {
+.mySwiperIphones .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mySwiperIphones .swiper-slide img {
   width: 220px;
   height: 350px;
   border-radius: 10px;
   transition: 0.7s;
 }
-.swiperCell .swiper-slide img:hover {
+.mySwiperIphones .swiper-slide img:hover {
   transform: translate(5px, -10px) rotate(-5deg);
-  filter: drop-shadow(-8px 8px 7px #000);
-}
-.swiperCell .swiper-wrapper {
-  margin: 20px 0;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
+  filter: brightness(1.05);
 }
 
 .cell .cell-container {
@@ -322,53 +327,6 @@ body {
 }
 .footer img {
   width: 40px;
-}
-
-.card-flip {
-  perspective: 1000px;
-}
-.card-flip .card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-.card-flip .card-inner.is-flipped {
-  transform: rotateY(180deg);
-}
-.card-flip .card-inner .card-front, .card-flip .card-inner .card-back {
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 16px;
-}
-.card-flip .card-inner .card-front {
-  transform: rotateY(0deg);
-}
-.card-flip .card-inner .card-front .card-img-top {
-  object-fit: contain;
-  height: 260px;
-  /* ⬅️ Aumenta proporcional */
-  padding: 20px;
-}
-.card-flip .card-inner .card-back {
-  transform: rotateY(180deg);
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.card-flip .card-inner .card {
-  max-width: 100%;
-  /* Se quiser ocupar toda a largura da coluna */
-  width: 280px;
-  /* Ou um tamanho fixo que desejar */
-  min-height: 420px;
-  margin: auto;
-  border-radius: 16px;
-}
-.card-flip .card-body {
-  padding: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */

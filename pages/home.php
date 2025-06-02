@@ -1,37 +1,31 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+
 <!-- Container principal -->
 <div class="container-fluid container">
-    <div class="swiperCell text-center" data-aos="zoom-in" data-aos-delay="100">
+    <div class="text-center" data-aos="zoom-in" data-aos-delay="100">
         <h2><strong><?= $iphones[1]->marca ?></strong></h2>
-        <div class="swiper-wrapper">
-            <!-- Slide 1 -->
-            <div class="swiper-slide">
-                <h3><?= $iphones[1]->nome ?></h3>
-                <img src="<?= $iphones[1]->imagem ?>" alt="<?= $iphones[1]->nome ?>" class="img-fluid">
-            </div>
 
-            <!-- Slide 2 -->
-            <div class="swiper-slide ">
-                <h3><?= $iphones[2]->nome ?></h3>
-                <img src="<?= $iphones[2]->imagem ?>" alt="<?= $iphones[2]->nome ?>" class="img-fluid">
+        <!-- Swiper container -->
+        <div class="swiper mySwiperIphones">
+            <div class="swiper-wrapper">
+                <?php for ($i = 1; $i <= 4; $i++): ?>
+                    <div class="swiper-slide">
+                        <h3><?= $iphones[$i]->nome ?></h3>
+                        <img src="<?= $iphones[$i]->imagem ?>" alt="<?= $iphones[$i]->nome ?>" class="img-fluid">
+                    </div>
+                <?php endfor; ?>
             </div>
-
-            <!-- Slide 3 -->
-            <div class="swiper-slide ">
-                <h3><?= $iphones[3]->nome ?></h3>
-                <img src="<?= $iphones[3]->imagem ?>" alt="<?= $iphones[3]->nome ?>" class="img-fluid">
-            </div>
-
-            <!-- Slide 4 -->
-            <div class="swiper-slide ">
-                <h3><?= $iphones[4]->nome ?></h3>
-                <img src="<?= $iphones[4]->imagem ?>" alt="<?= $iphones[4]->nome ?>" class="img-fluid">
-            </div>
+            <!-- Paginação opcional -->
+            <div class="swiper-pagination mt-5"></div>
         </div>
+
         <p>Disponível agora com ofertas exclusivas.</p>
         <div class="btn-saiba-mais">
             <a href="celulares/iphone">Saiba mais</a>
         </div>
     </div>
+
 
 
     <!-- Grid de produtos -->
@@ -82,7 +76,7 @@
                         <div class="card-body text-center">
                             <h5 class="card-title">Fone Bluetooth</h5>
                             <p class="card-text">Som de alta qualidade e bateria duradoura.</p>
-                            <a href="#" class="btn-comprar">Comprar</a>
+                            <button type="button" class="btn-comprar">Comprar</button>
                         </div>
                     </div>
                 </div>
@@ -93,7 +87,8 @@
                         <div class="card-body text-center">
                             <h5 class="card-title">Capinha iPhone</h5>
                             <p class="card-text">Proteção elegante e discreta para seu aparelho.</p>
-                            <a href="#" class="btn-comprar">Comprar</a>
+                            <button type="button" class="btn-comprar">Comprar</button>
+
                         </div>
                     </div>
                 </div>
@@ -103,7 +98,8 @@
                         <div class="card-body text-center">
                             <h5 class="card-title">Fone Bluetooth</h5>
                             <p class="card-text">Som de alta qualidade e bateria duradoura.</p>
-                            <a href="#" class="btn-comprar">Comprar</a>
+                            <button type="button" class="btn-comprar">Comprar</button>
+
                         </div>
                     </div>
                 </div>
@@ -114,7 +110,8 @@
                         <div class="card-body text-center">
                             <h5 class="card-title">Capinha iPhone</h5>
                             <p class="card-text">Proteção elegante e discreta para seu aparelho.</p>
-                            <a href="#" class="btn-comprar">Comprar</a>
+                            <button type="button" class="btn-comprar">Comprar</button>
+
                         </div>
                     </div>
                 </div>
@@ -124,7 +121,8 @@
                         <div class="card-body text-center">
                             <h5 class="card-title">Fone Bluetooth</h5>
                             <p class="card-text">Som de alta qualidade e bateria duradoura.</p>
-                            <a href="#" class="btn-comprar">Comprar</a>
+                            <button type="button" class="btn-comprar">Comprar</button>
+
                         </div>
                     </div>
                 </div>
@@ -135,7 +133,8 @@
                         <div class="card-body text-center">
                             <h5 class="card-title">Capinha iPhone</h5>
                             <p class="card-text">Proteção elegante e discreta para seu aparelho.</p>
-                            <a href="#" class="btn-comprar">Comprar</a>
+                            <button type="button" class="btn-comprar">Comprar</button>
+
                         </div>
                     </div>
                 </div>
@@ -273,47 +272,63 @@
         </div>
     </section>
 </div>
-
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
 <script>
-const swiper = new Swiper(".mySwiper", {
-    slidesPerView: 4, // mostra 3, mas centralizado
-    centeredSlides: true,
-    spaceBetween: 30,
-    loop: true,
-    speed: 1000,
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    breakpoints: {
-        0: {
-            slidesPerView: 1
-        },
-        576: {
-            slidesPerView: 2
-        },
-        992: {
-            slidesPerView: 3
-        },
-        1200: {
-            slidesPerView: 4
-        }
-    }
-});
-const swiperCell = new Swiper('.swiperCell', {
-    effect: 'fade',
-    loop: true,
-    autoplay: {
-        delay: 4000,
-        disableOnInteraction: false
-    },
-    fadeEffect: {
-        crossFade: true
-    }
-});
+    document.addEventListener('DOMContentLoaded', function() {
+        new Swiper('.mySwiperIphones', {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            slidesPerView: 1,
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        new Swiper('.mySwiper', {
+            loop: true,
+            spaceBetween: 30,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    centeredSlides: false
+                },
+                576: {
+                    slidesPerView: 2,
+                    centeredSlides: false
+                },
+                992: {
+                    slidesPerView: 3,
+                    centeredSlides: true
+                },
+                1200: {
+                    slidesPerView: 4,
+                    centeredSlides: true
+                }
+            }
+        });
+    });
+
+    document.querySelectorAll('.btn-comprar').forEach(btn => {
+        btn.addEventListener('click', e => {
+            e.stopPropagation(); // impede que o clique afete o Swiper
+            // aqui você pode abrir um modal, enviar pro WhatsApp etc
+            console.log('Botão comprar clicado!');
+        });
+    });
 </script>

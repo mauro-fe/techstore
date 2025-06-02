@@ -61,6 +61,7 @@ body {
 // Fim botões
 
 // Header
+
 .navbar {
   background-color: $tertiaryColor !important;
   backdrop-filter: saturate(180%) blur(20px);
@@ -170,21 +171,25 @@ body {
 // Fim header
 
 // Seções de celulares
-
-.swiperCell {
-  padding: 20px;
-  & .swiper-slide img {
-    width: 220px;
-    height: 350px;
-    border-radius: 10px;
-    transition: 0.7s;
-    &:hover {
-      transform: translate(5px, -10px) rotate(-5deg);
-      filter: $boxShadowHoverCell;
+.mySwiperIphones {
+  max-width: 320px;
+  margin: auto;
+  padding: 20px 0;
+  & .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & img {
+      width: 220px;
+      height: 350px;
+      border-radius: 10px;
+      transition: 0.7s;
+      &:hover {
+        transform: translate(5px, -10px) rotate(-5deg);
+        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
+        filter: brightness(1.05);
+      }
     }
-  }
-  .swiper-wrapper {
-    margin: 20px 0;
   }
 }
 
