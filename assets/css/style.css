@@ -249,7 +249,7 @@ header {
 
 .assistencia-section {
   padding: 2rem 1rem;
-  background: linear-gradient(to top, #e0f2ff, #f9f9f9);
+  background: #00abff33;
   display: flex;
   flex-direction: column;
   align-items: center;
