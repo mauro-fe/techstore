@@ -892,12 +892,12 @@
         buildWhatsAppMessage(nome, cor, armazenamento, quantidade) {
             return `Olá! Tenho interesse no *${nome}*.
 
-📱 Produto: *${nome}*
-🎨 Cor: *${cor}*
-💾 Armazenamento: *${armazenamento}*
-📦 Quantidade: *${quantidade}*
+        📱 Produto: *${nome}*
+        🎨 Cor: *${cor}*
+        💾 Armazenamento: *${armazenamento}*
+        📦 Quantidade: *${quantidade}*
 
-Poderia me passar mais informações sobre disponibilidade e formas de pagamento?`;
+        Poderia me passar mais informações sobre disponibilidade e formas de pagamento?`;
         }
 
         handleWhatsAppClick(e, linkWhatsapp) {
