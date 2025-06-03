@@ -60,7 +60,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto text-center">
                         <li class="nav-item" data-aos="fade-left" data-aos-delay="100">
-                            <a class="nav-link me-4" href="home">Loja</a>
+                            <a class="nav-link me-4" href="home">Home</a>
                         </li>
                         <li class="nav-item dropdown" data-aos="fade-left" data-aos-delay="200">
                             <a class="nav-link me-4">Celulares</a>
@@ -73,6 +73,9 @@
                         </li>
                         <li class="nav-item" data-aos="fade-left" data-aos-delay="300">
                             <a class="nav-link me-4" href="assistencia-tecnica">Assistência Técnica</a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-left" data-aos-delay="300">
+                            <a class="nav-link me-4" href="sobre-nos">Sobre nós</a>
                         </li>
                         <li class="nav-item" data-aos="fade-left" data-aos-delay="400">
                             <a class="nav-link me-4" href="contato">Contato</a>
