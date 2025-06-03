@@ -108,7 +108,7 @@
     /* Main Content */
     .main-content {
         position: relative;
-        padding-top: 60px;
+        margin-top: 7rem;
     }
 
 
@@ -246,11 +246,12 @@
         font-weight: 600;
     }
 
-    .submit-btn {
-        width: 50%;
+    .submit-btn,
+    .reset-btn {
+        width: 45%;
         background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
         color: white;
-        padding: 1rem;
+        padding: .5rem;
         border: none;
         border-radius: 15px;
         font-size: 1.2rem;
@@ -260,7 +261,9 @@
         margin-top: 1rem;
         position: relative;
         overflow: hidden;
+        margin: 0 10px;
     }
+
 
     .submit-btn::before {
         content: '';
@@ -295,6 +298,8 @@
         align-items: center;
         flex-direction: column;
         gap: 2rem;
+        margin-top: 7rem;
+
     }
 
     .info-header {
@@ -769,12 +774,16 @@
                             required></textarea>
                         <label for="message">Sua Mensagem *</label>
                     </div>
-
-                    <button type="submit" class="submit-btn">
-                        <i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i>
-                        Enviar Mensagem
-                    </button>
-
+                    <div class="row contant-buttons d-flex justify-content-center">
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            Enviar Mensagem
+                        </button>
+                        <button type="reset" class="reset-btn">
+                            <i class="fas fa-trash"></i>
+                            Limpar
+                        </button>
+                    </div>
                 </form>
             </div>
 
@@ -839,7 +848,8 @@
                         <a href="#" class="social-link whatsapp" title="WhatsApp">
                             <i class="fab fa-whatsapp"></i>
                         </a>
-                        <a href="#" class="social-link instagram" title="Instagram">
+                        <a href="https://www.instagram.com/megatech_cdl/" class="social-link instagram"
+                            title="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
                         <a href="#" class="social-link facebook" title="Facebook">
@@ -919,6 +929,9 @@
             }
         });
 
+        const resetBtn = document.querySelector(".reset-btn");
+
+
         // Email validation
         const email = document.getElementById('email');
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -967,6 +980,11 @@
             });
 
     });
+
+    resetBtn.addEventListener('click', function() {
+        const formControl = document.querySelector('.form-control').value;
+        formControl = '';
+    })
 
     // Success message functions
     function showSuccessMessage() {
