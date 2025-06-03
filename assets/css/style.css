@@ -5,6 +5,12 @@
   padding: 0;
 }
 
+body,
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Inter", sans-serif;
   color: #1d1d1f;

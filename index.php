@@ -118,7 +118,7 @@
         ?>
     </main>
 
-    <footer class="footer" data-aos="fade-up" data-aos-delay="100">
+    <footer class="footer">
         <div class="container">
             <div class="row">
                 <div class="navbar-logo">
