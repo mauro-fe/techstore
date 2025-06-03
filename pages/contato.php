@@ -730,32 +730,35 @@
                     <p>Preencha o formulário abaixo e entraremos em contato o mais breve possível</p>
                 </div>
 
-                <form action="enviar.php" method="post" class="contact-form" id="contactForm">
+                <form action="https://formsubmit.co/devmaurofelix@gmail.com" method="post" class="contact-form"
+                    id="contactForm">
+                    <input type="hidden" name="_next" id="nextRedirect" value="">
+
                     <div class="form-row">
                         <div class="form-group form-floating-label">
-                            <input type="text" id="fullName" name="fullName" class="form-control" placeholder=" "
-                                required>
+                            <input type="text" id="fullName" name="Nome completo    " class="form-control"
+                                placeholder=" " required>
                             <label for="fullName">Nome Completo *</label>
                         </div>
                         <div class="form-group form-floating-label">
-                            <input type="tel" id="phone" name="phone" class="form-control" placeholder=" " required>
+                            <input type="tel" id="phone" name="Telefone" class="form-control" placeholder=" " required>
                             <label for="phone">Telefone *</label>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group form-floating-label">
-                            <input type="email" id="email" name="email" class="form-control" placeholder=" " required>
+                            <input type="email" id="email" name="E-mail" class="form-control" placeholder=" " required>
                             <label for="email">E-mail *</label>
                         </div>
                         <div class="form-group form-floating-label">
-                            <input type="text" id="city" name="city" class="form-control" placeholder=" " required>
+                            <input type="text" id="city" name="Cidade" class="form-control" placeholder=" " required>
                             <label for="city">Cidade *</label>
                         </div>
                     </div>
 
                     <div class="form-group form-floating-label">
-                        <select id="foundUs" name="foundUs" class="form-control select" required>
+                        <select id="foundUs" name="Como nos encontrou" class="form-control select" required>
                             <option value="">Selecione uma opção</option>
                             <option value="google">Google / Pesquisa Online</option>
                             <option value="instagram">Instagram</option>
@@ -770,7 +773,7 @@
                     </div>
 
                     <div class="form-group form-floating-label">
-                        <textarea id="message" name="message" class="form-control textarea" placeholder=" "
+                        <textarea id="message" name="Mensagem" class="form-control textarea" placeholder=" "
                             required></textarea>
                         <label for="message">Sua Mensagem *</label>
                     </div>
@@ -895,6 +898,8 @@
         </button>
     </div>
 </main>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <script>
     // Phone mask
     function maskPhone(value) {
@@ -909,15 +914,18 @@
         e.target.value = maskPhone(e.target.value);
     });
 
-    // Form validation and submission
     document.getElementById('contactForm').addEventListener('submit', function(e) {
         e.preventDefault();
 
-        const submitBtn = this.querySelector('.submit-btn');
+        // Redireciona para a própria página com hash de sucesso
+        const currentUrl = window.location.href.split('#')[0];
+        document.getElementById('nextRedirect').value = currentUrl + '#contato-sucesso';
+
+        const form = this;
+        const submitBtn = form.querySelector('.submit-btn');
         const originalText = submitBtn.innerHTML;
 
-        // Validation
-        const requiredFields = this.querySelectorAll('input[required], select[required], textarea[required]');
+        const requiredFields = form.querySelectorAll('input[required], select[required], textarea[required]');
         let isValid = true;
 
         requiredFields.forEach(field => {
@@ -925,96 +933,69 @@
                 field.style.borderColor = 'var(--danger-color)';
                 isValid = false;
             } else {
-                field.style.borderColor = 'var(--gray-300);'
+                field.style.borderColor = 'var(--gray-300)';
             }
         });
 
-        const resetBtn = document.querySelector(".reset-btn");
-
-
-        // Email validation
         const email = document.getElementById('email');
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email.value)) {
-            email.style.borderColor = 'var(--danger-color)'
+            email.style.borderColor = 'var(--danger-color)';
             isValid = false;
         }
 
         if (!isValid) {
-            alert('Por favor, preencha todos os campos obrigatórios corretamente.');
+            Swal.fire({
+                icon: 'error',
+                title: 'Campos obrigatórios!',
+                text: 'Preencha todos os campos corretamente.',
+                confirmButtonText: 'Ok'
+            });
             return;
         }
 
-        // Simulate form submission
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin" style="margin-right: 0.5rem;"></i>Enviando...';
-        submitBtn.disabled = true;
-
-        const formData = new FormData(this);
-
-        fetch('enviar.php', {
-                method: 'POST',
-                body: new FormData(this)
-            })
-            .then(response => {
-                if (response.ok) {
-                    return response.text();
-                } else {
-                    throw new Error('Erro no envio');
-                }
-            })
-            .then(text => {
-                if (text.trim() === 'ok') {
-                    showSuccessMessage();
-                    this.reset();
-                } else {
-                    alert('Erro ao enviar a mensagem. Tente novamente.');
-                }
-            })
-            .catch(error => {
-                console.error('Erro:', error);
-                alert('Erro ao enviar a mensagem. Verifique sua conexão.');
-            })
-            .finally(() => {
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-            });
-
-    });
-
-    resetBtn.addEventListener('click', function() {
-        const formControl = document.querySelector('.form-control').value;
-        formControl = '';
-    })
-
-    // Success message functions
-    function showSuccessMessage() {
-        document.getElementById('overlay').classList.add('show');
-        document.getElementById('successMessage').classList.add('show');
-        document.body.style.overflow = 'hidden';
-    }
-
-    function closeSuccessMessage() {
-        document.getElementById('overlay').classList.remove('show');
-        document.getElementById('successMessage').classList.remove('show');
-        document.body.style.overflow = 'auto';
-    }
-
-    // Close modal when clicking overlay
-    document.getElementById('overlay').addEventListener('click', closeSuccessMessage);
-
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+        Swal.fire({
+            icon: 'question',
+            title: 'Deseja enviar sua mensagem?',
+            showCancelButton: true,
+            confirmButtonText: 'Sim, enviar',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Enviando...';
+                submitBtn.disabled = true;
+                setTimeout(() => {
+                    form.submit(); // Envia para formsubmit
+                }, 300);
             }
         });
     });
+
+    // ✅ Exibe alerta de sucesso se houver hash #contato-sucesso
+    if (window.location.hash === '#contato-sucesso') {
+        Swal.fire({
+            icon: 'success',
+            title: 'Mensagem enviada com sucesso!',
+            text: 'Entraremos em contato em breve.',
+            confirmButtonText: 'Fechar'
+        });
+
+        // Limpa o hash da URL depois de alguns segundos
+        setTimeout(() => {
+            history.replaceState(null, null, window.location.pathname);
+        }, 4000);
+    }
+
+
+
+    const resetBtn = document.querySelector(".reset-btn");
+
+    resetBtn.addEventListener('click', function() {
+        const formControl = document.querySelector('.form-control');
+        formControl.value = '';
+    })
+
+
 
     // Form field focus effects
     document.querySelectorAll('.form-control').forEach(field => {
