@@ -46,7 +46,7 @@
         align-items: center;
         position: relative;
         overflow: hidden;
-        padding: 58px;
+        padding: 85px;
     }
 
     .assistencia-tecnica_hero::before {
@@ -1128,28 +1128,7 @@
         });
     });
 
-    // Form submission
-    document.querySelector('.contact-form form').addEventListener('submit', function(e) {
-        e.preventDefault();
 
-        // Get form data
-        const formData = new FormData(this);
-        const data = Object.fromEntries(formData);
-
-        // Simulate form submission
-        const submitBtn = this.querySelector('.submit-btn');
-        const originalText = submitBtn.textContent;
-
-        submitBtn.textContent = 'Enviando...';
-        submitBtn.disabled = true;
-
-        setTimeout(() => {
-            alert('Solicitação enviada com sucesso! Entraremos em contato em breve.');
-            this.reset();
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-        }, 2000);
-    });
 
     // Service buttons
     document.querySelectorAll('.service-btn').forEach(btn => {
@@ -1234,75 +1213,4 @@
             document.body.style.opacity = '1';
         }, 100);
     });
-
-    // Função para WhatsApp dinâmico
-    function initWhatsAppIntegration() {
-        const linkWhatsapp = document.getElementById('linkWhatsapp');
-        const form = document.getElementById('entrarEmContato');
-
-        function updateWhatsAppLink() {
-            const nameWhats = document.getElementById('nameWhats').value;
-            const emailWhats = document.getElementById('emailWhats').value;
-            const deviceWhats = document.getElementById('deviceWhats').value;
-            const problemWhats = document.getElementById('problemWhats').value;
-
-            if (deviceWhats && problemWhats && nameWhats && emailWhats) {
-                const mensagem =
-                    `Olá! Me chamo *${nameWhats}*\n` +
-                    `Meu email é: *${emailWhats}*\n` +
-                    `Modelo do dispositivo: *${deviceWhats}*\n` +
-                    `Descrição do problema: *${problemWhats}*\n\n` +
-                    `Poderia me passar mais informações sobre disponibilidade de conserto e formas de pagamento?`;
-
-                const numero = '5544998170770';
-                const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
-
-                linkWhatsapp.href = url;
-                linkWhatsapp.style.opacity = '1';
-                linkWhatsapp.style.transform = 'scale(1)';
-            } else {
-                linkWhatsapp.href = '#';
-                linkWhatsapp.style.opacity = '0.6';
-                linkWhatsapp.style.transform = 'scale(0.95)';
-            }
-        }
-
-        // Atualiza link a cada digitação
-        form.addEventListener('input', updateWhatsAppLink);
-
-        // Impede envio incompleto
-        linkWhatsapp.addEventListener('click', function(e) {
-            if (this.href === '#' || this.href.includes('#')) {
-                e.preventDefault();
-
-                this.style.animation = 'pulse 0.5s ease-in-out';
-
-                const emailWhats = document.getElementById('emailWhats');
-                const deviceWhats = document.getElementById('deviceWhats');
-
-                if (!emailWhats.value) {
-                    emailWhats.style.borderColor = '#dc3545';
-                    emailWhats.style.animation = 'pulse 0.5s ease-in-out';
-                }
-                if (!deviceWhats.value) {
-                    deviceWhats.style.borderColor = '#dc3545';
-                    deviceWhats.style.animation = 'pulse 0.5s ease-in-out';
-                }
-
-                setTimeout(() => {
-                    emailWhats.style.borderColor = '';
-                    deviceWhats.style.borderColor = '';
-                    this.style.animation = '';
-                }, 500);
-            }
-        });
-
-        // Evita envio padrão do form
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-        });
-    }
-
-    // Ativar após carregamento da página
-    window.addEventListener('DOMContentLoaded', initWhatsAppIntegration);
 </script>
