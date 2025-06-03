@@ -67,8 +67,9 @@ body {
 // Fim botões
 
 // Header
-header {
-  position: sticky;
+.header {
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 1000;
 }
@@ -131,6 +132,9 @@ header {
     box-shadow: none !important;
   }
   &-logo {
+    & .title {
+      text-transform: uppercase;
+    }
     & .navbar-brand {
       color: $secundaryColor;
       font-weight: bold;
@@ -189,10 +193,14 @@ header {
 // Fim header
 
 // Seções de celulares
+.container-fluid {
+  padding-top: 70px;
+}
+
 .mySwiperIphones {
   max-width: 320px;
   margin: auto;
-  padding: 20px 0;
+  margin: 10px 0;
   & .swiper-slide {
     display: flex;
     flex-direction: column;

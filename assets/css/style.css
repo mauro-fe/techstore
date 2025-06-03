@@ -55,8 +55,9 @@ body {
   background-color: #006598;
 }
 
-header {
-  position: sticky;
+.header {
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 1000;
 }
@@ -119,6 +120,9 @@ header {
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   box-shadow: none !important;
 }
+.navbar-logo .title {
+  text-transform: uppercase;
+}
 .navbar-logo .navbar-brand {
   color: #fff;
   font-weight: bold;
@@ -168,10 +172,14 @@ header {
     color: #00abff !important;
   }
 }
+.container-fluid {
+  padding-top: 70px;
+}
+
 .mySwiperIphones {
   max-width: 320px;
   margin: auto;
-  padding: 20px 0;
+  margin: 10px 0;
 }
 .mySwiperIphones .swiper-slide {
   display: flex;

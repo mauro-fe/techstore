@@ -2,7 +2,7 @@
 
 
 <!-- Container principal -->
-<div class="container-fluid container">
+<div class="container-fluid container mt-2">
     <div class="text-center mb-5" data-aos="zoom-in" data-aos-delay="100">
         <h2><strong><?= $iphones[1]->marca ?></strong></h2>
 

@@ -43,14 +43,14 @@
 
 <body>
     <!-- Navbar -->
-    <header>
+    <header class="header">
         <nav class="navbar navbar-expand-lg  header">
             <div class="container">
                 <div class="navbar-logo" data-aos="fade-right" data-aos-delay="100">
                     <a class="navbar-brand" href="home">
                         <img src="assets/img/logo.png" alt="Logo">
                     </a>
-                    <a class="navbar-brand" href="home">MegaTech</a>
+                    <a class="navbar-brand title" href="home">MegaTech</a>
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
