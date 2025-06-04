@@ -5,12 +5,6 @@
   padding: 0;
 }
 
-body,
-html {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
 body {
   font-family: "Inter", sans-serif;
   color: #1d1d1f;
@@ -53,6 +47,10 @@ body {
 
 .btn-comprar:hover {
   background-color: #006598;
+}
+
+.header .navbar .container {
+  display: inline-block !important;
 }
 
 .container-fluid {

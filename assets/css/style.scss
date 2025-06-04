@@ -14,12 +14,6 @@ $boxShadowHoverCell: drop-shadow(-8px 8px 7px #000);
   padding: 0;
 }
 
-body,
-html {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
 body {
   font-family: "Inter", sans-serif;
   color: #1d1d1f;
@@ -66,6 +60,13 @@ body {
 }
 // Fim botões
 
+.header {
+  & .navbar {
+    & .container {
+      display: inline-block !important;
+    }
+  }
+}
 // Fim header
 
 // Seções de celulares

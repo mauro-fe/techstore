@@ -1,3 +1,7 @@
+<?php
+
+$BASE_URL = $_SERVER['SERVER_NAME'] . $_SERVER['SCRIPT_NAME'];
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -17,7 +21,7 @@
     <meta property="og:image" content="assets/img/logo.png">
     <link rel="canonical" href="https://megatech.com.br">
 
-    <base href="http://localhost/megatech2/">
+    <base href="http://<?= $BASE_URL ?>">
     <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
     <title>MegaTech | Smartphones Premium e Assistência Técnica</title>
 
@@ -69,7 +73,7 @@
         .navbar-wrapper {
             display: flex;
             align-items: center;
-            justify-content: space-around !important;
+            justify-content: space-between !important;
             position: relative;
         }
 
@@ -407,12 +411,13 @@
 
         /* Responsividade */
         @media (max-width: 991px) {
-            body {
-                padding-top: 70px;
-            }
 
             body.menu-open {
                 overflow: hidden;
+            }
+
+            .navbar {
+                height: 70px;
             }
 
             .navbar-toggler {
