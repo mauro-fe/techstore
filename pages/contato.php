@@ -562,24 +562,6 @@
         font-size: 2rem;
     }
 
-    .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 9999;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-    }
-
-    .overlay.show {
-        opacity: 1;
-        visibility: visible;
-    }
-
     .footer {
         margin-top: 50px;
     }
@@ -707,9 +689,10 @@
 
                 <div class="hero-icons">
                     <div class="hero-icon" data-aos="fade-up" data-aos-delay="200">
-                        <i class="fas fa-phone"></i>
+                        <a href="https://wa.me/+554498170770" target="_blank" style="color: #fff"><i
+                                class="fas fa-phone"></i></a>
                     </div>
-                    <div class="hero-icon" data-aos="fade-up" data-aos-delay="400">
+                    <div class="hero-icon" data-aos="fade-up" data-aos-dela y="400">
                         <i class="fas fa-envelope"></i>
                     </div>
                     <div class="hero-icon" data-aos="fade-up" data-aos-delay="600">
@@ -721,12 +704,12 @@
     </section>
 
     <!-- Main Content -->
-    <section class="main-content container">
+    <section class="main-content container" id="form-contato">
         <div class="content-column">
             <!-- Contact Form -->
             <div class="contact-form-section" data-aos="fade-right" data-aos-duration="1000">
                 <div class="form-header">
-                    <h2>Envie sua Mensagem</h2>
+                    <h2>Envie sua mensagem</h2>
                     <p>Preencha o formulário abaixo e entraremos em contato o mais breve possível</p>
                 </div>
 
@@ -794,7 +777,7 @@
             <div class="contact-info-section contact-info-card container mt-5" data-aos="fade-up"
                 data-aos-duration="1000">
                 <div class="info-header" data-aos="fade-up" data-aos-delay="100">
-                    <h2>Informações de Contato</h2>
+                    <h2>Informações de contato</h2>
                     <p>Diversos canais para você entrar em contato conosco</p>
                 </div>
                 <div class="row">
@@ -870,7 +853,7 @@
     <!-- Map Section -->
     <section class="map-section container" data-aos="fade-up" data-aos-duration="1000">
         <div class="map-header">
-            <h2>Nossa Localização</h2>
+            <h2>Nossa localização</h2>
             <p>Venha nos visitar em nossa loja física</p>
         </div>
         <div class="map-container">
@@ -882,21 +865,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Success Message Modal -->
-    <div class="overlay" id="overlay"></div>
-    <div class="success-message" id="successMessage">
-        <div class="success-icon">
-            <i class="fas fa-check"></i>
-        </div>
-        <h3 style="color: var(--success-color); margin-bottom: 1rem;">Mensagem Enviada!</h3>
-        <p style="color: var(--gray-600); margin-bottom: 2rem;">Obrigado pelo contato! Entraremos em contato em até 24
-            horas.</p>
-        <button onclick="closeSuccessMessage()"
-            style="background: var(--success-color); color: white; border: none; padding: 0.8rem 2rem; border-radius: 10px; font-weight: 600; cursor: pointer;">
-            Fechar
-        </button>
-    </div>
 </main>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 

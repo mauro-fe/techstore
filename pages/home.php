@@ -2,7 +2,7 @@
 
 
 <!-- Container principal -->
-<div class="container-fluid container mt-2">
+<div class="container-fluid container">
     <div class="text-center mb-5" data-aos="zoom-in" data-aos-delay="100">
         <h2><strong><?= $iphones[1]->marca ?></strong></h2>
 
@@ -144,7 +144,7 @@
     </div>
     <section class="assistencia-section">
         <div data-aos="fade-up" data-aos-delay="100">
-            <h2>Assistência Técnica Especializada</h2>
+            <h2>Assistência técnica especializada</h2>
             <p class="text-center text-muted m-2">Consertos rápidos, peças originais e garantia estendida para seu
                 smartphone.</p>
         </div>

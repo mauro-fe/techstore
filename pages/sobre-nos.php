@@ -324,7 +324,7 @@
 
 <section class="values-section">
     <div class="container">
-        <h2>Nossos Valores</h2>
+        <h2>Nossos valores</h2>
         <div class="values-grid">
             <div class="value-card">
                 <div class="value-icon">🎯</div>
@@ -355,9 +355,9 @@
 
 <section class="cta-section">
     <div class="container">
-        <h2>Venha Nos Conhecer!</h2>
-        <p>Estamos prontos para ajudar você a encontrar o smartphone perfeito</p>
-        <a href="#contato" class="cta-button">Entre em Contato</a>
+        <h2>Venha nos conhecer!</h2>
+        <p>Estamos prontos para ajudar você a encontrar o smartphone perfeito.</p>
+        <a href="contato" class="cta-button">Entre em Contato</a>
     </div>
 </section>
 
