@@ -642,6 +642,12 @@
             margin-bottom: 1rem;
         }
 
+        .submit-btn,
+        .reset-btn {
+            width: 30%;
+            font-size: 16px;
+        }
+
         .social-links {
             flex-wrap: wrap;
         }
@@ -669,10 +675,7 @@
             font-size: 2rem;
         }
 
-        .hero-icons {
-            flex-direction: column;
-            align-items: center;
-        }
+
     }
 </style>
 <main>
@@ -763,7 +766,7 @@
                     <div class="row contant-buttons d-flex justify-content-center">
                         <button type="submit" class="submit-btn">
                             <i class="fas fa-paper-plane"></i>
-                            Enviar Mensagem
+                            Enviar
                         </button>
                         <button type="reset" class="reset-btn">
                             <i class="fas fa-trash"></i>
