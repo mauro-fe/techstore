@@ -10,10 +10,10 @@
         <div class="swiper mySwiperIphones">
             <div class="swiper-wrapper">
                 <?php for ($i = 1; $i <= 4; $i++): ?>
-                    <div class="swiper-slide">
-                        <h3><?= $iphones[$i]->nome ?></h3>
-                        <img src="<?= $iphones[$i]->imagem ?>" alt="<?= $iphones[$i]->nome ?>" class="img-fluid">
-                    </div>
+                <div class="swiper-slide">
+                    <h3><?= $iphones[$i]->nome ?></h3>
+                    <img src="<?= $iphones[$i]->imagem ?>" alt="<?= $iphones[$i]->nome ?>" class="img-fluid">
+                </div>
                 <?php endfor; ?>
             </div>
             <!-- Paginação opcional -->
@@ -29,7 +29,7 @@
 
 
     <!-- Grid de produtos -->
-    <section class="cell row g-3 mb-3 ">
+    <section class="cell row g-3 mb-3">
         <div class="col-md-6">
             <div class="cell-container" data-aos="fade-right" data-aos-delay="100">
                 <h2><?= $xiaomis[1]->marca ?></h2>
@@ -276,51 +276,51 @@
 
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        new Swiper('.mySwiperIphones', {
-            loop: true,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true
-            },
-            slidesPerView: 1,
-        });
+document.addEventListener('DOMContentLoaded', function() {
+    new Swiper('.mySwiperIphones', {
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+        slidesPerView: 1,
     });
+});
 
-    document.addEventListener('DOMContentLoaded', function() {
-        new Swiper('.mySwiper', {
-            loop: true,
-            spaceBetween: 30,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
+document.addEventListener('DOMContentLoaded', function() {
+    new Swiper('.mySwiper', {
+        loop: true,
+        spaceBetween: 30,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+                centeredSlides: false
             },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
+            576: {
+                slidesPerView: 2,
+                centeredSlides: false
             },
-            breakpoints: {
-                0: {
-                    slidesPerView: 1,
-                    centeredSlides: false
-                },
-                576: {
-                    slidesPerView: 2,
-                    centeredSlides: false
-                },
-                992: {
-                    slidesPerView: 3,
-                    centeredSlides: true
-                },
-                1200: {
-                    slidesPerView: 4,
-                    centeredSlides: true
-                }
+            992: {
+                slidesPerView: 3,
+                centeredSlides: true
+            },
+            1200: {
+                slidesPerView: 4,
+                centeredSlides: true
             }
-        });
+        }
     });
+});
 </script>

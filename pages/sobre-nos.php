@@ -25,12 +25,6 @@
     box-sizing: border-box;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
 
 .intro-section {
     background: white;

@@ -48,18 +48,6 @@
             box-sizing: border-box;
         }
 
-        body {
-            padding-top: 80px;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #f5f5f5;
-        }
-
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
 
         /* Header Principal */
         .header {
@@ -74,17 +62,15 @@
             background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
             backdrop-filter: saturate(180%) blur(20px);
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
-            padding: 0.5rem 0;
-            min-height: 70px;
+            padding: 0;
         }
 
         /* Wrapper do navbar */
         .navbar-wrapper {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: space-around !important;
             position: relative;
-            min-height: 60px;
         }
 
         /* Indicador de Progresso de Scroll */
@@ -102,7 +88,6 @@
         .navbar-logo {
             display: flex;
             align-items: center;
-            gap: 12px;
             z-index: 1002;
         }
 
@@ -138,10 +123,11 @@
         /* Menu Navigation Desktop */
         .navbar-nav {
             display: flex;
+            flex-direction: row !important;
             list-style: none;
             margin: 0;
             padding: 0;
-            gap: 8px;
+            gap: 15px;
             align-items: center;
         }
 
@@ -152,7 +138,7 @@
         .nav-link {
             color: #e0e0e0;
             text-decoration: none;
-            font-size: 15px;
+            font-size: 12px;
             font-weight: 500;
             padding: 8px 16px;
             border-radius: 6px;
@@ -166,7 +152,7 @@
 
         .nav-link:hover {
             background: rgba(0, 171, 255, 0.1);
-            color: #00abff;
+            color: #fff;
             transform: translateY(-2px);
         }
 
@@ -214,7 +200,7 @@
         }
 
         .dropdown-menu {
-            position: absolute;
+            position: absolute !important;
             top: 100%;
             left: 0;
             background: #1a1a1a;
@@ -229,6 +215,7 @@
             transform: translateY(10px);
             transition: all 0.3s ease;
             list-style: none;
+            font-size: 14px;
         }
 
         .dropdown-menu.show {
@@ -251,7 +238,7 @@
 
         .dropdown-item:hover {
             background: rgba(0, 171, 255, 0.15);
-            color: #00abff;
+            color: #fff;
             transform: translateX(4px);
         }
 
@@ -266,7 +253,7 @@
             background: linear-gradient(135deg, #00abff 0%, #0088ff 100%);
             color: #fff !important;
             font-weight: 600;
-            padding: 8px 24px;
+            padding: 5px 10px;
             border-radius: 25px;
             box-shadow: 0 4px 15px rgba(0, 171, 255, 0.3);
             transition: all 0.3s ease;
@@ -444,12 +431,14 @@
                 background: #0d0d0d;
                 flex-direction: column;
                 padding: 100px 30px 30px;
-                gap: 20px;
+                gap: 15px;
                 overflow-y: auto;
                 transition: right 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
                 z-index: 1001;
                 justify-content: flex-start;
                 align-items: stretch;
+                flex-direction: column !important;
+
             }
 
             .navbar-nav.show {
@@ -493,7 +482,7 @@
             }
 
             .nav-link {
-                padding: 15px 20px;
+                padding: 8px 20px;
                 font-size: 18px;
                 width: 100%;
                 text-align: left;
@@ -534,7 +523,7 @@
 
             .dropdown-item {
                 font-size: 16px;
-                padding: 12px 20px;
+                padding: 5px 20px;
             }
 
             .btn-comprar-nav {
@@ -616,7 +605,7 @@
     <header class="header" role="banner">
         <nav class="navbar" aria-label="Menu principal">
             <div class="container">
-                <div class="navbar-wrapper ">
+                <div class="navbar-wrapper">
                     <!-- Logo -->
                     <div class="navbar-logo">
                         <a class="navbar-brand" href="home" aria-label="MegaTech - Página inicial">
@@ -632,9 +621,9 @@
                     </button>
 
                     <!-- Menu principal -->
-                    <ul class="navbar-nav d-flex flex-row">
+                    <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" href="home" aria-current="page">
+                            <a class="nav-link" href="home" aria-current="page" data-tooltip="Página inicial">
                                 <i class="fas fa-home"></i>
                                 <span>Home</span>
                             </a>
@@ -642,8 +631,8 @@
 
                         <!-- Dropdown Celulares -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" aria-haspopup="true"
-                                aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-tooltip="Marcas de celulares">
                                 <i class="fas fa-mobile-alt"></i>
                                 <span>Celulares</span>
                             </a>

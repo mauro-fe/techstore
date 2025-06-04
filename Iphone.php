@@ -425,5 +425,20 @@ $iphones = [
         ],
         '11-pro-max'
     ),
+    26 => new Product(
+        12,
+        'Apple',
+        'iPhone 11 Pro Max',
+        './assets/img/iphone-15-pro-max-dourado.png',
+        [
+            'tela' => '6.1 Liquid Retina HD',
+            'Processador' => 'A13 Bionic',
+            'camera' => 'dupla (12MP Wide + Ultra-Wide) Frontal: 12MP',
+            'Armazenamento' => '64GB, 128GB, 256GB',
+            'Bateria' => '5000mAh',
+            'camera' => 'Câmera de 12 MP'
+        ],
+        '11-pro-max'
+    ),
 
 ];
