@@ -18,7 +18,8 @@ $iphones = [
             'Bateria' => 'Até 17h de reprodução de vídeo',
 
         ],
-        '16'
+        '16',
+        ''
     ),
 
     2 => new Product(
@@ -37,7 +38,8 @@ $iphones = [
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
         ],
-        '16-pro'
+        '16-pro',
+        ''
     ),
     3 => new Product(
         3,
@@ -55,7 +57,8 @@ $iphones = [
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
         ],
-        '16-pro-max'
+        '16-pro-max',
+        ''
     ),
     4 => new Product(
         4,
@@ -73,7 +76,8 @@ $iphones = [
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
         ],
-        '16-plus'
+        '16-plus',
+        ''
     ),
     5 => new Product(
         5,
@@ -91,7 +95,8 @@ $iphones = [
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
         ],
-        '15'
+        '15',
+        ''
     ),
 
     6 => new Product(
@@ -111,7 +116,8 @@ $iphones = [
             'Bateria' => 'Até 17h de reprodução de vídeo',
 
         ],
-        '15-pro'
+        '15-pro',
+        ''
     ),
     7 => new Product(
         7,
@@ -129,7 +135,8 @@ $iphones = [
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
         ],
-        '15-pro-max'
+        '15-pro-max',
+        ''
     ),
     8 => new Product(
         8,
@@ -147,7 +154,8 @@ $iphones = [
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
         ],
-        '15-plus'
+        '15-plus',
+        ''
     ),
     9 => new Product(
         9,
@@ -165,7 +173,8 @@ $iphones = [
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
         ],
-        '14'
+        '14',
+        ''
     ),
 
     10 => new Product(
@@ -184,7 +193,8 @@ $iphones = [
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
         ],
-        '14-pro'
+        '14-pro',
+        ''
     ),
     11 => new Product(
         11,
@@ -202,7 +212,8 @@ $iphones = [
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
         ],
-        '14-pro-max'
+        '14-pro-max',
+        ''
     ),
     12 => new Product(
         12,
@@ -221,7 +232,8 @@ $iphones = [
             'Bateria' => 'Até 17h de reprodução de vídeo',
 
         ],
-        '14-plus'
+        '14-plus',
+        ''
     ),
     15 => new Product(
         1,
@@ -239,7 +251,8 @@ $iphones = [
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
         ],
-        '13'
+        '13',
+        ''
     ),
 
     16 => new Product(
@@ -259,7 +272,8 @@ $iphones = [
             'Bateria' => 'Até 17h de reprodução de vídeo',
 
         ],
-        '13-pro'
+        '13-pro',
+        ''
 
     ),
     17 => new Product(
@@ -278,7 +292,8 @@ $iphones = [
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
         ],
-        '13-pro-max'
+        '13-pro-max',
+        ''
     ),
     18 => new Product(
         4,
@@ -296,7 +311,8 @@ $iphones = [
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
         ],
-        '13-mini'
+        '13-mini',
+        ''
     ),
     19 => new Product(
         5,
@@ -315,7 +331,8 @@ $iphones = [
             'Bateria' => 'Até 17h de reprodução de vídeo',
 
         ],
-        '12'
+        '12',
+        ''
     ),
 
     20 => new Product(
@@ -334,7 +351,8 @@ $iphones = [
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
         ],
-        '12-pro'
+        '12-pro',
+        ''
     ),
     21 => new Product(
         7,
@@ -353,7 +371,8 @@ $iphones = [
             'Bateria' => 'Até 17h de reprodução de vídeo',
 
         ],
-        '12-pro-max'
+        '12-pro-max',
+        ''
     ),
     22 => new Product(
         8,
@@ -371,7 +390,8 @@ $iphones = [
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
         ],
-        '12-mini'
+        '12-mini',
+        ''
     ),
     23 => new Product(
         9,
@@ -389,7 +409,8 @@ $iphones = [
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
         ],
-        '11'
+        '11',
+        ''
     ),
 
     24 => new Product(
@@ -408,7 +429,8 @@ $iphones = [
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
         ],
-        '11-pro'
+        '11-pro',
+        ''
     ),
     25 => new Product(
         11,
@@ -423,7 +445,8 @@ $iphones = [
             'Bateria' => '5000mAh',
             'camera' => 'Câmera de 12 MP'
         ],
-        '11-pro-max'
+        '11-pro-max',
+        ''
     ),
     26 => new Product(
         12,
@@ -438,7 +461,8 @@ $iphones = [
             'Bateria' => '5000mAh',
             'camera' => 'Câmera de 12 MP'
         ],
-        '11-pro-max'
+        '11-pro-max',
+        ''
     ),
 
 ];

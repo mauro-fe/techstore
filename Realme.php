@@ -7,6 +7,7 @@ $realmes = [
         'c75',
         './assets/img/realme-c75-dourado-2.png',
         [],
+        '',
         ''
     )
 ];

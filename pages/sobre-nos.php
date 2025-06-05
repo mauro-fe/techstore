@@ -44,8 +44,12 @@
     max-width: 800px;
     margin: 0 auto;
     font-size: 1.2em;
-    color: var(--gray-100) !important;
     line-height: 1.8;
+}
+
+.intro-text p {
+    color: var(--gray-100) !important;
+
 }
 
 .team-section {

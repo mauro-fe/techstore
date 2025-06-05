@@ -262,7 +262,7 @@ $BASE_URL = $_SERVER['SERVER_NAME'] . $_SERVER['SCRIPT_NAME'];
             box-shadow: 0 4px 15px rgba(0, 171, 255, 0.3);
             transition: all 0.3s ease;
             text-transform: uppercase;
-            font-size: 13px;
+            font-size: 10px;
             letter-spacing: 0.5px;
         }
 
@@ -509,8 +509,8 @@ $BASE_URL = $_SERVER['SERVER_NAME'] . $_SERVER['SCRIPT_NAME'];
 
             /* Dropdown Mobile */
             .dropdown-menu {
-                position: static;
-                width: 100%;
+                position: static !important;
+                width: 90%;
                 margin-top: 10px;
                 margin-left: 20px;
                 box-shadow: none;
@@ -528,7 +528,7 @@ $BASE_URL = $_SERVER['SERVER_NAME'] . $_SERVER['SCRIPT_NAME'];
 
             .dropdown-item {
                 font-size: 16px;
-                padding: 5px 20px;
+                padding: 10px 20px !important;
             }
 
             .btn-comprar-nav {
@@ -636,8 +636,8 @@ $BASE_URL = $_SERVER['SERVER_NAME'] . $_SERVER['SCRIPT_NAME'];
 
                         <!-- Dropdown Celulares -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button"
-                                data-tooltip="Marcas de celulares">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" aria-haspopup="true"
+                                aria-expanded="false" data-tooltip="Marcas de celulares">
                                 <i class="fas fa-mobile-alt"></i>
                                 <span>Celulares</span>
                             </a>
@@ -704,13 +704,13 @@ $BASE_URL = $_SERVER['SERVER_NAME'] . $_SERVER['SCRIPT_NAME'];
         <?php
         // ini_set('display_errors', 1);
         // error_reporting(E_ALL);
-
         require_once 'Products.php';
+        require_once 'Acessorios.php';
+        require_once 'Avaliacoes.php';
         require_once 'Iphone.php';
         require_once 'Xiaomi.php';
         require_once 'Samsung.php';
         require_once 'Realme.php';
-
         require_once 'Helpers/utils.php';
 
         if (isset($_GET["param"])) {

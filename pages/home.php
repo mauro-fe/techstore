@@ -70,75 +70,21 @@
         <div class="swiper mySwiper" data-aos="fade-up" data-aos-delay="100">
 
             <div class="swiper-wrapper">
+                <?php foreach ($acessorios as $acessorio): ?>
                 <div class="swiper-slide">
                     <div class="card">
-                        <img src="./assets/img/carregador-iphone-tipo-c.jpg" class="card-img-top" alt="Fone">
+                        <img src="<?= $acessorio->imagem ?>" class="card-img-top" alt="<?= $acessorio->nome ?>">
                         <div class="card-body text-center">
-                            <h5 class="card-title">Fone Bluetooth</h5>
+                            <h5 class="card-title"><?= $acessorio->nome ?></h5>
                             <p class="card-text">Som de alta qualidade e bateria duradoura.</p>
                             <button type="button" class="btn-comprar">Comprar</button>
                         </div>
                     </div>
                 </div>
+                <?php endforeach; ?>
 
-                <div class="swiper-slide">
-                    <div class="card">
-                        <img src="./assets/img/carregador-samsung-tipo-c.webp" class="card-img-top" alt="Capinha">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Capinha iPhone</h5>
-                            <p class="card-text">Proteção elegante e discreta para seu aparelho.</p>
-                            <button type="button" class="btn-comprar">Comprar</button>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="card">
-                        <img src="./assets/img/carregador-iphone-tipo-c.jpg" class="card-img-top" alt="Fone">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Fone Bluetooth</h5>
-                            <p class="card-text">Som de alta qualidade e bateria duradoura.</p>
-                            <button type="button" class="btn-comprar">Comprar</button>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="card">
-                        <img src="./assets/img/carregador-samsung-tipo-c.webp" class="card-img-top" alt="Capinha">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Capinha iPhone</h5>
-                            <p class="card-text">Proteção elegante e discreta para seu aparelho.</p>
-                            <button type="button" class="btn-comprar">Comprar</button>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="card">
-                        <img src="./assets/img/carregador-iphone-tipo-c.jpg" class="card-img-top" alt="Fone">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Fone Bluetooth</h5>
-                            <p class="card-text">Som de alta qualidade e bateria duradoura.</p>
-                            <button type="button" class="btn-comprar">Comprar</button>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="card">
-                        <img src="./assets/img/carregador-samsung-tipo-c.webp" class="card-img-top" alt="Capinha">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Capinha iPhone</h5>
-                            <p class="card-text">Proteção elegante e discreta para seu aparelho.</p>
-                            <button type="button" class="btn-comprar">Comprar</button>
-
-                        </div>
-                    </div>
-                </div>
             </div>
+
             <div class="swiper-pagination mt-4"></div>
         </div>
     </div>
@@ -182,91 +128,20 @@
         <h2 class="text-center mb-2" data-aos="fade-up" data-aos-delay="100">O que dizem nossos clientes</h2>
         <div class="swiper mySwiper avaliacoesSwiper" data-aos="fade-up" data-aos-delay="300">
             <div class="swiper-wrapper pt-5 pb-5">
-
                 <!-- Avaliação 1 -->
+                <?php foreach ($avaliacoes as $avaliacao): ?>
                 <div class="swiper-slide">
                     <div class="card text-center">
                         <div class="card-body">
-                            <img src="https://randomuser.me/api/portraits/women/68.jpg" class="avatar m-3" alt="Maria">
-                            <div class="stars mb-2">★★★★★</div>
-                            <p class="card-text">"Comprei uma película e fui muito bem atendida. Chegou rápido e com
-                                qualidade!"</p>
-                            <h5 class="card-title mt-3 mb-1">Maria Oliveira</h5>
-                            <small class="text-muted">Cliente de São Paulo</small>
+                            <img src="<?= $avaliacao->imagem ?>" class="avatar m-3" alt="<?= $avaliacao->nome ?>">
+                            <div class="stars mb-2"><?= $avaliacao->estrela ?></div>
+                            <p class="card-text"><?= $avaliacao->avaliacao ?></p>
+                            <h5 class="card-title mt-3 mb-1"><?= $avaliacao->nome ?></h5>
+                            <small class="text-muted"><?= $avaliacao->localizacao ?></small>
                         </div>
                     </div>
                 </div>
-
-                <!-- Avaliação 2 -->
-                <div class="swiper-slide">
-                    <div class="card text-center">
-
-                        <div class="card-body">
-                            <img src="https://randomuser.me/api/portraits/men/75.jpg" class="avatar m-3" alt="João">
-                            <div class="stars mb-2">★★★★☆</div>
-                            <p class="card-text">"Produtos bons e originais, recomendo! Só achei o frete um pouco
-                                demorado."</p>
-                            <h5 class="card-title mt-3 mb-1">João Lima</h5>
-                            <small class="text-muted">Comprador via Instagram</small>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Avaliação 3 -->
-                <div class="swiper-slide">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <img src="https://randomuser.me/api/portraits/women/45.jpg" class="avatar m-3" alt="Ana">
-                            <div class="stars mb-2">★★★★★</div>
-                            <p class="card-text">"Atendimento incrível, resolveram minha dúvida pelo WhatsApp em
-                                minutos."</p>
-                            <h5 class="card-title mt-3 mb-1">Ana Paula</h5>
-                            <small class="text-muted">Cliente fiel</small>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Avaliação 4 -->
-                <div class="swiper-slide">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <img src="https://randomuser.me/api/portraits/women/45.jpg" class="avatar m-3" alt="Ana">
-                            <div class="stars mb-2">★★★★★</div>
-                            <p class="card-text">"Atendimento incrível, resolveram minha dúvida pelo WhatsApp em
-                                minutos."</p>
-                            <h5 class="card-title mt-3 mb-1">Ana Paula</h5>
-                            <small class="text-muted">Cliente fiel</small>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Avaliação 5 -->
-                <div class="swiper-slide">
-                    <div class="card text-center">
-                        <div class="card-body"> <img src="https://randomuser.me/api/portraits/women/45.jpg"
-                                class="avatar m-3" alt="Ana">
-                            <div class="stars mb-2">★★★★★</div>
-                            <p class="card-text">"Atendimento incrível, resolveram minha dúvida pelo WhatsApp em
-                                minutos."</p>
-                            <h5 class="card-title mt-3 mb-1">Ana Paula</h5>
-                            <small class="text-muted">Cliente fiel</small>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Avaliação 6 -->
-                <div class="swiper-slide">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <img src="https://randomuser.me/api/portraits/women/45.jpg" class="avatar m-3" alt="Ana">
-                            <div class="stars mb-2">★★★★★</div>
-                            <p class="card-text">"Atendimento incrível, resolveram minha dúvida pelo WhatsApp em
-                                minutos."</p>
-                            <h5 class="card-title mt-3 mb-1">Ana Paula</h5>
-                            <small class="text-muted">Cliente fiel</small>
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
             <div class="swiper-pagination"></div>
         </div>

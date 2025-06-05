@@ -8,6 +8,7 @@ $samsungs = [
         's24 ultra',
         './assets/img/samsung/samsung-galaxy-s25-ultra-cinza.png',
         [],
+        '',
         ''
     )
 ];
