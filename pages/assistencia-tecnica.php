@@ -600,7 +600,7 @@
         }
 
         .assistencia-tecnica_hero {
-            padding: 60px 20px;
+            padding: 100px 20px;
             flex-direction: column;
         }
 

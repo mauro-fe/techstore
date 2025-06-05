@@ -45,6 +45,8 @@
 
 /* Card Flip Melhorado */
 .card-flip {
+    height: 100%;
+    position: relative;
     perspective: 1000px;
     opacity: 0;
     transform: translateY(50px);
@@ -99,7 +101,8 @@
 .card-front,
 .card-back {
     width: 100%;
-    height: 100%;
+    min-height: 420px;
+    /* ou igual à .card */
     backface-visibility: hidden;
     border-radius: var(--border-radius);
     position: absolute;
@@ -116,10 +119,12 @@
 }
 
 .card-back {
+    position: absolute !important;
     background: linear-gradient(135deg, var(--dark-color) 0%, #495057 100%);
     color: white;
     transform: rotateY(180deg);
     box-shadow: var(--shadow-medium);
+    box-sizing: border-box;
 }
 
 .card {
@@ -131,6 +136,10 @@
     border: none !important;
     position: relative;
     overflow: hidden;
+}
+
+.card-body {
+    width: 100%;
 }
 
 /* Efeito Hover na Card */
@@ -319,8 +328,9 @@
     color: white;
     width: 30px;
     backdrop-filter: blur(10px);
-    top: 0;
-    left: 15px;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
 }
 
 .btn-voltar:hover {
@@ -505,7 +515,7 @@
 
 <main class="py-5">
     <div class="container">
-        <div class="row g-5 cards-container mt-2">
+        <div class="row g-5 cards-container mt-1">
             <h2 class="text-center fw-bold section-title">xiaomi</h2>
 
             <?php foreach ($xiaomis as $xiaomi): ?>

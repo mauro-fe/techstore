@@ -10,10 +10,10 @@
         <div class="swiper mySwiperIphones">
             <div class="swiper-wrapper">
                 <?php for ($i = 1; $i <= 4; $i++): ?>
-                <div class="swiper-slide">
-                    <h3><?= $iphones[$i]->nome ?></h3>
-                    <img src="<?= $iphones[$i]->imagem ?>" alt="<?= $iphones[$i]->nome ?>" class="img-fluid">
-                </div>
+                    <div class="swiper-slide">
+                        <h3><?= $iphones[$i]->nome ?></h3>
+                        <img src="<?= $iphones[$i]->imagem ?>" alt="<?= $iphones[$i]->nome ?>" class="img-fluid">
+                    </div>
                 <?php endfor; ?>
             </div>
             <!-- Paginação opcional -->
@@ -71,16 +71,16 @@
 
             <div class="swiper-wrapper">
                 <?php foreach ($acessorios as $acessorio): ?>
-                <div class="swiper-slide">
-                    <div class="card">
-                        <img src="<?= $acessorio->imagem ?>" class="card-img-top" alt="<?= $acessorio->nome ?>">
-                        <div class="card-body text-center">
-                            <h5 class="card-title"><?= $acessorio->nome ?></h5>
-                            <p class="card-text">Som de alta qualidade e bateria duradoura.</p>
-                            <button type="button" class="btn-comprar">Comprar</button>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="<?= $acessorio->imagem ?>" class="card-img-top" alt="<?= $acessorio->nome ?>">
+                            <div class="card-body text-center">
+                                <h5 class="card-title"><?= $acessorio->nome ?></h5>
+                                <p class="card-text">Som de alta qualidade e bateria duradoura.</p>
+                                <button type="button" class="btn-comprar">Comprar</button>
+                            </div>
                         </div>
                     </div>
-                </div>
                 <?php endforeach; ?>
 
             </div>
@@ -130,17 +130,17 @@
             <div class="swiper-wrapper pt-5 pb-5">
                 <!-- Avaliação 1 -->
                 <?php foreach ($avaliacoes as $avaliacao): ?>
-                <div class="swiper-slide">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <img src="<?= $avaliacao->imagem ?>" class="avatar m-3" alt="<?= $avaliacao->nome ?>">
-                            <div class="stars mb-2"><?= $avaliacao->estrela ?></div>
-                            <p class="card-text"><?= $avaliacao->avaliacao ?></p>
-                            <h5 class="card-title mt-3 mb-1"><?= $avaliacao->nome ?></h5>
-                            <small class="text-muted"><?= $avaliacao->localizacao ?></small>
+                    <div class="swiper-slide">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <img src="<?= $avaliacao->imagem ?>" class="avatar m-3" alt="<?= $avaliacao->nome ?>">
+                                <div class="stars mb-2"><?= $avaliacao->estrela ?></div>
+                                <p class="card-text"><?= $avaliacao->avaliacao ?></p>
+                                <h5 class="card-title mt-3 mb-1"><?= $avaliacao->nome ?></h5>
+                                <small class="text-muted"><?= $avaliacao->localizacao ?></small>
+                            </div>
                         </div>
                     </div>
-                </div>
                 <?php endforeach; ?>
             </div>
             <div class="swiper-pagination"></div>
@@ -151,51 +151,51 @@
 
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    new Swiper('.mySwiperIphones', {
-        loop: true,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true
-        },
-        slidesPerView: 1,
+    document.addEventListener('DOMContentLoaded', function() {
+        new Swiper('.mySwiperIphones', {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            slidesPerView: 1,
+        });
     });
-});
 
-document.addEventListener('DOMContentLoaded', function() {
-    new Swiper('.mySwiper', {
-        loop: true,
-        spaceBetween: 30,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        breakpoints: {
-            0: {
-                slidesPerView: 1,
-                centeredSlides: false
+    document.addEventListener('DOMContentLoaded', function() {
+        new Swiper('.mySwiper', {
+            loop: true,
+            spaceBetween: 30,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
             },
-            576: {
-                slidesPerView: 2,
-                centeredSlides: false
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
             },
-            992: {
-                slidesPerView: 3,
-                centeredSlides: true
-            },
-            1200: {
-                slidesPerView: 4,
-                centeredSlides: true
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    centeredSlides: false
+                },
+                576: {
+                    slidesPerView: 2,
+                    centeredSlides: false
+                },
+                992: {
+                    slidesPerView: 3,
+                    centeredSlides: true
+                },
+                1200: {
+                    slidesPerView: 4,
+                    centeredSlides: true
+                }
             }
-        }
+        });
     });
-});
 </script>

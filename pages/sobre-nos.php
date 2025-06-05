@@ -34,7 +34,7 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.intro-section h2 {
+.intro-section h1 {
     font-size: 2.5em;
     color: var(--gray-100);
     margin-bottom: 30px;
@@ -49,7 +49,10 @@
 
 .intro-text p {
     color: var(--gray-100) !important;
-
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+    line-height: 1.6;
 }
 
 .team-section {
@@ -207,6 +210,7 @@
 .cta-section p {
     font-size: 1.2em;
     margin-bottom: 30px;
+    color: var(--gray-100);
 }
 
 .cta-button {
@@ -246,7 +250,7 @@
 
 <section class="intro-section">
     <div class="container">
-        <h2>Nossa História</h2>
+        <h1>Nossa História</h1>
         <div class="intro-text">
             <p>Com mais de 4 anos de história, a <strong>MegaTech</strong> surgiu do sonho de empreender e oferecer uma
                 loja própria de assistência técnica e venda de aparelhos eletrônicos. O que começou como um projeto
