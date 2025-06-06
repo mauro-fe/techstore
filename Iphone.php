@@ -7,25 +7,49 @@ $iphones = [
         'iPhone 16',
         './assets/img/iphone/iphone/iphone-16-verde.png',
         [
-            'tela' => '6.1 Liquid Retina LCD',
+            'tela' => 'Super Retina XDR OLED sem bordas de 6,1 polegadas (na diagonal)',
 
-            'Processador' => 'A13 Bionic',
+            'Resolução' => '2556 x 1179 pixels',
 
-            'camera' => 'dupla (12MP Wide + Ultra-Wide) Frontal: 12MP',
+            'camera' => 'Câmera de 12 MP',
 
-            'armazenamento' => '64GB, 128GB, 256GB',
+            'armazenamento' => '128GB, 256GB, 512GB',
 
-            'Bateria' => 'Até 17h de reprodução de vídeo',
+            'Bateria' => 'Bateria interna recarregável de íon de lítio',
 
-            'cor' => 'Preto, Branco, Azul, Vermelho, Verde',
+            'cor' => 'Branco, Preto, Rosa, Ultramarine, Verde-acizentado',
+
+            'sistema-operacional' => 'iOS 18',
+
 
         ],
         '16',
         ''
     ),
-
     2 => new Product(
         2,
+        'Apple',
+        'iPhone 16 Plus',
+        './assets/img/iphone/iphone/iphone-16-plus-roxo.png',
+        [
+            'tela' => 'Super Retina XDR OLED sem bordas de 6,7 polegadas (na diagonal)',
+
+            'Resolução' => '2796 x 1290 pixels',
+
+            'camera' => 'dupla (12MP Wide + Ultra-Wide) Frontal: 12MP',
+
+            'armazenamento' => '128GB, 256GB, 512GB',
+            '512GB',
+
+            'Bateria' => 'Até 17h de reprodução de vídeo',
+
+            'cor' => 'Branco, Preto, Rosa, Ultramarine, Verde-acizentado',
+        ],
+        '16-plus',
+        ''
+    ),
+    3 => new Product(
+        3,
         'Apple',
         'iPhone 16 Pro',
         './assets/img/iphone/iphone/iphone-16-pro.png',
@@ -45,8 +69,8 @@ $iphones = [
         '16-pro',
         ''
     ),
-    3 => new Product(
-        3,
+    4 => new Product(
+        4,
         'Apple',
         'iPhone 16 Pro Max',
         './assets/img/iphone/iphone/iphone-16-pro-max-natutaltitanium.png',
@@ -64,25 +88,6 @@ $iphones = [
 
         ],
         '16-pro-max',
-        ''
-    ),
-    4 => new Product(
-        4,
-        'Apple',
-        'iPhone 16 Plus',
-        './assets/img/iphone/iphone/iphone-16-plus-roxo.png',
-        [
-            'tela' => '6.1 Liquid Retina LCD',
-
-            'Processador' => 'A13 Bionic',
-
-            'camera' => 'dupla (12MP Wide + Ultra-Wide) Frontal: 12MP',
-
-            'armazenamento' => '64GB, 128GB, 256GB',
-
-            'Bateria' => 'Até 17h de reprodução de vídeo',
-        ],
-        '16-plus',
         ''
     ),
     5 => new Product(

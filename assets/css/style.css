@@ -45,16 +45,6 @@ body {
   background-color: #0009;
 }
 
-.btn-comprar {
-  background-color: #00abff;
-  color: #fff;
-  transition: 0.5s;
-}
-
-.btn-comprar:hover {
-  background-color: #006598;
-}
-
 .header {
   width: 100%;
   box-sizing: border-box;
