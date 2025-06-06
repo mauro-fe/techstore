@@ -13,9 +13,11 @@ $iphones = [
 
             'camera' => 'dupla (12MP Wide + Ultra-Wide) Frontal: 12MP',
 
-            'Armazenamento' => '64GB, 128GB, 256GB',
+            'armazenamento' => '64GB, 128GB, 256GB',
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
+
+            'cor' => 'Preto, Branco, Azul, Vermelho, Verde',
 
         ],
         '16',
@@ -34,9 +36,11 @@ $iphones = [
 
             'camera' => 'dupla (12MP Wide + Ultra-Wide) Frontal: 12MP',
 
-            'Armazenamento' => '64GB, 128GB, 256GB',
+            'armazenamento' => '64GB, 128GB, 256GB',
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
+            'cor' => 'Preto, Branco, Azul, Vermelho, Verde',
+
         ],
         '16-pro',
         ''
@@ -53,9 +57,11 @@ $iphones = [
 
             'camera' => 'dupla (12MP Wide + Ultra-Wide) Frontal: 12MP',
 
-            'Armazenamento' => '64GB, 128GB, 256GB',
+            'armazenamento' => '64GB, 128GB, 256GB',
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
+            'cor' => 'Preto, Branco, Azul, Vermelho, Verde',
+
         ],
         '16-pro-max',
         ''
@@ -72,7 +78,7 @@ $iphones = [
 
             'camera' => 'dupla (12MP Wide + Ultra-Wide) Frontal: 12MP',
 
-            'Armazenamento' => '64GB, 128GB, 256GB',
+            'armazenamento' => '64GB, 128GB, 256GB',
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
         ],
@@ -91,7 +97,7 @@ $iphones = [
 
             'camera' => 'dupla (12MP Wide + Ultra-Wide) Frontal: 12MP',
 
-            'Armazenamento' => '64GB, 128GB, 256GB',
+            'armazenamento' => '64GB, 128GB, 256GB',
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
         ],
@@ -111,7 +117,7 @@ $iphones = [
 
             'camera' => 'dupla (12MP Wide + Ultra-Wide) Frontal: 12MP',
 
-            'Armazenamento' => '64GB, 128GB, 256GB',
+            'armazenamento' => '64GB, 128GB, 256GB',
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
 
@@ -131,7 +137,7 @@ $iphones = [
 
             'camera' => 'dupla (12MP Wide + Ultra-Wide) Frontal: 12MP',
 
-            'Armazenamento' => '64GB, 128GB, 256GB',
+            'armazenamento' => '64GB, 128GB, 256GB',
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
         ],
@@ -150,7 +156,7 @@ $iphones = [
 
             'camera' => 'dupla (12MP Wide + Ultra-Wide) Frontal: 12MP',
 
-            'Armazenamento' => '64GB, 128GB, 256GB',
+            'armazenamento' => '64GB, 128GB, 256GB',
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
         ],
@@ -169,7 +175,7 @@ $iphones = [
 
             'camera' => 'dupla (12MP Wide + Ultra-Wide) Frontal: 12MP',
 
-            'Armazenamento' => '64GB, 128GB, 256GB',
+            'armazenamento' => '64GB, 128GB, 256GB',
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
         ],
@@ -189,7 +195,7 @@ $iphones = [
 
             'camera' => 'dupla (12MP Wide + Ultra-Wide) Frontal: 12MP',
 
-            'Armazenamento' => '64GB, 128GB, 256GB',
+            'armazenamento' => '64GB, 128GB, 256GB',
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
         ],
@@ -208,7 +214,7 @@ $iphones = [
 
             'camera' => 'dupla (12MP Wide + Ultra-Wide) Frontal: 12MP',
 
-            'Armazenamento' => '64GB, 128GB, 256GB',
+            'armazenamento' => '64GB, 128GB, 256GB',
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
         ],
@@ -227,7 +233,7 @@ $iphones = [
 
             'camera' => 'dupla (12MP Wide + Ultra-Wide) Frontal: 12MP',
 
-            'Armazenamento' => '64GB, 128GB, 256GB',
+            'armazenamento' => '64GB, 128GB, 256GB',
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
 
@@ -247,7 +253,7 @@ $iphones = [
 
             'camera' => 'dupla (12MP Wide + Ultra-Wide) Frontal: 12MP',
 
-            'Armazenamento' => '64GB, 128GB, 256GB',
+            'armazenamento' => '64GB, 128GB, 256GB',
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
         ],
@@ -267,7 +273,7 @@ $iphones = [
 
             'camera' => 'dupla (12MP Wide + Ultra-Wide) Frontal: 12MP',
 
-            'Armazenamento' => '64GB, 128GB, 256GB',
+            'armazenamento' => '64GB, 128GB, 256GB',
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
 
@@ -288,7 +294,7 @@ $iphones = [
 
             'camera' => 'dupla (12MP Wide + Ultra-Wide) Frontal: 12MP',
 
-            'Armazenamento' => '64GB, 128GB, 256GB',
+            'armazenamento' => '64GB, 128GB, 256GB',
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
         ],
@@ -307,7 +313,7 @@ $iphones = [
 
             'camera' => 'dupla (12MP Wide + Ultra-Wide) Frontal: 12MP',
 
-            'Armazenamento' => '64GB, 128GB, 256GB',
+            'armazenamento' => '64GB, 128GB, 256GB',
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
         ],
@@ -326,7 +332,7 @@ $iphones = [
 
             'camera' => 'dupla (12MP Wide + Ultra-Wide) Frontal: 12MP',
 
-            'Armazenamento' => '64GB, 128GB, 256GB',
+            'armazenamento' => '64GB, 128GB, 256GB',
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
 
@@ -347,7 +353,7 @@ $iphones = [
 
             'camera' => 'dupla (12MP Wide + Ultra-Wide) Frontal: 12MP',
 
-            'Armazenamento' => '64GB, 128GB, 256GB',
+            'armazenamento' => '64GB, 128GB, 256GB',
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
         ],
@@ -366,7 +372,7 @@ $iphones = [
 
             'camera' => 'dupla (12MP Wide + Ultra-Wide) Frontal: 12MP',
 
-            'Armazenamento' => '64GB, 128GB, 256GB',
+            'armazenamento' => '64GB, 128GB, 256GB',
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
 
@@ -386,7 +392,7 @@ $iphones = [
 
             'camera' => 'dupla (12MP Wide + Ultra-Wide) Frontal: 12MP',
 
-            'Armazenamento' => '64GB, 128GB, 256GB',
+            'armazenamento' => '64GB, 128GB, 256GB',
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
         ],
@@ -405,7 +411,7 @@ $iphones = [
 
             'camera' => 'dupla (12MP Wide + Ultra-Wide) Frontal: 12MP',
 
-            'Armazenamento' => '64GB, 128GB, 256GB',
+            'armazenamento' => '64GB, 128GB, 256GB',
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
         ],
@@ -425,7 +431,7 @@ $iphones = [
 
             'camera' => 'dupla (12MP Wide + Ultra-Wide) Frontal: 12MP',
 
-            'Armazenamento' => '64GB, 128GB, 256GB',
+            'armazenamento' => '64GB, 128GB, 256GB',
 
             'Bateria' => 'Até 17h de reprodução de vídeo',
         ],
@@ -441,7 +447,7 @@ $iphones = [
             'tela' => '6.1 Liquid Retina HD',
             'Processador' => 'A13 Bionic',
             'camera' => 'dupla (12MP Wide + Ultra-Wide) Frontal: 12MP',
-            'Armazenamento' => '64GB, 128GB, 256GB',
+            'armazenamento' => '64GB, 128GB, 256GB',
             'Bateria' => '5000mAh',
             'camera' => 'Câmera de 12 MP'
         ],
@@ -457,7 +463,7 @@ $iphones = [
             'tela' => '6.1 Liquid Retina HD',
             'Processador' => 'A13 Bionic',
             'camera' => 'dupla (12MP Wide + Ultra-Wide) Frontal: 12MP',
-            'Armazenamento' => '64GB, 128GB, 256GB',
+            'armazenamento' => '64GB, 128GB, 256GB',
             'Bateria' => '5000mAh',
             'camera' => 'Câmera de 12 MP'
         ],

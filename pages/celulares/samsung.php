@@ -514,7 +514,7 @@
 
 <main class="py-5">
     <div class="container">
-        <div class="row g-5 cards-container mt-2">
+        <div class="row g-5 cards-container mt-1">
             <h2 class="text-center fw-bold section-title">Samsung</h2>
 
             <?php foreach ($samsungs as $samsung): ?>
