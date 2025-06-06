@@ -252,7 +252,7 @@
         color: white;
         padding: .5rem;
         border: none;
-        border-radius: 15px;
+        border-radius: 30px;
         font-size: 1.2rem;
         font-weight: 600;
         cursor: pointer;
@@ -261,6 +261,11 @@
         position: relative;
         overflow: hidden;
         margin: 0 10px;
+    }
+
+    .reset-btn {
+        background: #00a0f9;
+
     }
 
 
@@ -280,7 +285,27 @@
         box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
     }
 
+    .reset-btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: left 0.6s ease;
+    }
+
+    .reset-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+    }
+
     .submit-btn:hover::before {
+        left: 100%;
+    }
+
+    .reset-btn:hover::before {
         left: 100%;
     }
 
