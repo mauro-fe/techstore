@@ -157,7 +157,8 @@ p {
       }
 
       .card {
-        width: 260px;
+        width: 350px;
+        height: 100%;
         border: none;
         border-radius: 15px;
         overflow: hidden;
@@ -171,7 +172,7 @@ p {
         }
 
         &-img-top {
-          height: 240px;
+          height: 200px;
           object-fit: contain;
           padding: 20px;
         }

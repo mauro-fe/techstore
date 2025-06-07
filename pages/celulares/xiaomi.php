@@ -516,7 +516,7 @@
 <main class="py-5">
     <div class="container">
         <div class="row g-5 cards-container mt-1">
-            <h2 class="text-center fw-bold section-title">xiaomi</h2>
+            <h2 class="text-center fw-bold section-title">Xiaomi</h2>
 
             <?php foreach ($xiaomis as $xiaomi): ?>
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center" data-aos="fade-up"

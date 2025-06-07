@@ -107,7 +107,7 @@
                         <img src="<?= $acessorio->imagem ?>" class="card-img-top" alt="<?= $acessorio->nome ?>">
                         <div class="card-body text-center">
                             <h5 class="card-title"><?= $acessorio->nome ?></h5>
-                            <p class="card-text">Som de alta qualidade e bateria duradoura.</p>
+                            <p class="card-text"><?= $acessorio->sobre ?></p>
                             <button type="button" class="btn-comprar">Comprar</button>
                         </div>
                     </div>

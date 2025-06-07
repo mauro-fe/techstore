@@ -135,7 +135,8 @@ p {
   box-shadow: 0 0 10px 5px #0006;
 }
 .carousel .swiper-slide .card {
-  width: 260px;
+  width: 350px;
+  height: 100%;
   border: none;
   border-radius: 15px;
   overflow: hidden;
@@ -148,7 +149,7 @@ p {
   box-shadow: 0 0 6px 2px #0006;
 }
 .carousel .swiper-slide .card-img-top {
-  height: 240px;
+  height: 200px;
   object-fit: contain;
   padding: 20px;
 }
