@@ -22,7 +22,6 @@
         font-size: 10rem;
         font-weight: 700;
         background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
-        -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         line-height: 1;
         margin-bottom: var(--spacing-md);
@@ -351,6 +350,3 @@
         }, 10);
     });
 </script>
-</body>
-
-</html>

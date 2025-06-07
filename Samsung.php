@@ -5,8 +5,8 @@ $samsungs = [
     1 => new Product(
         1,
         'Samsung',
-        's25 FE',
-        './assets/img/samsung/samsung-galaxy-s25-ultra-cinza.png',
+        'S25 FE',
+        './assets/img/samsung/s25fe-azul.jpg',
         [],
         '',
         ''
@@ -14,8 +14,8 @@ $samsungs = [
     2 => new Product(
         2,
         'Samsung',
-        's25',
-        './assets/img/samsung/samsung-galaxy-s25-ultra-cinza.png',
+        'S25',
+        './assets/img/samsung/samsung-s25.jpg',
         [],
         '',
         ''
@@ -23,8 +23,8 @@ $samsungs = [
     3 => new Product(
         3,
         'Samsung',
-        's25 PLUS',
-        './assets/img/samsung/samsung-galaxy-s25-ultra-cinza.png',
+        'S25 PLUS',
+        './assets/img/samsung/s25-plus-azul-marinho.jpg',
         [],
         '',
         ''
@@ -32,8 +32,8 @@ $samsungs = [
     4 => new Product(
         4,
         'Samsung',
-        's25 ultra',
-        './assets/img/samsung/samsung-galaxy-s25-ultra-cinza.png',
+        'S25 ULTRA',
+        './assets/img/samsung/samsung-s25-ultra-cinza.jpg   ',
         [],
         '',
         ''
@@ -43,7 +43,7 @@ $samsungs = [
         5,
         'Samsung',
         'A06',
-        './assets/img/samsung/samsung-galaxy-s25-ultra-cinza.png',
+        './assets/img/samsung/a06-verde-claro.jpg',
         [],
         '',
         ''
@@ -52,7 +52,7 @@ $samsungs = [
         6,
         'Samsung',
         'A16',
-        './assets/img/samsung/samsung-galaxy-s25-ultra-cinza.png',
+        './assets/img/samsung/a16-branco.jpg',
         [],
         '',
         ''
@@ -61,7 +61,7 @@ $samsungs = [
         7,
         'Samsung',
         'A26',
-        './assets/img/samsung/samsung-galaxy-s25-ultra-cinza.png',
+        './assets/img/samsung/a26-preto.jpg',
         [],
         '',
         ''
@@ -70,7 +70,7 @@ $samsungs = [
         8,
         'Samsung',
         'A36',
-        './assets/img/samsung/samsung-galaxy-s25-ultra-cinza.png',
+        './assets/img/samsung/a36-violeta.jpg',
         [],
         '',
         ''
@@ -79,7 +79,7 @@ $samsungs = [
         9,
         'Samsung',
         'A56    ',
-        './assets/img/samsung/samsung-galaxy-s25-ultra-cinza.png',
+        './assets/img/samsung/a56-rosa.jpg',
         [],
         '',
         ''
