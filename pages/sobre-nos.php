@@ -32,6 +32,7 @@
     text-align: center;
     background-color: var(--primary-color);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5rem;
 }
 
 .intro-section h1 {
@@ -54,7 +55,7 @@
     color: var(--gray-100) !important;
     font-size: 1.25rem;
     color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 2rem;
+    padding-top: 2rem;
     line-height: 1.6;
 }
 
@@ -257,6 +258,7 @@
 </style>
 
 <section class="intro-section">
+
     <div class="container">
         <h1 data-aos="fade-up" data-aos-delay="100">Nossa História</h1>
         <div class="intro-text" data-aos="fade-up" data-aos-delay="200">
@@ -268,7 +270,6 @@
             <p style="margin-top: 20px;" data-aos="fade-up" data-aos-delay="300">Nossa missão é conectar pessoas por
                 meio da tecnologia, entregando não apenas
                 os melhores produtos, mas também uma experiência de atendimento que vai muito além da venda.</p>
-
         </div>
     </div>
 </section>
