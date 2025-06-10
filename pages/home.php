@@ -27,6 +27,77 @@
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(33, 37, 41, 0.2);
 }
+
+.btn-comprar.loading {
+    position: relative;
+    color: transparent;
+}
+
+.btn-comprar.loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-top: 2px solid var(--dark-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.modal-header {
+    background-color: var(--primary);
+}
+
+#linkWhatsapp {
+    background: #25d366;
+    border: none;
+    border-radius: 12px;
+    padding: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all var(--transition-fast);
+    position: relative;
+    overflow: hidden;
+    color: #f8f9fa;
+}
+
+#linkWhatsapp:hover {
+    background: #128c7e;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+}
+
+#linkWhatsapp::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent);
+    transition: left 0.6s;
+}
+
+#linkWhatsapp:hover::before {
+    left: 100%;
+}
 </style>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
@@ -48,7 +119,7 @@
                 <?php endfor; ?>
             </div>
             <!-- Paginação opcional -->
-            <div class="swiper-pagination mt-5"></div>
+            <div class="swiper-pagination"></div>
         </div>
         <p>Disponível agora com ofertas exclusivas.</p>
         <div class="btn-saiba-mais">
@@ -107,7 +178,11 @@
                         <div class="card-body text-center">
                             <h5 class="card-title"><?= $acessorio->nome ?></h5>
                             <p class="card-text"><?= $acessorio->sobre ?></p>
-                            <button type="button" class="btn-comprar">Comprar</button>
+                            <button type="button" class="btn-comprar" data-nome="<?= $acessorio->nome ?>"
+                                data-id="<?= $acessorio->id ?>">
+                                Comprar
+                            </button>
+
                         </div>
                     </div>
                 </div>
@@ -177,10 +252,55 @@
         </div>
     </section>
 </div>
+
+<!-- Modal de compra -->
+<div class="modal fade" id="modalComprar" tabindex="-1" aria-labelledby="modalComprarLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0">
+            <div class="modal-header text-white">
+                <h5 class="modal-title" id="modalComprarLabel">
+                    <i class="fas fa-shopping-cart me-2"></i> Comprar <span id="nomeProduto"></span>
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body">
+                <form id="formCompra">
+                    <input type="hidden" id="produtoId">
+
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">
+                            <i class="fas fa-user me-2"></i> Nome:
+                        </label>
+                        <input type="text" id="nome" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">
+                            <i class="fas fa-sort-numeric-up me-2"></i> Quantidade
+                        </label>
+                        <input type="number" id="quantidadeProduto" class="form-control" value="1" min="1" max="10"
+                            required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <a href="#" id="linkWhatsapp" target="_blank" class="btn w-100">
+                    <i class="fab fa-whatsapp me-2"></i> Finalizar compra no whatsapp
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-
 <script>
+document.addEventListener("DOMContentLoaded", function() {
+    window.scrollTo(0, 0);
+    window.history.scrollRestoration = "manual";
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     new Swiper('.mySwiperIphones', {
         loop: true,
@@ -194,14 +314,12 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         slidesPerView: 1,
     });
-});
 
-document.addEventListener('DOMContentLoaded', function() {
     new Swiper('.mySwiper', {
         loop: true,
         spaceBetween: 30,
         autoplay: {
-            delay: 3000,
+            delay: 5000,
             disableOnInteraction: false,
         },
         pagination: {
@@ -227,5 +345,83 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+});
+
+class Modal {
+    constructor() {
+        this.initModal();
+        this.initPurchaseModal();
+    }
+
+    initModal() {
+        try {
+            const modalEl = document.getElementById('modalComprar');
+            this.modal = new bootstrap.Modal(modalEl);
+        } catch (error) {
+            console.error('Erro ao inicializar modal:', error);
+        }
+    }
+
+    initPurchaseModal() {
+        document.addEventListener('click', (e) => {
+            const btn = e.target.closest('.btn-comprar');
+            if (btn) {
+                e.preventDefault();
+                this.handlePurchaseClick(btn);
+            }
+        });
+    }
+
+    async handlePurchaseClick(btn) {
+        if (btn.classList.contains('loading')) return;
+
+        btn.classList.add('loading');
+
+        try {
+            await this.delay(500); // simula carregamento
+
+            const nome = btn.getAttribute('data-nome');
+            const id = btn.getAttribute('data-id');
+
+            this.openPurchaseModal(nome, id);
+        } catch (error) {
+            console.error('Erro ao processar compra:', error);
+        } finally {
+            btn.classList.remove('loading');
+        }
+    }
+
+    openPurchaseModal(nome, id) {
+        const nomeEl = document.getElementById('nomeProduto');
+        const idEl = document.getElementById('produtoId');
+        const linkWhatsapp = document.getElementById('linkWhatsapp');
+        const qtdEl = document.getElementById('quantidadeProduto');
+
+        if (nomeEl && idEl && qtdEl) {
+            nomeEl.textContent = nome;
+            idEl.value = id;
+
+            // Atualiza o link do WhatsApp dinamicamente
+            qtdEl.addEventListener('input', () => {
+                linkWhatsapp.href = this.gerarLinkWhatsapp(nome, qtdEl.value);
+            });
+
+            linkWhatsapp.href = this.gerarLinkWhatsapp(nome, qtdEl.value);
+            this.modal.show();
+        }
+    }
+
+    gerarLinkWhatsapp(produto, quantidade) {
+        const msg = `Olá! Gostaria de comprar ${quantidade} unidade(s) do produto: ${produto}`;
+        return `https://wa.me/5544998011086?text=${encodeURIComponent(msg)}`;
+    }
+
+    delay(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    new Modal();
 });
 </script>

@@ -27,12 +27,14 @@
 
 /* Hero Section */
 .hero {
-    min-height: 60vh;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     display: flex;
     align-items: center;
     position: relative;
     overflow: hidden;
+    padding-top: 2rem;
+    padding-bottom: 6rem;
+    margin-bottom: 0;
 }
 
 .hero::before {
@@ -66,7 +68,7 @@
 .hero-content p {
     font-size: 1.3rem;
     color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 2rem;
+    margin: 4rem 0;
     line-height: 1.6;
     max-width: 600px;
     margin-left: auto;
@@ -106,10 +108,10 @@
 /* Main Content */
 .main-content {
     position: relative;
-    margin-top: 7rem;
+    margin-top: 5rem;
 }
 
-
+/* Formulario */
 .content-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -249,7 +251,7 @@
     width: 45%;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
-    padding: .5rem;
+    padding: .3rem 0;
     border: none;
     border-radius: 30px;
     font-size: 1.2rem;
@@ -322,7 +324,6 @@
     flex-direction: column;
     gap: 2rem;
     margin-top: 7rem;
-
 }
 
 .info-header {
@@ -505,7 +506,7 @@
 
 /* Map Section */
 .map-section {
-    margin-top: 6rem;
+    margin: 7rem auto;
     padding: 4rem 0;
     background: white;
     border-radius: 30px;
@@ -585,7 +586,7 @@
     font-size: 2rem;
 }
 
-.footer {
+.map-section .footer {
     margin-top: 50px;
 }
 
@@ -800,8 +801,7 @@
             </div>
 
             <!-- Contact Info -->
-            <div class="contact-info-section contact-info-card container mt-5" data-aos="fade-up"
-                data-aos-duration="1000">
+            <div class="contact-info-section contact-info-card container" data-aos="fade-up" data-aos-duration="1000">
                 <div class="info-header" data-aos="fade-up" data-aos-delay="100">
                     <h2>Informações de contato</h2>
                     <p>Diversos canais para você entrar em contato conosco</p>

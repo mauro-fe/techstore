@@ -474,6 +474,7 @@
     color: var(--gray-100);
     font-weight: bold;
     border-radius: 20px 20px 0 0;
+    padding: 2rem 20px;
 }
 
 .modal-header h5 {
@@ -481,7 +482,6 @@
     font-weight: 800;
     color: white;
     line-height: 1.2;
-    margin-bottom: 1.5rem;
     text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
@@ -1001,12 +1001,6 @@
                             <i class="fas fa-user me-2"></i>Nome completo:
                         </label>
                         <input type="text" class="form-control" required>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label fw-semibold">
-                            <i class="fas fa-phone me-2"></i>Telefone:
-                        </label>
-                        <input type="tel" class="form-control" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label fw-semibold">

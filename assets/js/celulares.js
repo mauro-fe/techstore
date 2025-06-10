@@ -172,7 +172,7 @@ class IPhoneStore {
         if (cor && armazenamento && nome) {
             const mensagem = this.buildWhatsAppMessage(nome, cor, armazenamento, quantidade);
             const numero = '5544998011086';
-            const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+            const url = `https://api.whatsapp.com/send?phone=${numero}&text=${encodeURIComponent(mensagem)}`;
 
             linkWhatsapp.href = url;
             linkWhatsapp.style.opacity = '1';

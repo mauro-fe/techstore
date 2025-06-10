@@ -77,12 +77,11 @@ p {
 
 // Seções de celulares
 .container-fluid {
-  padding-top: 70px;
+  padding-top: 55px;
 }
 .mySwiperIphones {
   max-width: 320px;
   margin: auto;
-  margin: 10px 0;
   & .swiper-slide {
     display: flex;
     flex-direction: column;
@@ -94,10 +93,13 @@ p {
       transition: 0.7s;
       &:hover {
         transform: translate(5px, -10px) rotate(-5deg);
-        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
-        filter: brightness(1.05);
+        filter: $boxShadowHoverCell;
       }
     }
+  }
+  .swiper-pagination {
+    position: relative;
+    margin-top: 5 px;
   }
 }
 
@@ -108,7 +110,7 @@ p {
     padding: 60px 0;
     border-radius: 10px;
     text-align: center;
-    background-color: #00abff33;
+    background: linear-gradient(to top, #f9f9f9 50%, #e2f3ff);
     & img {
       max-height: 300px;
       transition: 0.7s;
@@ -176,6 +178,14 @@ p {
           object-fit: contain;
           padding: 20px;
         }
+        & .card-title {
+          height: 50px;
+          font-size: 22px;
+        }
+        & .card-text {
+          height: 120px;
+          font-size: 18px;
+        }
       }
     }
   }
@@ -187,7 +197,7 @@ p {
   border-radius: 10px;
   margin: 8rem 0;
   padding: 5rem 1rem;
-  background: #00abff33;
+  background: linear-gradient(to top, #f9f9f9 50%, #e2f3ff);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -257,6 +267,9 @@ p {
       & .stars {
         color: #ffc107;
         font-size: 1.1rem;
+      }
+      & .card-text {
+        height: 130px;
       }
     }
   }
