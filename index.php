@@ -765,9 +765,11 @@ $BASE_URL = $_SERVER['SERVER_NAME'] . $_SERVER['SCRIPT_NAME'];
 
                 <!-- Links ou redes sociais -->
                 <div class="col-md-4 text-center text-md-end">
-                    <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="text-light me-3"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="text-light"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/megatech_cdl/" class="text-light me-3"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/MegaTech2k21/" class="text-light me-3"><i
+                            class="fab fa-facebook"></i></a>
+                    <a href="https://wa.me/+5544998011086" class="text-light"><i class="fab fa-whatsapp"></i></a>
                 </div>
 
             </div>
