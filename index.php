@@ -411,6 +411,8 @@ $BASE_URL = $_SERVER['SERVER_NAME'] . $_SERVER['SCRIPT_NAME'];
         bottom: -35px;
     }
 
+
+
     /* Responsividade */
     @media (max-width: 991px) {
 
@@ -695,7 +697,8 @@ $BASE_URL = $_SERVER['SERVER_NAME'] . $_SERVER['SCRIPT_NAME'];
                             </a>
                         </li>
                         <li class="nav-item" data-aos="fade-left" data-aos-delay="600">
-                            <a class="nav-link btn-comprar-nav" href="#" aria-label="Comprar agora">
+                            <a class="nav-link btn-comprar-nav" href="https://wa.me/+5544998011086"
+                                aria-label="Comprar agora">
                                 <i class="fas fa-shopping-cart"></i>
                                 Comprar
                             </a>
@@ -764,14 +767,20 @@ $BASE_URL = $_SERVER['SERVER_NAME'] . $_SERVER['SCRIPT_NAME'];
                 </div>
 
                 <!-- Links ou redes sociais -->
-                <div class="col-md-4 text-center text-md-end">
-                    <a href="https://www.instagram.com/megatech_cdl/" class="text-light me-3"><i
-                            class="fab fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/MegaTech2k21/" class="text-light me-3"><i
-                            class="fab fa-facebook"></i></a>
-                    <a href="https://wa.me/+5544998011086" class="text-light"><i class="fab fa-whatsapp"></i></a>
+                <div class="social-links col-md-4 text-center text-md-end">
+                    <a href="#" class="social-link whatsapp" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.instagram.com/megatech_cdl/" class="social-link instagram" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/MegaTech2k21/" class="social-link facebook" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <!-- <a href="#" class="social-link linkedin" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a> -->
                 </div>
-
             </div>
         </div>
     </footer>
