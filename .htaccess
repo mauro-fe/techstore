@@ -1,4 +1,10 @@
-RewriteEngine on
-RewriteCond %{SCRIPT_FILENAME} !-f
-RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteEngine On
+
+# Permitir acesso direto ao getImagens.php
+RewriteCond %{REQUEST_URI} ^/megatech2/getImagens\.php$
+RewriteRule ^ - [L]
+
+# Regras normais de rewrite
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php?param=$1

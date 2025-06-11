@@ -1,6 +1,7 @@
 <?= BASE_URL ?>
 
 <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/celulares.css">
+<script src="https://cdn.jsdelivr.net/npm/fslightbox/index.js"></script>
 
 <?php
 require_once __DIR__ . '/../../Pages.php';
@@ -108,13 +109,9 @@ require_once __DIR__ . '/../../Pages.php';
 
                                 </div>
                                 <div class="card-body d-flex align-items-center">
-                                    <button class="btn btn-enhanced btn-ver-detalhes" data-bs-toggle="modal"
-                                        data-bs-target="#modalDetalhes" data-nome="<?= $p->nome ?>" data-id="<?= $p->id ?>"
-                                        data-pasta="<?= $p->pastaImagens ?>"
-                                        data-processador="<?= $p->especificacoes['Processador'] ?? '' ?>"
-                                        data-camera="<?= $p->especificacoes['camera'] ?? '' ?>"
-                                        data-bateria="<?= $p->especificacoes['Bateria'] ?? '' ?>">
-                                        <i class="fas fa-info-circle"></i> Ver mais detalhes
+                                    <button class="btn btn-enhanced btn-ver-detalhes"
+                                        onclick="abrirGaleria('<?= $p->pastaImagens ?>', <?= $p->id ?>)">
+                                        <i class="fas fa-images"></i> Ver imagens
                                     </button>
 
                                     <button class="btn btn-enhanced btn-comprar" data-nome="<?= $p->nome ?>"
@@ -187,55 +184,44 @@ require_once __DIR__ . '/../../Pages.php';
             </div>
         </div>
     </div>
-
-
-
-    <!-- Modal Bonito com Detalhes do Produto -->
-    <div class="modal fade" id="modalDetalhes" tabindex="-1" aria-labelledby="modalDetalhesLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalDetalhesLabel">Detalhes do Produto</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <!-- Carousel de imagens -->
-
-                            <div id="carouselDetalhes" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner" id="carouselDetalhesInner">
-                                </div>
-
-                                <?php if (count($imagens) > 1): ?>
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselDetalhes"
-                                        data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Anterior</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselDetalhes"
-                                        data-bs-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Próximo</span>
-                                    </button>
-                                <?php endif; ?>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <h4 id="detalheTitulo"></h4>
-                            <ul class="list-group list-group-flush mt-3" id="listaEspecificacoes">
-                                <!-- Especificações adicionadas dinamicamente -->
-                            </ul>
-
-                            <button class="btn btn-success w-100 mt-4" id="btnIrParaCompra">
-                                <i class="fas fa-shopping-cart me-2"></i>Comprar Agora
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </main>
 
 <script src="<?= BASE_URL ?>/assets/js/celulares.js"></script>
+
+<!-- Script dinâmico por produto -->
+
+<script>
+    const BASE_URL = "<?= BASE_URL ?>";
+
+
+    function abrirGaleria(pasta, id) {
+        const url = `${BASE_URL}getImagens.php?pasta=${encodeURIComponent(pasta)}`;
+        console.log(url);
+
+        fetch(url)
+            .then(res => res.json())
+            .then(imagens => {
+                if (!Array.isArray(imagens) || imagens.length === 0) {
+                    alert('Nenhuma imagem encontrada.');
+                    return;
+                }
+
+                // Remove links antigos
+                document.querySelectorAll(`[data-fslightbox="galeria-${id}"]`).forEach(e => e.remove());
+
+                // Adiciona links invisíveis para fslightbox
+                imagens.forEach((src, i) => {
+                    const a = document.createElement('a');
+                    a.href = src;
+                    a.setAttribute('data-fslightbox', `galeria-${id}`);
+                    if (i === 0) a.id = `primeira-imagem-${id}`;
+                    a.style.display = 'none';
+                    document.body.appendChild(a);
+                });
+
+                // Dispara clique na primeira imagem
+                document.getElementById(`primeira-imagem-${id}`)?.click();
+            })
+            .catch(err => console.error('Erro ao carregar imagens:', err));
+    }
+</script>

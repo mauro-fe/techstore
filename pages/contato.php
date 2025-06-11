@@ -34,7 +34,7 @@
         overflow: hidden;
         padding-top: 2rem;
         padding-bottom: 6rem;
-        margin-bottom: 0;
+
     }
 
     .hero::before {
@@ -113,7 +113,7 @@
     /* Main Content */
     .main-content {
         position: relative;
-        margin-top: 5rem;
+        margin-top: 6rem;
     }
 
     /* Formulario */
