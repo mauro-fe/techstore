@@ -177,14 +177,16 @@
 .services {
     padding: 3rem 0;
     position: relative;
+    margin-top: 4rem;
 }
 
 .services-container {
-    max-width: 1200px;
     margin: 0 auto;
     background: var(--gray-100);
-    padding: 0 10px;
-    border-radius: 10px;
+    padding: 20px 10px;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
 }
 
 .section-header {
@@ -223,22 +225,6 @@
     margin-top: auto;
 }
 
-.service-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
 
 .service-card:hover::before {
     transform: scaleX(1);
@@ -272,6 +258,7 @@
     color: var(--gray-600);
     margin-bottom: 1.5rem;
     line-height: 1.6;
+    height: 100px;
 }
 
 .service-features {
@@ -323,9 +310,11 @@
 /* Process Section */
 .process {
     background: linear-gradient(to top, #f9f9f9 50%, #e2f3ff);
-    border-radius: 10px;
-    margin: 7rem auto;
+    border-radius: 30px;
+    margin: 5rem auto;
     padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
 }
 
 .process-container {
@@ -395,14 +384,19 @@
 /* FAQ Section */
 .faq {
     padding: 2rem 0;
+    margin-bottom: 6rem;
+
 }
 
 .faq-container {
     margin: 0 auto;
     padding: 2rem;
     background: var(--gray-200);
-    border-radius: 10px;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
 }
+
 
 .faq-item {
     background: var(--gray-100);
@@ -497,6 +491,30 @@
 #enviarAssistencia:hover::before {
     left: 100%;
 }
+
+.services-container::before,
+.process::before,
+.faq-container::before,
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+
+.services-container:hover::before,
+.process:hover::before,
+.faq-container:hover::before,
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
 
 
 /* Animations */
