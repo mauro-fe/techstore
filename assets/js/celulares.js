@@ -1,7 +1,7 @@
 
 // Versão otimizada com melhor performance e tratamento de erros
 
-class IPhoneStore {
+class CellStory {
     constructor() {
         this.modal = null;
         this.debounceTimer = null;
@@ -261,7 +261,7 @@ class IPhoneStore {
 
 // Inicialização
 document.addEventListener('DOMContentLoaded', () => {
-    new IPhoneStore();
+    new CellStory();
 });
 
 // Service Worker para cache (opcional)

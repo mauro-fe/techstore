@@ -411,6 +411,101 @@ $BASE_URL = $_SERVER['SERVER_NAME'] . $_SERVER['SCRIPT_NAME'];
         bottom: -35px;
     }
 
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .social-link {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-decoration: none;
+        font-size: 1.5rem;
+        transition: all 0.5s ease;
+        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    }
+
+
+    .social-link:hover {
+        transform: translateY(-5px) scale(1.1);
+    }
+
+    .social-link.whatsapp {
+        background: linear-gradient(135deg, #25D366, #128C7E);
+    }
+
+    .social-link.whatsapp:hover {
+        box-shadow: 0 0 20px #25D366;
+    }
+
+    .social-link.instagram {
+        background: linear-gradient(135deg, #E4405F, #F77737);
+    }
+
+    .social-link.instagram:hover {
+        box-shadow: 0 0 20px #E4405F;
+    }
+
+    .social-link.facebook {
+        background: linear-gradient(135deg, #1877F2, #42A5F5);
+    }
+
+    .social-link.facebook:hover {
+        box-shadow: 0 0 20px #42A5F5;
+    }
+
+    .social-link.linkedin {
+        background: linear-gradient(135deg, #0077B5, #00A0DC);
+    }
+
+    .social-link.linkedin:hover {
+        box-shadow: 0 0 20px #0077B5;
+
+    }
+
+
+    footer .social-link {
+        display: inline-block;
+        width: 36px !important;
+        height: 36px;
+        text-align: center;
+    }
+
+    footer .contact-info-card::before,
+    footer .social-section::before,
+    footer .contact-form-section::before,
+    footer .map-card-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+
+
+    footer .contact-info-card:hover::before,
+    footer .social-section:hover::before,
+    footer .contact-form-section:hover::before,
+    footer .map-card-section:hover::before {
+        transform: scaleX(1);
+    }
+
+
+    footer .social-link:hover {
+        color: #fff;
+    }
+
 
 
     /* Responsividade */
@@ -749,42 +844,195 @@ $BASE_URL = $_SERVER['SERVER_NAME'] . $_SERVER['SCRIPT_NAME'];
 
     </main>
 
-    <footer class="footer py-4">
+    <style>
+    .footer-containt {
+        display: flex;
+        flex-direction: column !important;
+    }
+    </style>
+    <footer class="footer py-4 bg-dark text-white">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="d-flex footer-containt">
+                <div class="row align-items-start">
+                    <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase mb-3 footer-heading">Páginas</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a class="footer-link d-flex align-items-center" href="home" aria-current="page"
+                                    data-tooltip="Página inicial">
+                                    <i class="fas fa-home me-2"></i> Home
+                                </a>
+                            </li>
+                            <li>
+                                <a class="footer-link d-flex align-items-center" href="assistencia-tecnica"
+                                    data-tooltip="Consertos e manutenção">
+                                    <i class="fas fa-tools me-2"></i> Assistência Técnica
+                                </a>
+                            </li>
+                            <li>
+                                <a class="footer-link d-flex align-items-center" href="sobre-nos"
+                                    data-tooltip="Conheça nossa história">
+                                    <i class="fas fa-info-circle me-2"></i> Sobre nós
+                                </a>
+                            </li>
+                            <li>
+                                <a class="footer-link d-flex align-items-center" href="contato"
+                                    data-tooltip="Fale conosco">
+                                    <i class="fas fa-envelope me-2"></i> Contato
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
 
-                <!-- Logo e nome -->
-                <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
-                    <a href="#" class="d-flex align-items-center gap-2 text-light text-decoration-none">
-                        <img src="assets/img/logo.png" alt="Logo MegaTech" style="height: 40px;">
-                        <span class="fw-bold fs-5">MegaTech</span>
-                    </a>
+                    <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase mb-3 footer-heading">Celulares</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a class="footer-link d-flex align-items-center"
+                                    href="<?= BASE_URL ?>celulares/celular/marca/iphone">
+                                    <i class="fab fa-apple me-2"></i> iPhone
+                                </a>
+                            </li>
+                            <li>
+                                <a class="footer-link d-flex align-items-center"
+                                    href="<?= BASE_URL ?>celulares/celular/marca/samsung">
+                                    <i class="fas fa-mobile me-2"></i> Samsung
+                                </a>
+                            </li>
+                            <li>
+                                <a class="footer-link d-flex align-items-center"
+                                    href="<?= BASE_URL ?>celulares/celular/marca/xiaomi">
+                                    <i class="fas fa-mobile-alt me-2"></i> Xiaomi
+                                </a>
+                            </li>
+                            <li>
+                                <a class="footer-link d-flex align-items-center"
+                                    href="<?= BASE_URL ?>celulares/celular/marca/realme">
+                                    <i class="fas fa-mobile-alt me-2"></i> Realme
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase mb-3 footer-heading">Fale Conosco</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-map-marker-alt me-2"></i> Campina da Lagoa, PR</li>
+                            <li><i class="fas fa-phone me-2"></i> (44) 99801-1086</li>
+                            <li><i class="fas fa-clock me-2"></i> Seg-Sex: 9h-18h</li>
+                        </ul>
+                        <p class="small text-muted mt-2">Parcelamos em até 18x!</p>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 mb-4 mb-md-0 text-center text-md-end">
+
+                        <p class="small text-muted mb-3">Sua tecnologia com confiança e preço justo.</p>
+
+                    </div>
                 </div>
 
-                <!-- Texto central -->
-                <div class="col-md-4 text-center mb-3 mb-md-0">
-                    <p class="mb-0 small">&copy; 2025 MegaTech. Todos os direitos reservados.</p>
-                </div>
-
-                <!-- Links ou redes sociais -->
-                <div class="social-links col-md-4 text-center text-md-end">
-                    <a href="#" class="social-link whatsapp" title="WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                    <a href="https://www.instagram.com/megatech_cdl/" class="social-link instagram" title="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.facebook.com/MegaTech2k21/" class="social-link facebook" title="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <!-- <a href="#" class="social-link linkedin" title="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a> -->
+                <hr class="my-4 border-secondary">
+                <div class="row align-items-center teste">
+                    <div class="col-md-3 text-center text-md-start">
+                        <a href="home"
+                            class="d-inline-flex align-items-center gap-2 text-white text-decoration-none mb-3">
+                            <img src="assets/img/logo.png" alt="Logo MegaTech" style="height: 50px;">
+                            <span class="fw-bold fs-4">MegaTech</span>
+                        </a>
+                    </div>
+                    <div class="col-md-3 text-center text-md-start">
+                        <p class="mb-0 small">&copy; 2025 MegaTech. Todos os direitos reservados.</p>
+                    </div>
+                    <div class="col-md-3 text-center text-md-end">
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item"><a href="politica-privacidade"
+                                    class=" text-decoration-none small">Política de Privacidade</a></li>
+                            <li class="list-inline-item"><span class=" small">|</span></li>
+                            <li class="list-inline-item"><a href="termos-servico"
+                                    class=" text-decoration-none small">Termos de Serviço</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 text-center text-md-end">
+                        <a href="https://wa.me/+5544998011086" class="social-link whatsapp me-2" title="WhatsApp"><i
+                                class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/megatech_cdl/" class="social-link instagram me-2"
+                            title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/MegaTech2k21/" class="social-link facebook"
+                            title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
+
     </footer>
 
+    <style>
+    .footer {
+        background-color: #212529 !important;
+        /* Um tom de cinza escuro para o fundo */
+        color: #f8f9fa;
+        /* Cor do texto principal */
+    }
+
+    .footer .footer-heading {
+        color: #0d6efd;
+        /* Azul para os títulos */
+        font-weight: bold;
+    }
+
+    .footer .footer-link {
+        color: #adb5bd;
+        /* Cinza claro para os links */
+        text-decoration: none;
+        transition: color 0.3s ease;
+        margin-bottom: 0.5rem;
+        /* Espaçamento entre os itens da lista */
+    }
+
+    .footer .footer-link:hover {
+        color: #ffffff;
+        /* Branco ao passar o mouse */
+    }
+
+    .footer .list-unstyled li {
+        margin-bottom: 0.3rem;
+        /* Espaçamento mais compacto para listas */
+    }
+
+    .footer .social-links a {
+        color: #ffffff;
+        font-size: 1.5rem;
+        margin: 0 0.5rem;
+        transition: color 0.3s ease;
+    }
+
+    .footer .social-link.whatsapp:hover {
+        color: #25D366;
+        /* Verde do WhatsApp */
+    }
+
+    .footer .social-link.instagram:hover {
+        color: #C13584;
+        /* Rosa do Instagram */
+    }
+
+    .footer .social-link.facebook:hover {
+        color: #1877F2;
+        /* Azul do Facebook */
+    }
+
+    /* Estilo para o botão "Comprar Agora" */
+    .footer .btn-success {
+        background-color: #28a745;
+        /* Verde Bootstrap padrão */
+        border-color: #28a745;
+    }
+
+    .footer .btn-success:hover {
+        background-color: #218838;
+        border-color: #1e7e34;
+    }
+    </style>
 
     <!-- Script do Swiper.js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

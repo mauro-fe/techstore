@@ -446,63 +446,6 @@
         margin-bottom: 1.5rem;
     }
 
-    .social-links {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-    }
-
-    .social-link {
-        width: 60px;
-        height: 60px;
-        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        text-decoration: none;
-        font-size: 1.5rem;
-        transition: all 0.5s ease;
-        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
-    }
-
-    .social-link:hover {
-        transform: translateY(-5px) scale(1.1);
-    }
-
-    .social-link.whatsapp {
-        background: linear-gradient(135deg, #25D366, #128C7E);
-    }
-
-    .social-link.whatsapp:hover {
-        box-shadow: 0 0 20px #25D366;
-    }
-
-    .social-link.instagram {
-        background: linear-gradient(135deg, #E4405F, #F77737);
-    }
-
-    .social-link.instagram:hover {
-        box-shadow: 0 0 20px #E4405F;
-    }
-
-    .social-link.facebook {
-        background: linear-gradient(135deg, #1877F2, #42A5F5);
-    }
-
-    .social-link.facebook:hover {
-        box-shadow: 0 0 20px #42A5F5;
-    }
-
-    .social-link.linkedin {
-        background: linear-gradient(135deg, #0077B5, #00A0DC);
-    }
-
-    .social-link.linkedin:hover {
-        box-shadow: 0 0 20px #0077B5;
-
-    }
 
     /* Map Section */
     .map-section {
@@ -707,41 +650,6 @@
         }
 
 
-    }
-
-    footer .social-link {
-        display: inline-block;
-        width: 36px !important;
-        height: 36px;
-        text-align: center;
-    }
-
-    .contact-info-card::before,
-    .social-section::before,
-    .contact-form-section::before,
-    .map-card-section::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 3px;
-        background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-        transform: scaleX(0);
-        transition: transform 0.3s ease;
-    }
-
-
-    .contact-info-card:hover::before,
-    .social-section:hover::before,
-    .contact-form-section:hover::before,
-    .map-card-section:hover::before {
-        transform: scaleX(1);
-    }
-
-
-    footer .social-link:hover {
-        color: #fff;
     }
 </style>
 <main>
