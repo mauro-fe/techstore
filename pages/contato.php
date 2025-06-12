@@ -785,18 +785,16 @@
                     <p>Preencha o formulário abaixo e entraremos em contato o mais breve possível</p>
                 </div>
 
-                <form action="https://formsubmit.co/devmaurofelix@gmail.com" method="post" class="contact-form"
-                    id="contactForm">
-                    <input type="hidden" name="_next" id="nextRedirect" value="">
+                <form action="contact.php" method="post" class="contact-form" id="contactForm">
 
                     <div class="form-row">
                         <div class="form-group form-floating-label">
-                            <input type="text" id="fullName" name="Nome completo    " class="form-control"
-                                placeholder=" " required>
+                            <input type="text" id="fullName" name="nome_completo" class="form-control" placeholder=" "
+                                required>
                             <label for="fullName">Nome Completo *</label>
                         </div>
                         <div class="form-group form-floating-label">
-                            <input type="tel" id="phone" name="Telefone" class="form-control" placeholder=" " required>
+                            <input type="tel" id="phone" name="telefone" class="form-control" placeholder=" " required>
                             <label for="phone">Telefone *</label>
                         </div>
                     </div>
@@ -813,7 +811,7 @@
                     </div>
 
                     <div class="form-group form-floating-label">
-                        <select id="foundUs" name="Como nos encontrou" class="form-control select" required>
+                        <select id="foundUs" name="como_nos_encontrou" class="form-control select" required>
                             <option value="">Selecione uma opção</option>
                             <option value="google">Google / Pesquisa Online</option>
                             <option value="instagram">Instagram</option>
@@ -828,7 +826,7 @@
                     </div>
 
                     <div class="form-group form-floating-label">
-                        <textarea id="message" name="Mensagem" class="form-control textarea" placeholder=" "
+                        <textarea id="message" name="mensagem" class="form-control textarea" placeholder=" "
                             required></textarea>
                         <label for="message">Sua Mensagem *</label>
                     </div>
@@ -1095,4 +1093,32 @@
             }
         });
     });
+
+    // Adicione no final da sua página contato.html
+    document.addEventListener('DOMContentLoaded', function() {
+        const urlParams = new URLSearchParams(window.location.search);
+
+        if (urlParams.get('success') === '1') {
+            alert('✅ Mensagem enviada com sucesso! Entraremos em contato em breve.');
+            // Ou exiba uma mensagem mais elegante
+            showSuccessMessage();
+        }
+
+        if (urlParams.get('error') === '1') {
+            const errorMsg = urlParams.get('msg') || 'Erro ao enviar mensagem. Tente novamente.';
+            alert('❌ ' + errorMsg);
+            // Ou exiba uma mensagem de erro mais elegante
+            showErrorMessage(errorMsg);
+        }
+    });
+
+    function showSuccessMessage() {
+        // Implemente sua notificação de sucesso
+        console.log('Mensagem enviada com sucesso!');
+    }
+
+    function showErrorMessage(msg) {
+        // Implemente sua notificação de erro
+        console.log('Erro:', msg);
+    }
 </script>

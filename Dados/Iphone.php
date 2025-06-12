@@ -23,7 +23,7 @@ $iphones = [
 
 
         ],
-        '16',
+        'iphone/16',
         ''
     ),
     2 => new Product(
@@ -47,7 +47,7 @@ $iphones = [
             'sistema-operacional' => 'iOS',
 
         ],
-        '16-plus',
+        'iphone/16-plus',
         ''
     ),
     3 => new Product(
@@ -72,7 +72,7 @@ $iphones = [
 
 
         ],
-        '16-pro',
+        'iphone/16-pro',
         ''
     ),
     4 => new Product(
@@ -96,7 +96,7 @@ $iphones = [
             'sistema-operacional' => 'iOS',
 
         ],
-        '16-pro-max',
+        'iphone/16-pro-max',
         ''
     ),
     5 => new Product(
@@ -120,7 +120,7 @@ $iphones = [
             'sistema-operacional' => 'iOS',
 
         ],
-        '15',
+        'iphone/15',
         ''
     ),
 
@@ -146,7 +146,7 @@ $iphones = [
 
 
         ],
-        '15-plus',
+        'iphone/15-plus',
         ''
     ),
 
@@ -170,7 +170,7 @@ $iphones = [
 
             'sistema-operacional' => 'iOS',
         ],
-        '15-pro',
+        'iphone/15-pro',
         ''
     ),
     8 => new Product(
@@ -194,7 +194,7 @@ $iphones = [
             'sistema-operacional' => 'iOS',
 
         ],
-        '15-pro-max',
+        'iphone/15-pro-max',
         ''
     ),
 
@@ -219,7 +219,7 @@ $iphones = [
             'sistema-operacional' => 'iOS',
 
         ],
-        '14',
+        'iphone/14',
         ''
     ),
 
@@ -244,7 +244,7 @@ $iphones = [
             'sistema-operacional' => 'iOS',
 
         ],
-        '14-plus',
+        'iphone/14-plus',
         ''
     ),
 
@@ -269,7 +269,7 @@ $iphones = [
             'sistema-operacional' => 'iOS',
 
         ],
-        '14-pro',
+        'iphone/14-pro',
         ''
     ),
     12 => new Product(
@@ -293,7 +293,7 @@ $iphones = [
             'sistema-operacional' => 'iOS',
 
         ],
-        '14-pro-max',
+        'iphone/14-pro-max',
         ''
     ),
 
@@ -317,7 +317,7 @@ $iphones = [
 
             'sistema-operacional' => 'iOS',
         ],
-        '13',
+        'iphone/13',
         ''
     ),
 
@@ -341,7 +341,7 @@ $iphones = [
 
             'sistema-operacional' => 'iOS',
         ],
-        '13-mini',
+        'iphone/13-mini',
         ''
     ),
 
@@ -365,7 +365,7 @@ $iphones = [
 
             'sistema-operacional' => 'iOS',
         ],
-        '13-pro',
+        'iphone/13-pro',
         ''
 
     ),
@@ -390,7 +390,7 @@ $iphones = [
 
             'sistema-operacional' => 'iOS',
         ],
-        '13-pro-max',
+        'iphone/13-pro-max',
         ''
     ),
 
@@ -415,7 +415,7 @@ $iphones = [
             'sistema-operacional' => 'iOS',
 
         ],
-        '12',
+        'iphone/12',
         ''
     ),
 
@@ -440,7 +440,7 @@ $iphones = [
             'sistema-operacional' => 'iOS',
 
         ],
-        '12-mini',
+        'iphone/12-mini',
         ''
     ),
 
@@ -464,7 +464,7 @@ $iphones = [
 
             'sistema-operacional' => 'iOS',
         ],
-        '12-pro',
+        'iphone/12-pro',
         ''
     ),
     22 => new Product(
@@ -488,7 +488,7 @@ $iphones = [
             'sistema-operacional' => 'iOS'
 
         ],
-        '12-pro-max',
+        'iphone/12-pro-max',
         ''
     ),
 
@@ -513,7 +513,7 @@ $iphones = [
             'sistema-operacional' => 'iOS',
 
         ],
-        '11',
+        'iphone/11',
         ''
     ),
 
@@ -537,7 +537,7 @@ $iphones = [
 
             'sistema-operacional' => 'iOS',
         ],
-        '11-pro',
+        'iphone/11-pro',
         ''
     ),
     25 => new Product(
@@ -562,7 +562,7 @@ $iphones = [
 
             'sistema-operacional' => 'iOS',
         ],
-        '11-pro-max',
+        'iphone/11-pro-max',
         ''
     )
 

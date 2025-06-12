@@ -7,7 +7,7 @@ $realmes = [
         'C75',
         './assets/img/realme-c75-dourado-2.png',
         [],
-        '',
+        'realme/c75',
         ''
     ),
     2 => new Product(
@@ -16,7 +16,7 @@ $realmes = [
         '14',
         './assets/img/realme-c75-dourado-2.png',
         [],
-        '',
+        'realme/14',
         ''
     ),
     3 => new Product(
@@ -25,7 +25,7 @@ $realmes = [
         '14 PRO',
         './assets/img/realme-c75-dourado-2.png',
         [],
-        '',
+        'realme/14-pro',
         ''
     ),
     4 => new Product(
@@ -34,7 +34,7 @@ $realmes = [
         '14 PRO PLUS',
         './assets/img/realme-c75-dourado-2.png',
         [],
-        '',
+        'realme/14-pro-plus',
         ''
     )
 ];

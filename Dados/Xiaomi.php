@@ -7,7 +7,7 @@ $xiaomis = [
         'NOTE 14',
         './assets/img/xiaomi/note14-coral-green.jpg',
         [],
-        '',
+        'xiaomi/note-14',
         ''
     ),
     2 => new Product(
@@ -16,7 +16,7 @@ $xiaomis = [
         'NOTE 14 PRO',
         './assets/img/xiaomi/note14-pro-roxo-lavanda.jpg',
         [],
-        '',
+        'xiaomi/note-14-pro',
         ''
     ),
     3 => new Product(
@@ -25,7 +25,7 @@ $xiaomis = [
         'NOTE 14 PRO PLUS',
         './assets/img/xiaomi/note14-pro-plus-preto.jpg',
         [],
-        '',
+        'xiaomi/note-14-pro-plus',
         ''
     ),
 
@@ -35,7 +35,7 @@ $xiaomis = [
         '15 Ultra',
         './assets/img/xiaomi/15-ultra-black-silver.jpg',
         [],
-        '',
+        'xiaomi/15-ultra',
         ''
     ),
     5 => new Product(
@@ -44,7 +44,7 @@ $xiaomis = [
         'POCO M7 PRO',
         './assets/img/xiaomi/poco-m7-pro-violeta.jpg',
         [],
-        '',
+        'xiaomi/poco-m7-pro',
         ''
     ),
     6 => new Product(
@@ -53,7 +53,7 @@ $xiaomis = [
         'POCO X7',
         './assets/img/xiaomi/poco-x7-cinza.jpg',
         [],
-        '',
+        'xiaomi/poco-x7',
         ''
     ),
     7 => new Product(
@@ -62,7 +62,7 @@ $xiaomis = [
         'POCO X7 PRO',
         './assets/img/xiaomi/poco-x7-pro-verde.jpg',
         [],
-        '',
+        'xiaomi/poco-x7-pro',
         ''
     ),
 
@@ -72,7 +72,7 @@ $xiaomis = [
         'POCO F7',
         './assets/img/xiaomi-15-ultra-preto.png',
         [],
-        '',
+        'xiaomi/poco-f7',
         ''
     ),
     9 => new Product(
@@ -81,7 +81,7 @@ $xiaomis = [
         'POCO F7 PRO',
         './assets/img/xiaomi/poco-f7-pro-azul.jpg',
         [],
-        '',
+        'xiaomi/poco-f7-pro',
         ''
     ),
 ];

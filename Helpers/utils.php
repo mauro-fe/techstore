@@ -1,22 +1,39 @@
 <?php
 
-function getImagesForModel($pasta): array
+// ===== ARQUIVO: helpers/utils.php =====
+// Adicione esta função ao seu arquivo utils.php existente
+
+/**
+ * Busca todas as imagens de uma pasta específica
+ * @param string $folderPath Caminho relativo da pasta (ex: 'iphone/11')
+ * @return array Array com as URLs das imagens
+ */
+function getImagesForModel($folderPath)
 {
+    $images = [];
+    $allowedExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
 
-    // Caminho físico correto no servidor (filesystem)
-    $caminhoAbsoluto = realpath(__DIR__ . '/../assets/img/iphone/' . $pasta);
+    // Ajuste o caminho base conforme sua estrutura
+    $basePath = __DIR__ . '/../assets/img/';
+    $fullPath = $basePath . $folderPath;
 
-    // Caminho para o navegador
-    $caminhoRelativo = 'assets/img/iphone/' . $pasta;
+    if (is_dir($fullPath)) {
+        $files = scandir($fullPath);
 
-    $imagens = [];
+        foreach ($files as $file) {
+            if ($file != '.' && $file != '..') {
+                $extension = strtolower(pathinfo($file, PATHINFO_EXTENSION));
 
-    if ($pasta && $caminhoAbsoluto && is_dir($caminhoAbsoluto)) {
-        foreach (glob($caminhoAbsoluto . "/*.{jpg,jpeg,png,webp}", GLOB_BRACE) as $img) {
-            $nomeArquivo = basename($img);
-            $imagens[] = $caminhoRelativo . '/' . $nomeArquivo;
+                if (in_array($extension, $allowedExtensions)) {
+                    // Monta a URL completa da imagem
+                    $images[] = BASE_URL . '/assets/img/' . $folderPath . '/' . $file;
+                }
+            }
         }
+
+        // Ordena as imagens por nome
+        sort($images);
     }
 
-    return $imagens;
+    return $images;
 }
