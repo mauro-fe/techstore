@@ -515,8 +515,6 @@
     transform: scaleX(1);
 }
 
-
-
 /* Animations */
 @keyframes float {
 
