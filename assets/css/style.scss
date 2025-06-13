@@ -78,6 +78,8 @@ p {
 // Seções de celulares
 .container-fluid {
   padding-top: 55px;
+  padding-bottom: 5rem;
+  background-color: #e9ecef;
 }
 .mySwiperIphones {
   max-width: 320px;
@@ -155,7 +157,7 @@ p {
         transform: scale(1.06); // Destaque no item central
         z-index: 2;
         background-color: #fff;
-        box-shadow: 0 0 10px 5px #0006;
+        box-shadow: 0 0 10px 5px #0001;
       }
 
       .card {
@@ -170,7 +172,7 @@ p {
 
         &:hover {
           transform: scale(1.02);
-          box-shadow: 0 0 6px 2px #0006;
+          box-shadow: 0 0 6px 2px #0004;
         }
 
         &-img-top {
@@ -249,12 +251,13 @@ p {
       width: 280px;
       border-radius: 15px;
       border: none;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.09);
+      box-shadow: 0 0 10px 5px #0001;
+
       background-color: #fff;
       padding-bottom: 15px;
       transition: transform 0.5s ease, box-shadow 0.5s ease;
       &:hover {
-        box-shadow: 0 0 8px 2px #0007;
+        box-shadow: 0 0 8px 2px #0004;
         transform: scale(1.1);
       }
       & .avatar {
