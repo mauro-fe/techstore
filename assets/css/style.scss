@@ -164,10 +164,11 @@ p {
       }
 
       .card {
-        width: 350px;
-        height: 100%;
+        margin: 4rem 0;
+        width: 320px;
+        height: 450px;
         border: none;
-        border-radius: 15px;
+        border-radius: 20px;
         overflow: hidden;
         transition: transform 0.5s ease, box-shadow 0.5s ease;
         background-color: #f1f1f1;
@@ -175,7 +176,7 @@ p {
 
         &:hover {
           transform: scale(1.02);
-          box-shadow: 0 0 6px 2px #0004;
+          box-shadow: 0 0 6px 2px #0003;
         }
 
         &-img-top {
@@ -221,15 +222,14 @@ p {
       transform: translateY(-10px);
     }
   }
-  & .details {
-    margin-bottom: 20px;
-  }
+
   & .assistencia-box {
     padding: 0.5rem;
     border-radius: 12px;
     background: white;
     box-shadow: $boxShadow;
     transition: all 0.3s ease;
+    width: 400px;
     &:hover {
       transform: translateY(-5px);
     }

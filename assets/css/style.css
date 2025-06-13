@@ -143,10 +143,11 @@ p {
   box-shadow: 0 0 10px 5px #0001;
 }
 .carousel .swiper-slide .card {
-  width: 350px;
-  height: 100%;
+  margin: 4rem 0;
+  width: 320px;
+  height: 450px;
   border: none;
-  border-radius: 15px;
+  border-radius: 20px;
   overflow: hidden;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
   background-color: #f1f1f1;
@@ -154,7 +155,7 @@ p {
 }
 .carousel .swiper-slide .card:hover {
   transform: scale(1.02);
-  box-shadow: 0 0 6px 2px #0004;
+  box-shadow: 0 0 6px 2px #0003;
 }
 .carousel .swiper-slide .card-img-top {
   height: 200px;
@@ -194,15 +195,13 @@ p {
 .assistencia-section img:hover {
   transform: translateY(-10px);
 }
-.assistencia-section .details {
-  margin-bottom: 20px;
-}
 .assistencia-section .assistencia-box {
   padding: 0.5rem;
   border-radius: 12px;
   background: white;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
+  width: 400px;
 }
 .assistencia-section .assistencia-box:hover {
   transform: translateY(-5px);
