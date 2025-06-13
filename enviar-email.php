@@ -143,8 +143,8 @@ try {
                 box-shadow: 0 0 20px rgba(0,0,0,0.1);
             }
             .header {
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                color: white;
+                background: linear-gradient(135deg, #00abff 0%, #00abff 100%);
+                color: white !important;
                 padding: 30px;
                 text-align: center;
             }

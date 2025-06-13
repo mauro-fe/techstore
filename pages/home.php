@@ -119,7 +119,7 @@
                 <?php endfor; ?>
             </div>
             <!-- Paginação opcional -->
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination mt-3"></div>
         </div>
         <p>Disponível agora com ofertas exclusivas.</p>
         <div class="btn-saiba-mais">
