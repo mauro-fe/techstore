@@ -65,6 +65,8 @@
         border-radius: 30px;
         position: relative;
         overflow: hidden;
+        box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.1);
+
     }
 
     .team-section h2 {
@@ -86,6 +88,8 @@
         background: linear-gradient(to top, #f9f9f9 50%, #e2f3ff);
         position: relative;
         overflow: hidden;
+        box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.1);
+
     }
 
     .values-section h2 {
