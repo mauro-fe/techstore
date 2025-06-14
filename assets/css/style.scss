@@ -309,15 +309,15 @@ p {
       color: $primaryColor;
     }
   }
-  p {
-    color: $secundaryColor;
-    font-size: 16px;
-  }
-  i {
-    font-size: 20px;
-  }
 }
 
-// Fim footer
+.modal-header {
+  border-radius: 20px 20px 0 0;
+}
 
-// Começa pagina de celulares
+.modal-content {
+  border-radius: 20px;
+}
+.modal-body {
+  background-color: #f1f1f1;
+}

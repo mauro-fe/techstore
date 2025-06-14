@@ -192,7 +192,7 @@
                 </div>
             <?php endforeach; ?>
         </div>
-        <div class="swiper-pagination mt-5"></div>
+        <div class="swiper-pagination"></div>
 
     </div>
 </div>
@@ -257,7 +257,8 @@
 </div>
 
 <!-- Modal de compra -->
-<div class="modal fade" id="modalComprar" tabindex="-1" aria-labelledby="modalComprarLabel" aria-hidden="true">
+<div class="modal modal-comprar fade" id="modalComprar" tabindex="-1" aria-labelledby="modalComprarLabel"
+    aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content border-0">
             <div class="modal-header text-white">
@@ -277,17 +278,22 @@
                         </label>
                         <input type="text" id="nome" class="form-control" required>
                     </div>
-
                     <div class="mb-3">
                         <label class="form-label fw-semibold">
-                            <i class="fas fa-sort-numeric-up me-2"></i> Quantidade
+                            <i class="fas fa-sort-numeric-up me-2"></i> Quantidade:
                         </label>
                         <input type="number" id="quantidadeProduto" class="form-control" value="1" min="1" max="10"
                             required>
                     </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">
+                            💬 Alguma mensagem?
+                        </label>
+                        <input type="text" id="msg" class="form-control" required>
+                    </div>
                 </form>
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer p-4">
                 <a href="#" id="linkWhatsapp" target="_blank" class="btn w-100">
                     <i class="fab fa-whatsapp me-2"></i> Finalizar compra no whatsapp
                 </a>

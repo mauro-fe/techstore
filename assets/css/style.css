@@ -272,12 +272,17 @@ p {
 .footer a:hover {
   color: #00abff;
 }
-.footer p {
-  color: #fff;
-  font-size: 16px;
+
+.modal-header {
+  border-radius: 20px 20px 0 0;
 }
-.footer i {
-  font-size: 20px;
+
+.modal-content {
+  border-radius: 20px;
+}
+
+.modal-body {
+  background-color: #f1f1f1;
 }
 
 /*# sourceMappingURL=style.css.map */

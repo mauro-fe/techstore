@@ -398,7 +398,7 @@
 
 /* Modal Melhorado */
 .modal-content {
-  border-radius: var(--border-radius);
+  border-radius: 20px;
   border: none;
   box-shadow: var(--shadow-strong);
   overflow: hidden;

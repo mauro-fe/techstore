@@ -247,7 +247,7 @@
 
 .submit-btn,
 .reset-btn {
-  width: 45%;
+  width: 170px;
   background: linear-gradient(
     135deg,
     var(--primary-color),
@@ -264,7 +264,7 @@
   margin-top: 1rem;
   position: relative;
   overflow: hidden;
-  margin: 0 10px;
+  margin: 0 50px;
 }
 
 .reset-btn {
@@ -334,8 +334,8 @@
   align-items: center;
   flex-direction: column;
   gap: 2rem;
-  margin-top: 7rem;
   overflow: hidden;
+  margin: 7rem auto;
 }
 
 .info-header {
@@ -368,6 +368,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  height: 290px;
   margin: 0 10px;
   padding: 15px 20px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
@@ -402,8 +403,9 @@
 }
 
 .contact-icon {
-  width: 70px;
-  height: 70px;
+  width: 70px !important;
+  height: 70px !important;
+  padding: 20px;
   background: linear-gradient(
     135deg,
     var(--primary-color),
@@ -467,7 +469,7 @@
 /* Map Section */
 .map-section {
   background: linear-gradient(to top, #f9f9f9 50%, #e2f3ff);
-  margin: 7rem auto;
+  margin-bottom: 7rem;
   background: white;
   border-radius: 30px;
   box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.1);
@@ -562,7 +564,8 @@
 
 .contact-form-section::before,
 .contact-info-section::before,
-.map-section::before {
+.map-section::before,
+.social-section::before {
   content: "";
   position: absolute;
   top: 0;
@@ -576,7 +579,8 @@
 
 .contact-form-section:hover::before,
 .contact-info-section:hover::before,
-.map-section:hover::before {
+.map-section:hover::before,
+.social-section:hover::before {
   transform: scaleX(1);
 }
 
@@ -643,10 +647,22 @@
     gap: 1rem;
   }
 
+  .form-control {
+    width: 100%;
+  }
+
+  .form-control .select {
+    width: 80%;
+  }
+
   .contact-item {
     flex-direction: column;
     text-align: center;
     margin-bottom: 2.5rem;
+  }
+
+  .form-group label {
+    padding: 0;
   }
 
   .contact-icon {
@@ -654,10 +670,17 @@
     margin-bottom: 1rem;
   }
 
+  .form-control {
+    padding: 0;
+    height: 50px;
+  }
+
   .submit-btn,
   .reset-btn {
     width: 30%;
-    font-size: 16px;
+    font-size: 10px;
+    padding: 5px 10px;
+    margin: 0 10px;
   }
 
   .social-links {

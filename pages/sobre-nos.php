@@ -3,7 +3,7 @@
 
 <section class="intro-section">
     <div class="container">
-        <h1 data-aos="fade-up" data-aos-delay="100">Nossa História</h1>
+        <h1 data-aos="fade-up" data-aos-delay="100">Nossa <span style="color: #000">História</span></h1>
         <div class="intro-text" data-aos="fade-up" data-aos-delay="200">
             <p>Com mais de 4 anos de história, a <strong>MegaTech</strong> surgiu do sonho de empreender e oferecer uma
                 loja própria de assistência técnica e venda de aparelhos eletrônicos. O que começou como um projeto

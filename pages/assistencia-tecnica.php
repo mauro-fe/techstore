@@ -310,7 +310,7 @@ $scrollTo = isset($_GET['scroll']) ? $_GET['scroll'] : '';
                 </form>
             </div>
             <div class="modal-footer">
-                <a href="#" id="enviarAssistencia" class="btn btn-success w-100">
+                <a href="#" id="enviarAssistencia" class="btn btn-success w-100 m-3">
                     <i class="fab fa-whatsapp me-2"></i>
                     Solicitar atendimento via WhatsApp
                 </a>
