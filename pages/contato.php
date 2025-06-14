@@ -18,7 +18,7 @@
                                 class="fas fa-phone"></i></a>
                     </div>
                     <div class="hero-icon" data-aos="fade-up" data-aos-dela y="400">
-                        <a href="#"><i class="fas fa-envelope"></i></a>
+                        <a href="megatechempresa@gmail.com"><i class="fas fa-envelope"></i></a>
                     </div>
                     <div class="hero-icon" data-aos="fade-up" data-aos-delay="600">
                         <a href="https://www.google.com.br/maps/place/Av.+Brasil+-+Campina+da+Lagoa,+PR,+87345-000/@-24.5945994,-52.8098194,17z/data=!3m1!4b1!4m6!3m5!1s0x94f20ea00b0d6f3d:0xf161c6134ec6b069!8m2!3d-24.5945994!4d-52.8072445!16s%2Fg%2F1ymx18pk0?hl=pt-BR&entry=ttu&g_ep=EgoyMDI1MDYwOC4wIKXMDSoASAFQAw%3D%3D"
@@ -123,7 +123,7 @@
                             </div>
                             <div class="contact-details">
                                 <h3>E-mail</h3>
-                                <p><a href="mailto:contato@megatech.com.br">contato@megatech.com.br</a></p>
+                                <p><a href="mailto:megatechempresa@gmail.com">megatechempresa@gmail.com</a></p>
                                 <p>Respondemos em até 24 horas</p>
                             </div>
                         </div>

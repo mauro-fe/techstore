@@ -20,9 +20,9 @@ $config = [
     'smtp_password' => 'mjdoqrffhjoakfta',                 // SENHA DE APP
 
     // Remetente e Destinatário  
-    'from_email' => 'mauro.cardoso.1998@gmail.com',
+    'from_email' => 'megatechempresa@gmail.com',
     'from_name' => 'Site - Loja de Celulares',
-    'to_email' => 'devmaurofelix@gmail.com',              // EMAIL DA LOJA
+    'to_email' => 'megatechempresa@gmail.com',              // EMAIL DA LOJA
     'to_name' => 'Loja de Celulares'
 ];
 
