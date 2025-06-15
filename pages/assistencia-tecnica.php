@@ -1,6 +1,5 @@
 <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/assistencia.css">
 
-
 <?php
 $scrollTo = isset($_GET['scroll']) ? $_GET['scroll'] : '';
 ?>
