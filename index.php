@@ -244,13 +244,13 @@ $BASE_URL = $_SERVER['SERVER_NAME'] . $_SERVER['SCRIPT_NAME'];
 
         .dropdown-item:focus,
         .dropdown-item:active {
-            color: #fff;
+            color: #00abff;
             background: rgba(0, 171, 255, 0.15);
         }
 
         .dropdown-item:hover {
             background: rgba(0, 171, 255, 0.15);
-            color: #fff;
+            color: #00abff;
             transform: translateX(4px);
         }
 
