@@ -1,3 +1,44 @@
+:root {
+  --color-primary: #00abff;
+  --color-accent: #5856d6;
+  --color-secondary: #00c896;
+  --color-danger: #ff3b30;
+  --color-warning: #ff9500;
+  --color-text-primary: #1d1d1f;
+  --color-text-secondary: #86868b;
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f5f5f7;
+  --color-border: #d2d2d7;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 3rem;
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 20px;
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.3s ease;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.12);
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
 /* Estilos específicos da página de erro */
 .error-page {
   min-height: 100vh;
@@ -25,7 +66,9 @@
     var(--color-primary) 0%,
     var(--color-accent) 100%
   );
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
   line-height: 1;
   margin-bottom: var(--spacing-md);
   text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
@@ -44,14 +87,15 @@
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  color: var(--color-text-secondary);
 }
 
 .error-actions {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: var(--spacing-md);
   margin-top: var(--spacing-xl);
-  align-items: center;
+  justify-content: center;
 }
 
 .error-search {
@@ -79,6 +123,24 @@
   outline: none;
   border-color: var(--color-primary);
   box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.2);
+}
+
+.error-search button {
+  padding: 0 var(--spacing-lg);
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.error-search button:hover {
+  background-color: #0051a2;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
 }
 
 .error-illustration {
@@ -112,6 +174,7 @@
   font-size: 3rem;
   margin-bottom: var(--spacing-sm);
   animation: float 3s ease-in-out infinite;
+  cursor: pointer;
 }
 
 .error-code {
@@ -175,6 +238,7 @@
 .suggestions h3 {
   font-size: 1.25rem;
   margin-bottom: var(--spacing-lg);
+  color: var(--color-text-secondary);
 }
 
 .suggestion-links {
@@ -191,6 +255,7 @@
   color: var(--color-text-primary);
   font-weight: 500;
   transition: all var(--transition-fast);
+  text-decoration: none;
 }
 
 .suggestion-link:hover {
@@ -223,6 +288,52 @@
 .error-title:hover + .glitch-effect {
   opacity: 0.5;
   animation: glitch 0.3s ease forwards;
+}
+
+/* Botões de ação */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--border-radius-md);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0051a2;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Ícones inline */
+.icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /* Animações */
@@ -282,10 +393,22 @@
 
   .error-actions {
     flex-direction: column;
+    width: 100%;
+    padding: 0 var(--spacing-md);
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
   }
 
   .suggestion-links {
     flex-direction: column;
+  }
+
+  .suggestion-link {
+    width: 100%;
+    text-align: center;
   }
 
   .floating-element {
@@ -304,5 +427,9 @@
 
   .error-illustration {
     max-width: 220px;
+  }
+
+  .error-message {
+    font-size: 1rem;
   }
 }

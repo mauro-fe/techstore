@@ -1,7 +1,7 @@
 <?php
 
 $protocolo = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https" : "http";
-define('BASE_URL', $protocolo . "://" . $_SERVER['SERVER_NAME'] . "/megatech2/");
+define('BASE_URL', $protocolo . "://" . $_SERVER['SERVER_NAME'] . "/megatech/");
 
 
 $BASE_URL = $_SERVER['SERVER_NAME'] . $_SERVER['SCRIPT_NAME'];

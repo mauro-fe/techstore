@@ -3,6 +3,13 @@
 
 <div class="container">
     <section class="error-page">
+        <!-- Elementos flutuantes de fundo -->
+        <div class="floating-elements">
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+        </div>
+
         <div class="error-content d-flex flex-column align-items-center">
             <div class="error-illustration">
                 <svg class="error-device" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -26,8 +33,38 @@
                 Ops! A página que você está procurando parece ter sido desconectada do nosso servidor.
                 Talvez ela tenha sido movida, renomeada, ou simplesmente não exista.
             </p>
-        </div>
 
+
+            <!-- Botões de ação -->
+            <div class="error-actions">
+
+                <a href="home" class="btn btn-primary">
+                    <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                    </svg>
+                    Página Inicial
+                </a>
+                <a href="contato" class="btn btn-secondary">
+                    <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                    </svg>
+                    Contato
+                </a>
+            </div>
+
+            <!-- Sugestões de páginas -->
+            <div class="suggestions">
+                <h3>Páginas populares</h3>
+                <div class="suggestion-links">
+                    <a href="celulares/celular/marca/iphone" class="suggestion-link">iPhone</a>
+                    <a href="celulares/celular/marca/samsung" class="suggestion-link">Samsung</a>
+                    <a href="assistencia-tecnica" class="suggestion-link">Assistência Tecnica</a>
+                    <a href="sobre-nos" class="suggestion-link">Sobre Nós</a>
+                </div>
+            </div>
+        </div>
     </section>
 </div>
 
@@ -35,7 +72,7 @@
 <script>
     // Animação emoji interativo
     const errorEmoji = document.querySelector('.error-emoji');
-    const emojis = ['😵', '🤔', '😅', '🤖', '👻'];
+    const emojis = ['😵', '🤔', '😅', '🤖', '👻', '📱', '🔌', '📡'];
     let currentIndex = 0;
 
     errorEmoji.addEventListener('click', () => {
@@ -45,5 +82,42 @@
         setTimeout(() => {
             errorEmoji.style.animation = 'float 3s ease-in-out infinite';
         }, 10);
+    });
+
+    // Adiciona efeito de digitação no placeholder da busca
+    const searchInput = document.querySelector('.error-search input');
+    const placeholders = [
+        'Buscar produtos...',
+        'iPhone 15...',
+        'Samsung Galaxy...',
+        'Capinhas...',
+        'Fones de ouvido...'
+    ];
+    let placeholderIndex = 0;
+
+    setInterval(() => {
+        placeholderIndex = (placeholderIndex + 1) % placeholders.length;
+        searchInput.placeholder = placeholders[placeholderIndex];
+    }, 3000);
+
+    // Efeito parallax nos elementos flutuantes
+    document.addEventListener('mousemove', (e) => {
+        const floatingElements = document.querySelectorAll('.floating-element');
+        const x = e.clientX / window.innerWidth;
+        const y = e.clientY / window.innerHeight;
+
+        floatingElements.forEach((element, index) => {
+            const speed = (index + 1) * 10;
+            element.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+        });
+    });
+
+    // Adiciona animação ao clicar no título 404
+    const errorTitle = document.querySelector('.error-title');
+    errorTitle.addEventListener('click', () => {
+        errorTitle.style.animation = 'glitch 0.5s ease';
+        setTimeout(() => {
+            errorTitle.style.animation = '';
+        }, 500);
     });
 </script>
