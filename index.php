@@ -1027,8 +1027,7 @@ $BASE_URL = $_SERVER['SERVER_NAME'] . $_SERVER['SCRIPT_NAME'];
             flex-direction: column !important;
         }
     </style>
-    <button class="scroll-to-top" id="scrollToTop" title="Voltar ao topo">
-    </button>
+    <button class="scroll-to-top" id="scrollToTop" title="Voltar ao topo"></button>
     <!-- Footer -->
     <footer class="footer">
         <!-- Links Section -->

@@ -83,41 +83,4 @@
             errorEmoji.style.animation = 'float 3s ease-in-out infinite';
         }, 10);
     });
-
-    // Adiciona efeito de digitação no placeholder da busca
-    const searchInput = document.querySelector('.error-search input');
-    const placeholders = [
-        'Buscar produtos...',
-        'iPhone 15...',
-        'Samsung Galaxy...',
-        'Capinhas...',
-        'Fones de ouvido...'
-    ];
-    let placeholderIndex = 0;
-
-    setInterval(() => {
-        placeholderIndex = (placeholderIndex + 1) % placeholders.length;
-        searchInput.placeholder = placeholders[placeholderIndex];
-    }, 3000);
-
-    // Efeito parallax nos elementos flutuantes
-    document.addEventListener('mousemove', (e) => {
-        const floatingElements = document.querySelectorAll('.floating-element');
-        const x = e.clientX / window.innerWidth;
-        const y = e.clientY / window.innerHeight;
-
-        floatingElements.forEach((element, index) => {
-            const speed = (index + 1) * 10;
-            element.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
-        });
-    });
-
-    // Adiciona animação ao clicar no título 404
-    const errorTitle = document.querySelector('.error-title');
-    errorTitle.addEventListener('click', () => {
-        errorTitle.style.animation = 'glitch 0.5s ease';
-        setTimeout(() => {
-            errorTitle.style.animation = '';
-        }, 500);
-    });
 </script>
