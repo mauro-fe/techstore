@@ -113,7 +113,3 @@
         <a href="contato" class="cta-button" data-aos="fade-up" data-aos-delay="300">Entre em Contato</a>
     </div>
 </section>
-
-</body>
-
-</html>

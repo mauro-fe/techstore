@@ -16,31 +16,6 @@ document.querySelectorAll('.faq-question').forEach(button => {
     });
 });
 
-
-
-// Service buttons
-document.querySelectorAll('.service-btn').forEach(btn => {
-    btn.addEventListener('click', function () {
-        const serviceName = this.closest('.service-card').querySelector('h3').textContent;
-        const contactSection = document.getElementById('contact');
-        const deviceInput = document.getElementById('device');
-        const problemTextarea = document.getElementById('problem');
-
-        // Scroll to contact
-        contactSection.scrollIntoView({
-            behavior: 'smooth'
-        });
-
-        // Pre-fill form
-        setTimeout(() => {
-            problemTextarea.value = `Gostaria de solicitar o serviço: ${serviceName}`;
-            deviceInput.focus();
-        }, 1000);
-    });
-});
-
-
-
 // Counter animation for stats
 function animateCounter(element, start, end, duration) {
     let startTimestamp = null;
@@ -133,18 +108,3 @@ document.getElementById('enviarAssistencia').addEventListener('click', function 
 
     window.open(`https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`, '_blank');
 });
-
-// document.addEventListener('DOMContentLoaded', function () {
-//         <? php if ($scrollTo): ?>
-//             const targetElement = document.getElementById('<?php echo $scrollTo; ?>');
-
-//     if (targetElement) {
-//         setTimeout(() => {
-//             targetElement.scrollIntoView({
-//                 behavior: 'smooth',
-//                 block: 'start'
-//             });
-//         }, 300);
-//     }
-//         <? php endif; ?>
-//     });

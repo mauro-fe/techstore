@@ -314,20 +314,6 @@ p {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.footer {
-  background: #000;
-  color: #fff;
-  font-size: 0.9rem;
-}
-.footer a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-.footer a:hover {
-  color: #00abff;
-}
-
 .modal-header {
   border-radius: 20px 20px 0 0;
 }
