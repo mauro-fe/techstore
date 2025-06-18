@@ -1,104 +1,4 @@
-<style>
-    :root {
-        --primary: #00abff;
-        --primary-dark: #00abff;
-        --secondary: #10b981;
-        --dark: #111827;
-        --gray: #6b7280;
-        --light-gray: #f3f4f6;
-        --white: #ffffff;
-        --red: #ef4444;
-        --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    }
-
-    .btn-comprar {
-        background-color: var(--primary);
-        color: var(--light-gray);
-        transition: 0.5s;
-        margin: 0;
-        padding: 3px 20px;
-    }
-
-
-
-    .btn-comprar:hover {
-        background: #00abf0;
-        color: white;
-        transform: translateY(-5px);
-        box-shadow: 0 8px 20px rgba(33, 37, 41, 0.2);
-    }
-
-    .btn-comprar.loading {
-        position: relative;
-        color: transparent;
-    }
-
-    .btn-comprar.loading::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 20px;
-        height: 20px;
-        border: 2px solid #ccc;
-        border-top: 2px solid var(--dark-color);
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-    }
-
-    @keyframes spin {
-        from {
-            transform: translate(-50%, -50%) rotate(0deg);
-        }
-
-        to {
-            transform: translate(-50%, -50%) rotate(360deg);
-        }
-    }
-
-    .modal-header {
-        background-color: var(--primary);
-    }
-
-    #linkWhatsapp {
-        background: #25d366;
-        border: none;
-        border-radius: 12px;
-        padding: 15px;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        transition: all var(--transition-fast);
-        position: relative;
-        overflow: hidden;
-        color: #f8f9fa;
-    }
-
-    #linkWhatsapp:hover {
-        background: #128c7e;
-        transform: translateY(-2px);
-        box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
-    }
-
-    #linkWhatsapp::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg,
-                transparent,
-                rgba(255, 255, 255, 0.2),
-                transparent);
-        transition: left 0.6s;
-    }
-
-    #linkWhatsapp:hover::before {
-        left: 100%;
-    }
-</style>
+<link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/home.css">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
@@ -186,7 +86,6 @@
                                 data-id="<?= $acessorio->id ?>">
                                 Comprar
                             </button>
-
                         </div>
                     </div>
                 </div>

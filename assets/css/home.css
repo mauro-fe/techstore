@@ -1,4 +1,15 @@
-@charset "UTF-8";
+:root {
+  --primary: #00abff;
+  --primary-dark: #00abff;
+  --secondary: #10b981;
+  --dark: #111827;
+  --gray: #6b7280;
+  --light-gray: #f3f4f6;
+  --white: #ffffff;
+  --red: #ef4444;
+  --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
 /* Apenas estilos mínimos para manter a estética Apple */
 * {
   margin: 0;
@@ -11,14 +22,9 @@ body {
   width: 100%;
 }
 
-body {
-  font-family: "Inter", sans-serif;
-  color: #1d1d1f;
-}
-
 p {
   font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: #1d1d1f !important;
   margin-bottom: 1rem;
   line-height: 1.6;
 }
@@ -53,16 +59,56 @@ p {
   background-color: #0009;
 }
 
-.home {
-  background-color: #f1f1f1;
+.btn-comprar {
+  background-color: var(--primary);
+  color: var(--light-gray);
+  transition: 0.5s;
+  margin: 0;
+  padding: 3px 20px;
 }
 
-.header {
-  width: 100%;
-  box-sizing: border-box;
+.btn-comprar:hover {
+  background: #00abf0;
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(33, 37, 41, 0.2);
 }
-.header .navbar .container {
-  display: inline-block !important;
+
+.btn-comprar.loading {
+  position: relative;
+  color: transparent;
+}
+
+.btn-comprar.loading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-top: 2px solid var(--dark-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.modal-header {
+  background-color: var(--primary);
+}
+
+.home {
+  background-color: #f1f1f1;
 }
 
 .container-fluid {
@@ -134,12 +180,6 @@ p {
   justify-content: center;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
-.carousel .swiper-slide.swiper-slide-active .card {
-  transform: scale(1.06);
-  z-index: 2;
-  background-color: #fff;
-  box-shadow: 0 0 10px 5px #0001;
-}
 .carousel .swiper-slide .card {
   margin: 4rem 0;
   width: 320px;
@@ -148,13 +188,22 @@ p {
   border-radius: 20px;
   overflow: hidden;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
-  background-color: #f1f1f1;
+  background-color: #fff;
+  box-shadow: 0 0 6px 2px #0001;
   transform: scale(0.9);
 }
 .carousel .swiper-slide .card:hover {
   transform: scale(1.02);
   box-shadow: 0 0 6px 2px #0003;
 }
+
+.carousel .swiper-slide.swiper-slide-active .card {
+  transform: scale(1.06);
+  z-index: 2;
+  background-color: #fff;
+  box-shadow: 0 0 10px 5px #0001;
+}
+
 .carousel .swiper-slide .card-img-top {
   height: 200px;
   object-fit: contain;
@@ -167,6 +216,8 @@ p {
 .carousel .swiper-slide .card .card-text {
   height: 120px;
   font-size: 18px;
+  color: #000 !important;
+  margin-bottom: 0;
 }
 
 .assistencia-section {
@@ -201,6 +252,11 @@ p {
   transition: all 0.3s ease;
   width: 400px;
 }
+
+.assistencia-section .assistencia-box p {
+  color: #000 !important;
+}
+
 .assistencia-section .assistencia-box:hover {
   transform: translateY(-5px);
 }
@@ -246,6 +302,7 @@ p {
 }
 .avaliacoes .avaliacoesSwiper .swiper-slide .card .card-text {
   height: 130px;
+  color: #000 !important;
 }
 
 .mapa-container {
@@ -281,6 +338,50 @@ p {
 
 .modal-body {
   background-color: #f1f1f1;
+}
+
+#linkWhatsapp {
+  background: #25d366;
+  border: none;
+  border-radius: 12px;
+  padding: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+  color: #f8f9fa;
+}
+
+#linkWhatsapp:hover {
+  background: #128c7e;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+}
+
+#linkWhatsapp::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.6s;
+}
+
+#linkWhatsapp:hover::before {
+  left: 100%;
+}
+
+.modal-header {
+  background-color: var(--primary);
 }
 
 /*# sourceMappingURL=style.css.map */
