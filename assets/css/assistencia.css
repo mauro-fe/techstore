@@ -3,7 +3,6 @@
   --secondary-color: #00abff;
   --accent-color: #00abff;
   --success-color: #2ecc71;
-  --warning-color: #f39c12;
   --danger-color: #e74c3c;
   --dark-color: #2c3e50;
   --light-color: #ffffff;
@@ -349,21 +348,6 @@
   box-shadow: 0 10px 20px rgba(102, 126, 234, 0.1);
   transition: all 0.3s ease;
 }
-
-/* .process-step::after {
-        content: '';
-        position: absolute;
-        top: 40px;
-        right: -2rem;
-        width: 2rem;
-        height: 2px;
-        background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-        display: none;
-    }
-
-    .process-step:not(:last-child)::after {
-        display: block;
-    } */
 
 .step-number {
   width: 80px;

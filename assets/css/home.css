@@ -1,26 +1,9 @@
 :root {
   --primary: #00abff;
-  --primary-dark: #00abff;
-  --secondary: #10b981;
-  --dark: #111827;
-  --gray: #6b7280;
   --light-gray: #f3f4f6;
-  --white: #ffffff;
-  --red: #ef4444;
-  --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 /* Apenas estilos mínimos para manter a estética Apple */
-* {
-  margin: 0;
-  padding: 0;
-}
-
-html,
-body {
-  overflow-x: hidden;
-  width: 100%;
-}
 
 p {
   font-size: 1.25rem;
@@ -88,7 +71,6 @@ p {
   width: 20px;
   height: 20px;
   border: 2px solid #ccc;
-  border-top: 2px solid var(--dark-color);
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
