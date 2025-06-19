@@ -30,7 +30,7 @@ $iphones = [
         2,
         'Apple',
         'iPhone 16 Plus',
-        './assets/img/iphone/iphone/iphone-16-plus-roxo.png',
+        './assets/img/iphone/iphone/iphone-16-plus-roxo.jpg',
         [
             'tela' => 'Super Retina XDR OLED sem bordas de 6,7 polegadas (na diagonal)',
 

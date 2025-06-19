@@ -211,6 +211,8 @@
 
         document.addEventListener('DOMContentLoaded', function() {
             new Swiper('.mySwiperIphones', {
+                effect: "flip",
+                grabCursor: true,
                 loop: true,
                 autoplay: {
                     delay: 3000,
@@ -218,7 +220,8 @@
                 },
                 pagination: {
                     el: '.swiper-pagination',
-                    clickable: true
+                    dynamicBullets: true,
+
                 },
                 slidesPerView: 1,
             });
@@ -232,7 +235,8 @@
                 },
                 pagination: {
                     el: '.swiper-pagination',
-                    clickable: true,
+                    dynamicBullets: true,
+
                 },
                 breakpoints: {
                     0: {

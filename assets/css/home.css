@@ -99,22 +99,18 @@ p {
 }
 
 .mySwiperIphones {
-  margin: auto;
+  transform-style: preserve-3d;
+  width: 320px;
 }
-.mySwiperIphones .swiper-slide {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 .mySwiperIphones .swiper-slide img {
   margin: 20px 0 20px;
   width: 320px;
   height: 450px;
   border-radius: 10px;
-  transition: 0.7s;
+  transition: filter 0.7s;
 }
 .mySwiperIphones .swiper-slide img:hover {
-  transform: translate(5px, -10px) rotate(-5deg);
   filter: drop-shadow(-8px 8px 7px #000);
 }
 .mySwiperIphones .swiper-pagination {
