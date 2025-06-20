@@ -57,6 +57,16 @@ require_once __DIR__ . '/../../Pages.php';
 
                                         <div class="spec-item">
                                             <div class="spec-icon">
+                                                <i class="fas fa-microchip"></i>
+                                            </div>
+                                            <div class="text-start">
+                                                <strong>Resolução</strong><br>
+                                                <small><?= $p->especificacoes['resolucao'] ?? 'N/A' ?></small>
+                                            </div>
+                                        </div>
+
+                                        <div class="spec-item">
+                                            <div class="spec-icon">
                                                 <i class="fas fa-camera"></i>
                                             </div>
                                             <div class="text-start">
@@ -71,7 +81,7 @@ require_once __DIR__ . '/../../Pages.php';
                                             </div>
                                             <div class="text-start">
                                                 <strong>Bateria</strong><br>
-                                                <small><?= $p->especificacoes['Bateria'] ?? 'N/A' ?></small>
+                                                <small><?= $p->especificacoes['bateria'] ?? 'N/A' ?></small>
                                             </div>
                                         </div>
                                         <div class="spec-item">
@@ -99,6 +109,15 @@ require_once __DIR__ . '/../../Pages.php';
                                             <div class="text-start">
                                                 <strong>Sistema operacional</strong><br>
                                                 <small><?= $p->especificacoes['sistema-operacional'] ?? 'N/A' ?></small>
+                                            </div>
+                                        </div>
+                                        <div class="spec-item">
+                                            <div class="spec-icon">
+                                                <i class="fas fa-gear"></i>
+                                            </div>
+                                            <div class="text-start">
+                                                <strong>Peso</strong><br>
+                                                <small><?= $p->especificacoes['peso'] ?? 'N/A' ?></small>
                                             </div>
                                         </div>
                                     </div>

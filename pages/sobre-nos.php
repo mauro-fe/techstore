@@ -41,7 +41,7 @@
     <!-- Membro 2 -->
     <div class="member row align-items-center flex-md-row-reverse mb-5">
         <div class="col-md-5 text-center mb-4 mb-md-0" data-aos="fade-right" data-aos-delay="200">
-            <img src="https://placehold.co/600x400" alt="Ana Lima" class="img-fluid rounded shadow-lg">
+            <img src="assets/img/ana.jpeg" alt="Ana Lima" class="img-fluid rounded shadow-lg">
         </div>
         <div class="col-md-7" data-aos="fade-right" data-aos-delay="100">
             <h2 class="fw-bold">Ana Souza</h2>
