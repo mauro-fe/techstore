@@ -45,27 +45,26 @@
                 <form action="enviar-email.php" method="post" class="contact-form" id="contactForm">
                     <div class="form-row">
                         <div class="form-group form-floating-label">
-                            <input type="text" id="fullName" name="nome_completo" class="form-control" placeholder=" "
-                                required>
+                            <input type="text" id="fullName" name="nome_completo" class="form-control" placeholder=" ">
                             <label for="fullName">Nome Completo *</label>
                         </div>
                         <div class="form-group form-floating-label">
-                            <input type="tel" id="phone" name="telefone" class="form-control" placeholder=" " required>
+                            <input type="tel" id="phone" name="telefone" class="form-control" placeholder=" ">
                             <label for="phone">Telefone *</label>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group form-floating-label">
-                            <input type="email" id="email" name="email" class="form-control" placeholder=" " required>
+                            <input type="email" id="email" name="email" class="form-control" placeholder=" ">
                             <label for="email">E-mail *</label>
                         </div>
                         <div class="form-group form-floating-label">
-                            <input type="text" id="city" name="cidade" class="form-control" placeholder=" " required>
+                            <input type="text" id="city" name="cidade" class="form-control" placeholder=" ">
                             <label for="city">Cidade *</label>
                         </div>
                     </div>
                     <div class="form-group form-floating-label">
-                        <select id="foundUs" name="como_encontrou" class="form-control select" required>
+                        <select id="foundUs" name="como_encontrou" class="form-control select">
                             <option value="">Selecione uma opção</option>
                             <option value="google">Google / Pesquisa Online</option>
                             <option value="instagram">Instagram</option>
@@ -79,8 +78,7 @@
                         <label for="foundUs">Por onde nos encontrou? *</label>
                     </div>
                     <div class="form-group form-floating-label">
-                        <textarea id="message" name="mensagem" class="form-control textarea" placeholder=" "
-                            required></textarea>
+                        <textarea id="message" name="mensagem" class="form-control textarea" placeholder=" "></textarea>
                         <label for="message">Sua Mensagem *</label>
                     </div>
                     <div class="row contant-buttons d-flex justify-content-center">
