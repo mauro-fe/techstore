@@ -108,10 +108,12 @@ p {
   width: 320px;
   height: 450px;
   border-radius: 10px;
-  transition: filter 0.7s;
+  transition: filter 0.7s, scale 0.5s;
+  filter: drop-shadow(0px 0px 7px #0008);
 }
 .mySwiperIphones .swiper-slide img:hover {
-  filter: drop-shadow(-8px 8px 7px #000);
+  transform: scale(101%);
+  filter: drop-shadow(0px 0px 10px #000);
 }
 .mySwiperIphones .swiper-pagination {
   position: relative;
@@ -126,11 +128,12 @@ p {
 }
 .cell .cell-container img {
   max-height: 300px;
-  transition: 0.7s;
+  transition: filter 0.7s, scale 0.5s;
+  filter: drop-shadow(0px 0px 7px #0008);
 }
 .cell .cell-container img:hover {
-  transform: translate(5px, -10px) rotate(-5deg);
-  filter: drop-shadow(-8px 8px 7px #000);
+  transform: scale(101%);
+  filter: drop-shadow(0px 0px 10px #000);
 }
 
 .hero {
@@ -138,11 +141,12 @@ p {
 }
 .hero img {
   max-width: 250px;
-  transition: 0.7s;
+  transition: filter 0.7s, scale 0.5s;
+  filter: drop-shadow(0px 0px 7px #0008);
 }
 .hero img:hover {
-  transform: translate(5px, -10px) rotate(-5deg);
-  filter: drop-shadow(-8px 8px 7px #000);
+  transform: scale(101%);
+  filter: drop-shadow(0px 0px 10px #000);
 }
 
 .carousel {

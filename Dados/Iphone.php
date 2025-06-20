@@ -5,7 +5,7 @@ $iphones = [
         1,
         'Apple',
         'iPhone 16',
-        './assets/img/iphone/iphone/iphone-16-verde.png',
+        './assets/img/iphone/iphone/iphone-16-branco.png',
         [
             'tela' => 'Super Retina XDR OLED sem bordas de 6,1 polegadas (na diagonal)',
 
@@ -30,7 +30,7 @@ $iphones = [
         2,
         'Apple',
         'iPhone 16 Plus',
-        './assets/img/iphone/iphone/iphone-16-plus-roxo.jpg',
+        './assets/img/iphone/iphone/iphone-16-plus-roxo.png',
         [
             'tela' => 'Super Retina XDR OLED sem bordas de 6,7 polegadas (na diagonal)',
 
@@ -54,7 +54,7 @@ $iphones = [
         3,
         'Apple',
         'iPhone 16 Pro',
-        './assets/img/iphone/iphone/iphone-16-pro.png',
+        './assets/img/iphone/iphone/iphone-16-pro-titanio-natural.png',
         [
             'tela' => '6.1 Liquid Retina LCD',
 
@@ -79,7 +79,7 @@ $iphones = [
         4,
         'Apple',
         'iPhone 16 Pro Max',
-        './assets/img/iphone/iphone/iphone-16-pro-max-natutaltitanium.png',
+        './assets/img/iphone/iphone/iphone-16-pro-max-titanio-natural.png',
         [
             'tela' => '6.1 Liquid Retina LCD',
 
