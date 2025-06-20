@@ -84,11 +84,11 @@
                         <label for="message">Sua Mensagem *</label>
                     </div>
                     <div class="row contant-buttons d-flex justify-content-center">
-                        <button type="submit" class="submit-btn" id="btnSubmit">
+                        <button type="submit" class="submit-btn btn-enhanced" id="btnSubmit">
                             <i class="fas fa-paper-plane"></i>
                             <span class="btn-text">Enviar</span>
                         </button>
-                        <button type="reset" class="reset-btn">
+                        <button type="reset" class="reset-btn btn-enhanced">
                             <i class="fas fa-trash"></i> Limpar
                         </button>
                     </div>

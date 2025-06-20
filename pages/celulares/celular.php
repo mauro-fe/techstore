@@ -134,7 +134,8 @@ require_once __DIR__ . '/../../Pages.php';
                                     $imagensJson = htmlspecialchars(json_encode($todasImagens), ENT_QUOTES, 'UTF-8');
                                     ?>
                                     <!-- CORREÇÃO: Usar a função correta -->
-                                    <button class="btn btn-ver-imagens" onclick='abrirGaleriaDirecta(<?= $imagensJson ?>)'>
+                                    <button class="btn btn-ver-imagens btn-enhanced"
+                                        onclick='abrirGaleriaDirecta(<?= $imagensJson ?>)'>
                                         <i class="fas fa-images"></i> Ver imagens
                                     </button>
 
