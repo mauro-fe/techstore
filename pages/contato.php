@@ -100,56 +100,51 @@
                     <h2>Informações de contato</h2>
                     <p>Diversos canais para você entrar em contato conosco</p>
                 </div>
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                        <div class="contact-item mb-3" data-aos="fade-up" data-aos-delay="200">
-                            <div class="contact-icon"><a href="tel:+5544998011086" target="_blank"><i
-                                        class="fas fa-phone"></i></a>
-                            </div>
-                            <div class="contact-details">
-                                <h3>Telefone</h3>
-                                <p><a href="tel:+5544998011086">(44) 99801-1086</a></p>
-                                <p>Segunda à Sexta: 8h às 18h<br>Sábado: 8h às 12h</p>
-                            </div>
+                <div class="values-grid">
+                    <div class="contact-item mbcontact-info-card-3" data-aos="fade-up" data-aos-delay="200">
+                        <div class="contact-icon"><a href="tel:+5544998011086" target="_blank"><i
+                                    class="fas fa-phone"></i></a>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Telefone</h3>
+                            <p><a href="tel:+5544998011086">(44) 99801-1086</a></p>
+                            <p>Segunda à Sexta: 8h às 18h<br>Sábado: 8h às 12h</p>
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                        <div class="contact-item mb-3" data-aos="fade-up" data-aos-delay="300">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h3>E-mail</h3>
-                                <p><a href="mailto:megatechempresa@gmail.com">megatechempresa@gmail.com</a></p>
-                                <p>Respondemos em até 24 horas</p>
-                            </div>
+
+                    <div class="contact-item mb-3" data-aos="fade-up" data-aos-delay="300">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>E-mail</h3>
+                            <p><a href="mailto:megatechempresa@gmail.com">megatechempresa@gmail.com</a></p>
+                            <p>Respondemos em até 24 horas</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                        <div class="contact-item mb-3" data-aos="fade-up" data-aos-delay="400">
-                            <div class="contact-icon">
-                                <a href="https://www.google.com.br/maps/place/Av.+Brasil+-+Campina+da+Lagoa,+PR,+87345-000/@-24.5945994,-52.8098194,17z/data=!3m1!4b1!4m6!3m5!1s0x94f20ea00b0d6f3d:0xf161c6134ec6b069!8m2!3d-24.5945994!4d-52.8072445!16s%2Fg%2F1ymx18pk0?hl=pt-BR&entry=ttu&g_ep=EgoyMDI1MDYwOC4wIKXMDSoASAFQAw%3D%3D"
-                                    target="_blank"><i class="fas fa-map-marker-alt"></i></a>
-                            </div>
-                            <div class="contact-details">
-                                <h3>Endereço</h3>
-                                <p>Rua Avenida Brasil<br>Centro - Campina da Lagoa/PR<br>CEP: 87.345-000</p>
-                            </div>
+
+                    <div class="contact-item mb-3" data-aos="fade-up" data-aos-delay="400">
+                        <div class="contact-icon">
+                            <a href="https://www.google.com.br/maps/place/Av.+Brasil+-+Campina+da+Lagoa,+PR,+87345-000/@-24.5945994,-52.8098194,17z/data=!3m1!4b1!4m6!3m5!1s0x94f20ea00b0d6f3d:0xf161c6134ec6b069!8m2!3d-24.5945994!4d-52.8072445!16s%2Fg%2F1ymx18pk0?hl=pt-BR&entry=ttu&g_ep=EgoyMDI1MDYwOC4wIKXMDSoASAFQAw%3D%3D"
+                                target="_blank"><i class="fas fa-map-marker-alt"></i></a>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Endereço</h3>
+                            <p>Rua Avenida Brasil<br>Centro - Campina da Lagoa/PR<br>CEP: 87.345-000</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                        <div class="contact-item mb-3" data-aos="fade-up" data-aos-delay="500">
-                            <div class="contact-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h3>Horário de Funcionamento</h3>
-                                <p><strong>Segunda à Sexta:</strong> 8h às 18h<br>
-                                    <strong>Sábado:</strong> 8h às 12h<br>
-                                    <strong>Domingo:</strong> Fechado
-                                </p>
-                            </div>
+
+                    <div class="contact-item mb-3" data-aos="fade-up" data-aos-delay="500">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Horário de Funcionamento</h3>
+                            <p><strong>Segunda à Sexta:</strong> 8h às 18h<br>
+                                <strong>Sábado:</strong> 8h às 12h<br>
+                                <strong>Domingo:</strong> Fechado
+                            </p>
                         </div>
                     </div>
                 </div>

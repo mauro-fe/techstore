@@ -159,7 +159,7 @@ $xiaomis = [
         9,
         'Xiaomi',
         'POCO F7 PRO',
-        './assets/img/xiaomi/poco-f7-pro-azul.jpg',
+        './assets/img/xiaomi-f7-pro.png',
         [
             'tela' => '6.67" AMOLED Flow (120Hz)',
             'resolucao' => '3200 x 1440 pixels (2K)',

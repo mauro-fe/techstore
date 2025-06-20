@@ -311,8 +311,31 @@
   transition: all 0.3s ease;
 }
 
+.service-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  transition: left 0.8s ease;
+}
+
+.service-btn::before {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+}
+
+.service-btn:hover::before {
+  left: 100%;
+}
+
 .service-btn:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   box-shadow: 0 0px 10px #0005;
 }
 

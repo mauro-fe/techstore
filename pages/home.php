@@ -36,9 +36,9 @@
 <section class="cell row g-3 mb-3">
     <div class="col-md-6">
         <div class="cell-container" data-aos="fade-right" data-aos-delay="100">
-            <h2><?= $xiaomis[8]->marca ?></h2>
-            <h3><?= $xiaomis[8]->nome ?></h3>
-            <img src="<?= $xiaomis[8]->imagem ?>" alt="<?= $xiaomis[8]->nome ?>" class="mt-2">
+            <h2><?= $xiaomis[9]->marca ?></h2>
+            <h3><?= $xiaomis[9]->nome ?></h3>
+            <img src="<?= $xiaomis[9]->imagem ?>" alt="<?= $xiaomis[9]->nome ?>" class="mt-2">
             <p class="m-3">A prova de água e resistente à queda.</p>
             <div class="btn-saiba-mais">
                 <a href="celulares/xiaomi">Saiba mais</a>
