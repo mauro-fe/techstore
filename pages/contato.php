@@ -18,7 +18,7 @@
                                 class="fas fa-phone"></i></a>
                     </div>
                     <div class="hero-icon" data-aos="fade-up" data-aos-dela y="400">
-                        <a href="megatechempresa@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="mailto:megatechempresa@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
                     </div>
                     <div class="hero-icon" data-aos="fade-up" data-aos-delay="600">
                         <a href="https://www.google.com.br/maps/place/Av.+Brasil+-+Campina+da+Lagoa,+PR,+87345-000/@-24.5945994,-52.8098194,17z/data=!3m1!4b1!4m6!3m5!1s0x94f20ea00b0d6f3d:0xf161c6134ec6b069!8m2!3d-24.5945994!4d-52.8072445!16s%2Fg%2F1ymx18pk0?hl=pt-BR&entry=ttu&g_ep=EgoyMDI1MDYwOC4wIKXMDSoASAFQAw%3D%3D"
@@ -107,7 +107,7 @@
                         </div>
                         <div class="contact-details">
                             <h3>Telefone</h3>
-                            <p><a href="tel:+5544998011086">(44) 99801-1086</a></p>
+                            <p><a href="tel:+5544998011086" target="_blank">(44) 99801-1086</a></p>
                             <p>Segunda à Sexta: 8h às 18h<br>Sábado: 8h às 12h</p>
                         </div>
                     </div>
@@ -119,7 +119,8 @@
                         </div>
                         <div class="contact-details">
                             <h3>E-mail</h3>
-                            <p><a href="mailto:megatechempresa@gmail.com">megatechempresa@gmail.com</a></p>
+                            <p><a href="mailto:megatechempresa@gmail.com" target="_blank">megatechempresa@gmail.com</a>
+                            </p>
                             <p>Respondemos em até 24 horas</p>
                         </div>
                     </div>
@@ -152,14 +153,15 @@
                 <div class="social-section" data-aos="fade-up" data-aos-delay="400">
                     <h3>Siga-nos nas Redes Sociais</h3>
                     <div class="social-links">
-                        <a href="#" class="social-link whatsapp" title="WhatsApp">
+                        <a href="#" class="social-link whatsapp" title="WhatsApp" target="_blank">
                             <i class="fab fa-whatsapp"></i>
                         </a>
                         <a href="https://www.instagram.com/megatech_cdl/" class="social-link instagram"
-                            title="Instagram">
+                            title="Instagram" target="_blank">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="https://www.facebook.com/MegaTech2k21/" class="social-link facebook" title="Facebook">
+                        <a href="https://www.facebook.com/MegaTech2k21/" class="social-link facebook" title="Facebook"
+                            target="_blank">
                             <i class="fab fa-facebook-f"></i>
                         </a>
                         <!-- <a href="#" class="social-link linkedin" title="LinkedIn">

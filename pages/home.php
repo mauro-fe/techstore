@@ -25,7 +25,7 @@
                 </div>
                 <p>Disponível agora com ofertas exclusivas.</p>
                 <div class="btn-saiba-mais">
-                    <a href="celulares/iphone">Saiba mais</a>
+                    <a href="celulares/celular/marca/iphone">Saiba mais</a>
                 </div>
             </div>
 
@@ -41,7 +41,7 @@
             <img src="<?= $xiaomis[9]->imagem ?>" alt="<?= $xiaomis[9]->nome ?>" class="mt-2">
             <p class="m-3">A prova de água e resistente à queda.</p>
             <div class="btn-saiba-mais">
-                <a href="celulares/xiaomi">Saiba mais</a>
+                <a href="celulares/celular/marca/xiaomi">Saiba mais</a>
             </div>
         </div>
     </div>
@@ -52,7 +52,7 @@
             <img src="<?= $realmes[1]->imagem ?>" alt="<?= $realmes[1]->nome ?>" class="mt-2">
             <p class="m-3">Com o processador Snapdragon 8 Elite.</p>
             <div class="btn-saiba-mais">
-                <a href="celulares/realme">Saiba mais</a>
+                <a href="celulares/celular/marca/realme">Saiba mais</a>
             </div>
         </div>
     </div>
@@ -65,7 +65,7 @@
         <img src="<?= $samsungs[4]->imagem ?>" alt="<?= $samsungs[4]->nome ?>">
         <p class="m-3">A câmera com o melhor zoom.</p>
         <div class="btn-saiba-mais">
-            <a href="celulares/samsung">Saiba mais</a>
+            <a href="celulares/celular/marca/samsung">Saiba mais</a>
         </div>
     </section>
 </div>
