@@ -143,6 +143,8 @@
   color: white;
   padding: 60px 0;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .cta-section h2 {
@@ -173,6 +175,22 @@
 .cta-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 0px 20px rgba(0, 0, 0, 0.4);
+}
+
+.value-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-color), var(--accent-color));
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover::before {
+  transform: scaleX(1);
 }
 
 @media (max-width: 768px) {
