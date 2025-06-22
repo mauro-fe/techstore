@@ -95,7 +95,7 @@ p {
 
 .container-fluid {
   margin-top: 40px;
-  padding: 3.7rem 0;
+  padding: 2.8rem 0;
 }
 
 .mySwiperIphones {
@@ -104,9 +104,9 @@ p {
 }
 
 .mySwiperIphones .swiper-slide img {
-  margin: 20px 0 20px;
-  width: 320px;
-  height: 450px;
+  margin: 10px 0 20px;
+  width: 300px;
+  height: 420px;
   border-radius: 10px;
   transition: filter 0.7s, scale 0.5s;
   filter: drop-shadow(0px 0px 7px #0008);
