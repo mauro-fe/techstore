@@ -283,8 +283,9 @@ p {
   font-size: 1.1rem;
 }
 .avaliacoes .avaliacoesSwiper .swiper-slide .card .card-text {
-  height: 130px;
+  height: 170px;
   color: #000 !important;
+  font-size: 18px;
 }
 
 .mapa-container {
