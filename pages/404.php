@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/404.css">
+<link rel="stylesheet" href="<?= BASE_URL ?>/assets/dist/404.css">
 
 
 <div class="container">
