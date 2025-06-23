@@ -14,10 +14,10 @@
                 <div class="swiper mySwiperIphones">
                     <div class="swiper-wrapper">
                         <?php for ($i = 1; $i <= 4; $i++): ?>
-                            <div class="swiper-slide">
-                                <h3><?= $iphones[$i]->nome ?></h3>
-                                <img src="<?= $iphones[$i]->imagem ?>" alt="<?= $iphones[$i]->nome ?>" class="img-fluid">
-                            </div>
+                        <div class="swiper-slide">
+                            <h3><?= $iphones[$i]->nome ?></h3>
+                            <img src="<?= $iphones[$i]->imagem ?>" alt="<?= $iphones[$i]->nome ?>" class="img-fluid">
+                        </div>
                         <?php endfor; ?>
                     </div>
                     <!-- Paginação opcional -->
@@ -76,19 +76,19 @@
 
         <div class="swiper-wrapper">
             <?php foreach ($acessorios as $acessorio): ?>
-                <div class="swiper-slide">
-                    <div class="card">
-                        <img src="<?= $acessorio->imagem ?>" class="card-img-top" alt="<?= $acessorio->nome ?>">
-                        <div class="card-body text-center">
-                            <h5 class="card-title"><?= $acessorio->nome ?></h5>
-                            <p class="card-text"><?= $acessorio->sobre ?></p>
-                            <button type="button" class="btn-comprar" data-nome="<?= $acessorio->nome ?>"
-                                data-id="<?= $acessorio->id ?>">
-                                Comprar
-                            </button>
-                        </div>
+            <div class="swiper-slide">
+                <div class="card">
+                    <img src="<?= $acessorio->imagem ?>" class="card-img-top" alt="<?= $acessorio->nome ?>">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><?= $acessorio->nome ?></h5>
+                        <p class="card-text"><?= $acessorio->sobre ?></p>
+                        <button type="button" class="btn-comprar" data-nome="<?= $acessorio->nome ?>"
+                            data-id="<?= $acessorio->id ?>">
+                            Comprar
+                        </button>
                     </div>
                 </div>
+            </div>
             <?php endforeach; ?>
         </div>
         <div class="swiper-pagination"></div>
@@ -137,17 +137,17 @@
         <div class="swiper-wrapper pt-5 pb-5">
             <!-- Avaliação 1 -->
             <?php foreach ($avaliacoes as $avaliacao): ?>
-                <div class="swiper-slide">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <img src="<?= $avaliacao->imagem ?>" class="avatar m-3" alt="<?= $avaliacao->nome ?>">
-                            <div class="stars mb-2"><?= $avaliacao->estrela ?></div>
-                            <p class="card-text"><?= $avaliacao->avaliacao ?></p>
-                            <h5 class="card-title mt-3 mb-1"><?= $avaliacao->nome ?></h5>
-                            <small class="text-muted"><?= $avaliacao->localizacao ?></small>
-                        </div>
+            <div class="swiper-slide">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <img src="<?= $avaliacao->imagem ?>" class="avatar m-3" alt="<?= $avaliacao->nome ?>">
+                        <div class="stars mb-2"><?= $avaliacao->estrela ?></div>
+                        <p class="card-text"><?= $avaliacao->avaliacao ?></p>
+                        <h5 class="card-title mt-3 mb-1"><?= $avaliacao->nome ?></h5>
+                        <small class="text-muted"><?= $avaliacao->localizacao ?></small>
                     </div>
                 </div>
+            </div>
             <?php endforeach; ?>
         </div>
         <div class="swiper-pagination"></div>
@@ -204,136 +204,136 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            window.scrollTo(0, 0);
-            window.history.scrollRestoration = "manual";
+    document.addEventListener("DOMContentLoaded", function() {
+        window.scrollTo(0, 0);
+        window.history.scrollRestoration = "manual";
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        new Swiper('.mySwiperIphones', {
+            effect: "flip",
+            grabCursor: true,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                dynamicBullets: true,
+
+            },
+            slidesPerView: 1,
         });
 
-        document.addEventListener('DOMContentLoaded', function() {
-            new Swiper('.mySwiperIphones', {
-                effect: "flip",
-                grabCursor: true,
-                loop: true,
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    dynamicBullets: true,
+        new Swiper('.mySwiper', {
+            loop: true,
+            spaceBetween: 30,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                dynamicBullets: true,
 
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    centeredSlides: false
                 },
-                slidesPerView: 1,
-            });
-
-            new Swiper('.mySwiper', {
-                loop: true,
-                spaceBetween: 30,
-                autoplay: {
-                    delay: 5000,
-                    disableOnInteraction: false,
+                576: {
+                    slidesPerView: 2,
+                    centeredSlides: false
                 },
-                pagination: {
-                    el: '.swiper-pagination',
-                    dynamicBullets: true,
-
+                992: {
+                    slidesPerView: 3,
+                    centeredSlides: true
                 },
-                breakpoints: {
-                    0: {
-                        slidesPerView: 1,
-                        centeredSlides: false
-                    },
-                    576: {
-                        slidesPerView: 2,
-                        centeredSlides: false
-                    },
-                    992: {
-                        slidesPerView: 3,
-                        centeredSlides: true
-                    },
-                    1200: {
-                        slidesPerView: 4,
-                        centeredSlides: true
-                    }
+                1200: {
+                    slidesPerView: 4,
+                    centeredSlides: true
                 }
-            });
+            }
         });
+    });
 
-        class Modal {
-            constructor() {
-                this.initModal();
-                this.initPurchaseModal();
-            }
+    class Modal {
+        constructor() {
+            this.initModal();
+            this.initPurchaseModal();
+        }
 
-            initModal() {
-                try {
-                    const modalEl = document.getElementById('modalComprar');
-                    this.modal = new bootstrap.Modal(modalEl);
-                } catch (error) {
-                    console.error('Erro ao inicializar modal:', error);
-                }
-            }
-
-            initPurchaseModal() {
-                document.addEventListener('click', (e) => {
-                    const btn = e.target.closest('.btn-comprar');
-                    if (btn) {
-                        e.preventDefault();
-                        this.handlePurchaseClick(btn);
-                    }
-                });
-            }
-
-            async handlePurchaseClick(btn) {
-                if (btn.classList.contains('loading')) return;
-
-                btn.classList.add('loading');
-
-                try {
-                    await this.delay(500); // simula carregamento
-
-                    const nome = btn.getAttribute('data-nome');
-                    const id = btn.getAttribute('data-id');
-
-                    this.openPurchaseModal(nome, id);
-                } catch (error) {
-                    console.error('Erro ao processar compra:', error);
-                } finally {
-                    btn.classList.remove('loading');
-                }
-            }
-
-            openPurchaseModal(nome, id) {
-                const nomeEl = document.getElementById('nomeProduto');
-                const idEl = document.getElementById('produtoId');
-                const linkWhatsapp = document.getElementById('linkWhatsapp');
-                const qtdEl = document.getElementById('quantidadeProduto');
-
-                if (nomeEl && idEl && qtdEl) {
-                    nomeEl.textContent = nome;
-                    idEl.value = id;
-
-                    // Atualiza o link do WhatsApp dinamicamente
-                    qtdEl.addEventListener('input', () => {
-                        linkWhatsapp.href = this.gerarLinkWhatsapp(nome, qtdEl.value);
-                    });
-
-                    linkWhatsapp.href = this.gerarLinkWhatsapp(nome, qtdEl.value);
-                    this.modal.show();
-                }
-            }
-
-            gerarLinkWhatsapp(produto, quantidade) {
-                const msg = `Olá! Gostaria de comprar ${quantidade} unidade(s) do produto: ${produto}`;
-                return `https://wa.me/5544998011086?text=${encodeURIComponent(msg)}`;
-            }
-
-            delay(ms) {
-                return new Promise(resolve => setTimeout(resolve, ms));
+        initModal() {
+            try {
+                const modalEl = document.getElementById('modalComprar');
+                this.modal = new bootstrap.Modal(modalEl);
+            } catch (error) {
+                console.error('Erro ao inicializar modal:', error);
             }
         }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            new Modal();
-        });
+        initPurchaseModal() {
+            document.addEventListener('click', (e) => {
+                const btn = e.target.closest('.btn-comprar');
+                if (btn) {
+                    e.preventDefault();
+                    this.handlePurchaseClick(btn);
+                }
+            });
+        }
+
+        async handlePurchaseClick(btn) {
+            if (btn.classList.contains('loading')) return;
+
+            btn.classList.add('loading');
+
+            try {
+                await this.delay(500); // simula carregamento
+
+                const nome = btn.getAttribute('data-nome');
+                const id = btn.getAttribute('data-id');
+
+                this.openPurchaseModal(nome, id);
+            } catch (error) {
+                console.error('Erro ao processar compra:', error);
+            } finally {
+                btn.classList.remove('loading');
+            }
+        }
+
+        openPurchaseModal(nome, id) {
+            const nomeEl = document.getElementById('nomeProduto');
+            const idEl = document.getElementById('produtoId');
+            const linkWhatsapp = document.getElementById('linkWhatsapp');
+            const qtdEl = document.getElementById('quantidadeProduto');
+
+            if (nomeEl && idEl && qtdEl) {
+                nomeEl.textContent = nome;
+                idEl.value = id;
+
+                // Atualiza o link do WhatsApp dinamicamente
+                qtdEl.addEventListener('input', () => {
+                    linkWhatsapp.href = this.gerarLinkWhatsapp(nome, qtdEl.value);
+                });
+
+                linkWhatsapp.href = this.gerarLinkWhatsapp(nome, qtdEl.value);
+                this.modal.show();
+            }
+        }
+
+        gerarLinkWhatsapp(produto, quantidade) {
+            const msg = `Olá! Gostaria de comprar ${quantidade} unidade(s) do produto: ${produto}`;
+            return `https://wa.me/5544998011086?text=${encodeURIComponent(msg)}`;
+        }
+
+        delay(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        new Modal();
+    });
     </script>

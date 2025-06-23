@@ -1,8 +1,6 @@
 <?php
-
 $protocolo = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https" : "http";
 define('BASE_URL', $protocolo . "://" . $_SERVER['SERVER_NAME'] . "/megatech/");
-
 
 $BASE_URL = $_SERVER['SERVER_NAME'] . $_SERVER['SCRIPT_NAME'];
 ?>
@@ -12,47 +10,60 @@ $BASE_URL = $_SERVER['SERVER_NAME'] . $_SERVER['SCRIPT_NAME'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MegaTech | Smartphones Premium e Assistência Técnica</title>
+
+    <!-- SEO -->
     <meta name="description"
         content="MegaTech - A melhor loja de smartphones e acessórios do Brasil. iPhone, Samsung, Xiaomi, Realme com os melhores preços e assistência técnica especializada.">
     <meta name="keywords"
         content="smartphone, celular, iPhone, Samsung, Xiaomi, Realme, acessórios, assistência técnica, loja de celular">
     <meta name="author" content="MegaTech">
+
+    <!-- Open Graph (Redes sociais) -->
     <meta property="og:title" content="MegaTech - Loja Premium de Smartphones">
     <meta property="og:description"
         content="Descubra os melhores smartphones e acessórios com assistência técnica especializada">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://megatech.com.br">
-    <meta property="og:image" content="assets/img/logo.png">
+    <meta property="og:image" content="<?= BASE_URL ?>assets/img/logo.png">
+
+    <!-- Canonical -->
     <link rel="canonical" href="https://megatech.com.br">
 
+    <!-- Base URL -->
     <base href="<?= BASE_URL ?>">
+
+    <!-- Favicon -->
     <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
-    <title>MegaTech | Smartphones Premium e Assistência Técnica</title>
 
-    <!-- Fontes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
+    <!-- Font: Inter (com preload otimizado) -->
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap">
+    <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap">
+    </noscript>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-    <!-- Swiper CSS -->
+    <!-- Swiper.js -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
-    <!-- aos master -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- AOS (Animate on Scroll) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 
-    <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/index.css">
-
-
-
+    <!-- Seu CSS principal -->
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/index.css">
 </head>
+
 
 <body>
 

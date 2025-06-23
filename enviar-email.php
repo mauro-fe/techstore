@@ -6,25 +6,10 @@ header('Access-Control-Allow-Origin: *');
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-// Removi a linha: use PHPMailer\PHPMailer\SMTP;
 
 // Carrega o PHPMailer
 require 'vendor/autoload.php';
-
-// ===== CONFIGURAÇÕES =====
-$config = [
-    // SMTP
-    'smtp_host' => 'smtp.gmail.com',
-    'smtp_port' => 587,
-    'smtp_username' => 'mauro.cardoso.1998@gmail.com',     // SEU EMAIL
-    'smtp_password' => 'mjdoqrffhjoakfta',                 // SENHA DE APP
-
-    // Remetente e Destinatário  
-    'from_email' => 'megatechempresa@gmail.com',
-    'from_name' => 'Site - Loja de Celulares',
-    'to_email' => 'megatechempresa@gmail.com',              // EMAIL DA LOJA
-    'to_name' => 'Loja de Celulares'
-];
+require_once 'Config/config.php';
 
 // Função para limpar dados
 function limparDados($dados)
