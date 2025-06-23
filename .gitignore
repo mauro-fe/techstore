@@ -1,3 +1,5 @@
 .env
 Config/
 assets/css
+services/minify.php
+vendor/
