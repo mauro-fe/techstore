@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<?= BASE_URL ?>/assets/dist/home.css">
+<link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/home.css">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
@@ -16,7 +16,7 @@
                         <?php for ($i = 1; $i <= 4; $i++): ?>
                         <div class="swiper-slide">
                             <h3><?= $iphones[$i]->nome ?></h3>
-                            <img src="<?= $iphones[$i]->imagem ?>" alt="<?= $iphones[$i]->nome ?>" class="img-fluid">
+                            <img src="<?= $iphones[$i]->imagem ?>" alt="<?= $iphones[$i]->nome ?>" class="img-fluid" fetchpriority="high" decoding="async">
                         </div>
                         <?php endfor; ?>
                     </div>
@@ -38,7 +38,7 @@
         <div class="cell-container" data-aos="fade-right" data-aos-delay="100">
             <h2><?= $xiaomis[9]->marca ?></h2>
             <h3><?= $xiaomis[9]->nome ?></h3>
-            <img src="<?= $xiaomis[9]->imagem ?>" alt="<?= $xiaomis[9]->nome ?>" class="mt-2">
+            <img src="<?= $xiaomis[9]->imagem ?>" alt="<?= $xiaomis[9]->nome ?>" class="mt-2" fetchpriority="high" decoding="async">
             <p class="m-3">A prova de água e resistente à queda.</p>
             <div class="btn-saiba-mais">
                 <a href="celulares/celular/marca/xiaomi">Saiba mais</a>
@@ -62,7 +62,7 @@
         data-aos-delay="100">
         <h2><?= $samsungs[4]->marca ?></h2>
         <h3><?= $samsungs[4]->nome ?></h3>
-        <img src="<?= $samsungs[4]->imagem ?>" alt="<?= $samsungs[4]->nome ?>">
+        <img src="<?= $samsungs[4]->imagem ?>" alt="<?= $samsungs[4]->nome ?>" fetchpriority="high" decoding="async">
         <p class="m-3">A câmera com o melhor zoom.</p>
         <div class="btn-saiba-mais">
             <a href="celulares/celular/marca/samsung">Saiba mais</a>
@@ -78,7 +78,7 @@
             <?php foreach ($acessorios as $acessorio): ?>
             <div class="swiper-slide">
                 <div class="card">
-                    <img src="<?= $acessorio->imagem ?>" class="card-img-top" alt="<?= $acessorio->nome ?>">
+                    <img src="<?= $acessorio->imagem ?>" class="card-img-top" alt="<?= $acessorio->nome ?>" fetchpriority="high" decoding="async">
                     <div class="card-body text-center">
                         <h5 class="card-title"><?= $acessorio->nome ?></h5>
                         <p class="card-text"><?= $acessorio->sobre ?></p>
@@ -101,8 +101,8 @@
         <p class="text-center text-muted m-2">Consertos rápidos, peças originais e garantia estendida para seu
             smartphone.</p>
     </div>
-    <img src="./assets/img/assistencia-tecnica.png" alt="Assitência Tecnica" class="w-100" data-aos="fade-up"
-        data-aos-delay="200">
+    <img src="./assets/img/assistencia-tecnica1.jpeg" alt="Assitência Tecnica" class="w-100" data-aos="fade-up"
+        data-aos-delay="200" fetchpriority="high" decoding="async">
     <div class="row g-4 details">
         <div class="col-md-4">
             <div class="assistencia-box text-center" data-aos="fade-up" data-aos-delay="100">
@@ -140,7 +140,7 @@
             <div class="swiper-slide">
                 <div class="card text-center">
                     <div class="card-body">
-                        <img src="<?= $avaliacao->imagem ?>" class="avatar m-3" alt="<?= $avaliacao->nome ?>">
+                        <img src="<?= $avaliacao->imagem ?>" class="avatar m-3" alt="<?= $avaliacao->nome ?>" fetchpriority="high" decoding="async">
                         <div class="stars mb-2"><?= $avaliacao->estrela ?></div>
                         <p class="card-text"><?= $avaliacao->avaliacao ?></p>
                         <h5 class="card-title mt-3 mb-1"><?= $avaliacao->nome ?></h5>
