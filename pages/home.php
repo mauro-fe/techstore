@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/home.css">
+<link rel="stylesheet" href="<?= BASE_URL ?>/assets/dist/home.min.css">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 

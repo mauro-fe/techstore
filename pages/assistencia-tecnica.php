@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<?= BASE_URL ?>/assets/dist/assistencia.css">
+<link rel="stylesheet" href="<?= BASE_URL ?>/assets/dist/assistencia.min.css">
 
 <?php
 $scrollTo = isset($_GET['scroll']) ? $_GET['scroll'] : '';

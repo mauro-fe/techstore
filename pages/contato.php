@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<?= BASE_URL ?>/assets/dist/contato.css">
+<link rel="stylesheet" href="<?= BASE_URL ?>/assets/dist/contato.min.css">
 
 <main>
     <!-- Hero Section -->

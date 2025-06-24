@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<?= BASE_URL ?>/assets/dist/sobre.css">
+<link rel="stylesheet" href="<?= BASE_URL ?>/assets/dist/sobre.min.css">
 
 
 <section class="intro-section">
@@ -23,7 +23,7 @@
     <!-- Membro 1 -->
     <div class="member row align-items-center mb-5">
         <div class=" col-md-5 text-center mb-4 mb-md-0" data-aos="fade-left" data-aos-delay="200">
-            <img src="assets/img/michel.jpg" alt="João Carlos Silva" class="img-fluid shadow-lg">
+            <img src="assets/img/michel2.jpg" alt="João Carlos Silva" class="img-fluid shadow-lg" style="width: 500px; height: 350px; border-radius: 10px;">
         </div>
         <div class="col-md-7" data-aos="fade-left" data-aos-delay="100">
             <h2 class="fw-bold">Paulo Michel Cabrera</h2>
@@ -41,7 +41,7 @@
     <!-- Membro 2 -->
     <div class="member row align-items-center flex-md-row-reverse mb-5">
         <div class="col-md-5 text-center mb-4 mb-md-0" data-aos="fade-right" data-aos-delay="200">
-            <img src="assets/img/ana.png" alt="Ana Lima" class="img-fluid rounded shadow-lg">
+            <img src="assets/img/ana.png" alt="Ana Lima" class="img-fluid rounded shadow-lg" style="width: 500px; height: 350px; border-radius: 10px !important;">
         </div>
         <div class="col-md-7" data-aos="fade-right" data-aos-delay="100">
             <h2 class="fw-bold">Ana Souza</h2>
@@ -55,22 +55,7 @@
         </div>
     </div>
 
-    <!-- Membro 3 -->
-    <div class="member row align-items-center mb-5">
-        <div class="col-md-5 text-center mb-4 mb-md-0" data-aos="fade-left" data-aos-delay="200">
-            <img src="https://placehold.co/600x400" alt="Carlos Melo" class="img-fluid rounded shadow-lg">
-        </div>
-        <div class="col-md-7" data-aos="fade-left" data-aos-delay="100">
-            <h2 class="fw-bold">Ana Souza</h2>
-            <h5 class="text-muted">Vendedora</h5>
-            <p class="mt-3">
-                Com simpatia e dedicação, Ana Souza é responsável por oferecer um atendimento personalizado e
-                atencioso aos nossos clientes.
-                Sempre disposta a ajudar, ela entende as necessidades de cada pessoa e garante uma experiência de
-                compra acolhedora e eficiente.
-            </p>
-        </div>
-    </div>
+
 </section>
 
 
