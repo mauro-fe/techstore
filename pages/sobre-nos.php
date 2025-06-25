@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<?= BASE_URL ?>/assets/dist/sobre.min.css">
+<link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/sobre.css">
 
 
 <section class="intro-section">
@@ -23,7 +23,7 @@
     <!-- Membro 1 -->
     <div class="member row align-items-center mb-5">
         <div class=" col-md-5 text-center mb-4 mb-md-0" data-aos="fade-left" data-aos-delay="200">
-            <img src="assets/img/michel2.jpg" alt="João Carlos Silva" class="img-fluid shadow-lg" style="width: 500px; height: 350px; border-radius: 10px;">
+            <img src="assets/img/michel2.jpg" alt="João Carlos Silva" class="img-fluid shadow-lg">
         </div>
         <div class="col-md-7" data-aos="fade-left" data-aos-delay="100">
             <h2 class="fw-bold">Paulo Michel Cabrera</h2>
@@ -41,7 +41,7 @@
     <!-- Membro 2 -->
     <div class="member row align-items-center flex-md-row-reverse mb-5">
         <div class="col-md-5 text-center mb-4 mb-md-0" data-aos="fade-right" data-aos-delay="200">
-            <img src="assets/img/ana.png" alt="Ana Lima" class="img-fluid rounded shadow-lg" style="width: 500px; height: 350px; border-radius: 10px !important;">
+            <img src="assets/img/ana.png" alt="Ana Lima" class="img-fluid rounded shadow-lg">
         </div>
         <div class="col-md-7" data-aos="fade-right" data-aos-delay="100">
             <h2 class="fw-bold">Ana Souza</h2>
@@ -54,10 +54,22 @@
             </p>
         </div>
     </div>
+    <!-- Membro 3 -->
+    <div class="member row align-items-center mb-5">
 
-
+        <div class="col-md-5 text-center mb-4 mb-md-0" data-aos="fade-right" data-aos-delay="200">
+            <img src="assets/img/layna.png" alt="Ana Lima" class="img-fluid rounded shadow-lg">
+        </div>
+        <div class="col-md-7" data-aos="fade-right" data-aos-delay="100">
+            <h2 class="fw-bold">Layna Bartoli</h2>
+            <h5 class="text-muted">Vendedora</h5>
+            <p class="mt-3">
+                Uma vendedora sorridente e atenta, com um conhecimento vasto de celulares, eletrônicos e os serviços de
+                assistência técnica oferecidos, pronta para ajudar os clientes a encontrar exatamente o que precisam
+            </p>
+        </div>
+    </div>
 </section>
-
 
 <section class="values-section container">
     <div class="values-section-cards">
