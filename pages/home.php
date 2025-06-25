@@ -14,10 +14,11 @@
                 <div class="swiper mySwiperIphones">
                     <div class="swiper-wrapper">
                         <?php for ($i = 1; $i <= 4; $i++): ?>
-                            <div class="swiper-slide">
-                                <h3><?= $iphones[$i]->nome ?></h3>
-                                <img src="<?= $iphones[$i]->imagem ?>" alt="<?= $iphones[$i]->nome ?>" class="img-fluid" fetchpriority="high" decoding="async">
-                            </div>
+                        <div class="swiper-slide">
+                            <h3><?= $iphones[$i]->nome ?></h3>
+                            <img src="<?= $iphones[$i]->imagem ?>" alt="<?= $iphones[$i]->nome ?>" class="img-fluid"
+                                fetchpriority="high" decoding="async">
+                        </div>
                         <?php endfor; ?>
                     </div>
                     <!-- Paginação opcional -->
@@ -38,7 +39,8 @@
         <div class="cell-container" data-aos="fade-right" data-aos-delay="100">
             <h2 class="title"><?= $xiaomis[9]->marca ?></h2>
             <h3><?= $xiaomis[9]->nome ?></h3>
-            <img src="<?= $xiaomis[9]->imagem ?>" alt="<?= $xiaomis[9]->nome ?>" class="mt-2" fetchpriority="high" decoding="async">
+            <img src="<?= $xiaomis[9]->imagem ?>" alt="<?= $xiaomis[9]->nome ?>" class="mt-2" fetchpriority="high"
+                decoding="async">
             <p class="m-3 paragrafo-padrao">A prova de água e resistente à queda.</p>
             <div class="btn-saiba-mais">
                 <a href="celulares/celular/marca/xiaomi">Saiba mais</a>
@@ -77,19 +79,20 @@
 
             <div class="swiper-wrapper">
                 <?php foreach ($acessorios as $acessorio): ?>
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <img src="<?= $acessorio->imagem ?>" class="card-img-top" alt="<?= $acessorio->nome ?>" fetchpriority="high" decoding="async">
-                            <div class="card-body text-center">
-                                <h5 class="card-title"><?= $acessorio->nome ?></h5>
-                                <p class="card-text"><?= $acessorio->sobre ?></p>
-                                <button type="button" class="btn-comprar" data-nome="<?= $acessorio->nome ?>"
-                                    data-id="<?= $acessorio->id ?>">
-                                    Comprar
-                                </button>
-                            </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="<?= $acessorio->imagem ?>" class="card-img-top" alt="<?= $acessorio->nome ?>"
+                            fetchpriority="high" decoding="async">
+                        <div class="card-body text-center">
+                            <h5 class="card-title"><?= $acessorio->nome ?></h5>
+                            <p class="card-text"><?= $acessorio->sobre ?></p>
+                            <button type="button" class="btn-comprar" data-nome="<?= $acessorio->nome ?>"
+                                data-id="<?= $acessorio->id ?>">
+                                Comprar
+                            </button>
                         </div>
                     </div>
+                </div>
                 <?php endforeach; ?>
             </div>
             <div class="swiper-pagination"></div>
@@ -100,7 +103,8 @@
 <section class="assistencia-section">
     <div data-aos="fade-up" data-aos-delay="100">
         <h2 class="title">Assistência técnica especializada</h2>
-        <p class="text-center text-muted m-2 paragrafo-padrao">Consertos rápidos, peças originais e garantia estendida para seu
+        <p class="text-center text-muted m-2 paragrafo-padrao">Consertos rápidos, peças originais e garantia estendida
+            para seu
             smartphone.</p>
     </div>
     <img src="./assets/img/assistencia-tecnica1.jpeg" alt="Assitência Tecnica" class="w-100 img" data-aos="fade-up"
@@ -137,34 +141,34 @@
     <h2 class="text-center mb-2" data-aos="fade-up" data-aos-delay="100">O que dizem nossos clientes</h2>
 
 
-        <div class="swiper mySwiperAvaliacoes avaliacoesSwiper">
-            <div class="swiper-wrapper pt-5 pb-5">
-                <?php foreach ($avaliacoes as $avaliacao): ?>
-                    <div class="swiper-slide">
-                        <div class="card text-center h-100">
-                            <div class="card-body d-flex flex-column">
-                                <img src="<?= $avaliacao->imagem ?>" class="avatar m-3" alt="<?= $avaliacao->nome ?>">
-                                <div class="stars mb-2"><?= $avaliacao->estrela ?></div>
-                                <p class="card-text"><?= $avaliacao->avaliacao ?></p>
-                                <div class="mt-auto">
-                                    <h5 class="card-title mt-3 mb-1"><?= $avaliacao->nome ?></h5>
-                                    <small class="text-muted"><?= $avaliacao->localizacao ?></small>
-                                </div>
-                            </div>
+    <div class="swiper mySwiperAvaliacoes avaliacoesSwiper">
+        <div class="swiper-wrapper pt-5 pb-5">
+            <?php foreach ($avaliacoes as $avaliacao): ?>
+            <div class="swiper-slide">
+                <div class="card text-center h-100">
+                    <div class="card-body d-flex flex-column">
+                        <img src="<?= $avaliacao->imagem ?>" class="avatar m-3" alt="<?= $avaliacao->nome ?>">
+                        <div class="stars mb-2"><?= $avaliacao->estrela ?></div>
+                        <p class="card-text"><?= $avaliacao->avaliacao ?></p>
+                        <div class="mt-auto">
+                            <h5 class="card-title mt-3 mb-1"><?= $avaliacao->nome ?></h5>
+                            <small class="text-muted"><?= $avaliacao->localizacao ?></small>
                         </div>
                     </div>
-                <?php endforeach; ?>
-
-            </div>
-            <!-- Timer personalizado -->
-            <div class="timer-container">
-                <div class="timer-circle" id="timerCircle">
-                    <div class="timer-progress" id="timerProgress"></div>
-                    <div class="timer-number" id="timerNumber">5</div>
                 </div>
             </div>
-            <div class="swiper-pagination"></div>
+            <?php endforeach; ?>
+
         </div>
+        <!-- Timer personalizado -->
+        <div class="timer-container">
+            <div class="timer-circle" id="timerCircle">
+                <div class="timer-progress" id="timerProgress"></div>
+                <div class="timer-number" id="timerNumber">5</div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
     </div>
 </section>
 </div>
@@ -215,140 +219,6 @@
     </div>
     </main>
 
+    <script src="<?= BASE_URL ?>/assets/js/home.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            // Reset scroll
-            window.scrollTo(0, 0);
-            window.history.scrollRestoration = "manual";
-
-            // Configuração base para Swipers
-            const baseConfig = {
-                loop: true,
-                spaceBetween: 30,
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    dynamicBullets: true
-                }
-            };
-
-            // Breakpoints responsivos
-            const responsiveBreaks = {
-                0: {
-                    slidesPerView: 1,
-                    centeredSlides: false
-                },
-                990: {
-                    slidesPerView: 2,
-                    centeredSlides: false
-                },
-                992: {
-                    slidesPerView: 3,
-                    centeredSlides: true
-                },
-                1200: {
-                    slidesPerView: 4,
-                    centeredSlides: true
-                }
-            };
-
-            // Inicializar Swipers
-            new Swiper('.mySwiperIphones', {
-                ...baseConfig,
-                effect: "flip",
-                grabCursor: true,
-                slidesPerView: 1
-            });
-            new Swiper('.mySwiper', {
-                ...baseConfig,
-                breakpoints: responsiveBreaks
-            });
-
-            // Swiper com timer personalizado
-            let progress = 0,
-                interval;
-            const timerEls = ['timerProgress', 'timerNumber'].map(id => document.getElementById(id));
-            const [timerProgress, timerNumber] = timerEls;
-
-            const updateTimer = p => {
-                if (!timerProgress) return;
-                timerProgress.style.background = `conic-gradient(#00abff ${p * 3.6}deg, transparent ${p * 3.6}deg)`;
-                timerNumber && (timerNumber.textContent = Math.ceil((100 - p) / 20));
-            };
-
-            const startTimer = () => {
-                clearInterval(interval);
-                progress = 0;
-                interval = setInterval(() => {
-                    progress += 0.2;
-                    if (progress >= 100) {
-                        clearInterval(interval);
-                        swiperAval.slideNext();
-                        return;
-                    }   
-                    updateTimer(progress);
-                }, 10);
-            };
-
-            const swiperAval = new Swiper('.mySwiperAvaliacoes', {
-                ...baseConfig,
-                autoplay: false,
-                speed: 800,
-                breakpoints: responsiveBreaks,
-                on: {
-                    slideChange: startTimer
-                }
-            });
-
-            // Controles do timer
-            const swiperEl = document.querySelector('.swiper');
-            swiperEl?.addEventListener('mouseenter', () => clearInterval(interval));
-            swiperEl?.addEventListener('mouseleave', startTimer);
-            setTimeout(startTimer, 1000);
-
-            // Modal simplificado
-            let modal;
-            try {
-                modal = new bootstrap.Modal(document.getElementById('modalComprar'));
-            } catch {}
-
-            // Handler de compra
-            document.addEventListener('click', async e => {
-                const btn = e.target.closest('.btn-comprar');
-                if (!btn || btn.classList.contains('loading')) return;
-
-                btn.classList.add('loading');
-                await new Promise(r => setTimeout(r, 500));
-                btn.classList.remove('loading');
-
-                const nome = btn.dataset.nome;
-                const id = btn.dataset.id;
-
-                const els = {
-                    nome: document.getElementById('nomeProduto'),
-                    id: document.getElementById('produtoId'),
-                    qty: document.getElementById('quantidadeProduto'),
-                    link: document.getElementById('linkWhatsapp')
-                };
-
-                if (els.nome && modal) {
-                    els.nome.textContent = nome;
-                    els.id && (els.id.value = id);
-
-                    const updateLink = () => {
-                        const msg = `Olá! Gostaria de comprar ${els.qty?.value || 1} unidade(s) do produto: ${nome}`;
-                        els.link && (els.link.href = `https://wa.me/5544998011086?text=${encodeURIComponent(msg)}`);
-                    };
-
-                    els.qty?.addEventListener('input', updateLink);
-                    updateLink();
-                    modal.show();
-                }
-            });
-        });
-    </script>
