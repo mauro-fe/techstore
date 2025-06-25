@@ -1,6 +1,6 @@
 <?= BASE_URL ?>
 
-<link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/celulares.css">
+<link rel="stylesheet" href="<?= BASE_URL ?>/assets/dist/celulares.min.css">
 <script src="https://cdn.jsdelivr.net/npm/fslightbox/index.js"></script>
 
 <?php
