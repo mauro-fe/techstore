@@ -6,15 +6,17 @@
 /* Apenas estilos mínimos para manter a estética Apple */
 
 p {
-  font-size: 1.25rem;
   color: #1d1d1f !important;
   margin-bottom: 1rem;
   line-height: 1.6;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .container-fluid {
   margin-top: 45px;
 }
+
 
 .btn-comprar,
 .btn-saiba-mais {
@@ -103,6 +105,12 @@ p {
   width: 320px;
 }
 
+.title{
+  color: #000;
+  font-size: 3em;
+  font-weight: 500;
+}
+
 .mySwiperIphones .swiper-slide img {
   margin: 10px 0 20px;
   width: 300px;
@@ -163,8 +171,8 @@ p {
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 .carousel .swiper-slide .card {
-  margin: 4rem 0;
-  width: 320px;
+  margin: 3rem 0;
+  width: 350px;
   height: 450px;
   border: none;
   border-radius: 20px;
@@ -176,7 +184,7 @@ p {
 }
 .carousel .swiper-slide .card:hover {
   transform: scale(1.02);
-  box-shadow: 0 0 6px 2px #0003;
+  box-shadow: 0 0 6px 2px #0005;
 }
 
 .carousel .swiper-slide.swiper-slide-active .card {
@@ -184,6 +192,30 @@ p {
   z-index: 2;
   background-color: #fff;
   box-shadow: 0 0 10px 5px #0001;
+}
+
+.carousel .swiper-slide.swiper-slide-active .card:hover {
+  transform: scale(1.07);
+}
+
+.carousel .swiper-slide .card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--primary);
+  transform: scaleX(0);
+  transition: transform 1s ease;
+}
+.carousel .swiper-slide.swiper-slide-active .card::before {
+  transform: scaleX(1);
+}
+
+.carousel .swiper-slide.swiper-slide-active .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
 
 .carousel .swiper-slide .card-img-top {
@@ -212,13 +244,16 @@ p {
   align-items: center;
 }
 .assistencia-section h2 {
-  font-weight: bold;
   text-align: center;
 }
+.assistencia-section p {
+  font-size: 24px;
+  }
+
 .assistencia-section img {
   border-radius: 10px;
   max-width: 900px;
-  height: 360px;
+  height: 550px;
   margin: 20px 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: 0.5s transform;
@@ -233,6 +268,7 @@ p {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
   width: 400px;
+  height: 220px;
 }
 
 .assistencia-section .assistencia-box p {
@@ -246,48 +282,164 @@ p {
   font-size: 2.5rem;
   color: #0071e3;
 }
-
+/* --- CSS CORRIGIDO PARA A SEÇÃO DE AVALIAÇÕES --- */
 .avaliacoes {
-  margin: 15px 0;
-  padding: 4em 0;
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
-.avaliacoes .avaliacoesSwiper {
-  width: 100%;
+
+.swiper-slide {
+  height: auto;
 }
-.avaliacoes .avaliacoesSwiper .swiper-slide {
-  display: flex;
-  justify-content: center;
-}
-.avaliacoes .avaliacoesSwiper .swiper-slide .card {
-  width: 280px;
-  border-radius: 15px;
+
+.avaliacoes .card {
   border: none;
-  box-shadow: 0 0 10px 5px #0001;
-  background-color: #fff;
-  padding-bottom: 15px;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  width: 380px;
 }
-.avaliacoes .avaliacoesSwiper .swiper-slide .card:hover {
-  box-shadow: 0 0 8px 2px #0004;
-  transform: scale(1.1);
+
+.avaliacoes .card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--primary);
 }
-.avaliacoes .avaliacoesSwiper .swiper-slide .card .avatar {
+
+.avaliacoes .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.avaliacoes .card-body{
+  height: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
   width: 80px;
   height: 80px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-.avaliacoes .avaliacoesSwiper .swiper-slide .card .stars {
-  color: #ffc107;
-  font-size: 1.1rem;
-}
-.avaliacoes .avaliacoesSwiper .swiper-slide .card .card-text {
-  height: 170px;
-  color: #000 !important;
-  font-size: 18px;
+  border: 4px solid #fff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  transition: all 0.3s ease;
 }
 
+.stars {
+  font-size: 1.2rem;
+  color: #ffc107;
+  text-shadow: 0 2px 4px rgba(255, 193, 7, 0.3);
+}
+
+.card-text {
+  line-height: 1.6;
+  color: #555;
+  position: relative;
+}
+
+.card-title {
+  color: #333;
+}
+
+.text-muted {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* Timer personalizado */
+.timer-container {
+  position: absolute;
+  bottom: 60px;
+  right: 110px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.timer-circle {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  cursor:progress;
+}
+
+.timer-progress {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(var(--primary), 0deg, transparent 0deg);
+  transition: background 0.1s linear;
+}
+
+.timer-number {
+  position: relative;
+  z-index: 2;
+  font-weight: bold;
+  color:#000;
+  font-size: 14px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .timer-container {
+    top: 10px;
+    right: 10px;
+    gap: 10px;
+  }
+
+  .timer-circle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .timer-number {
+    font-size: 12px;
+  }
+
+  .timer-btn {
+    width: 35px;
+    height: 35px;
+  }
+
+  .timer-info {
+    display: none;
+  }
+}
+
+/* Animações */
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.timer-circle.pulse {
+  animation: pulse 1s ease-in-out;
+}
+
+/* termina swiper*/
 .mapa-container {
   width: 100%;
   max-width: 1000px;
