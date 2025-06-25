@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/sobre.css">
+<link rel="stylesheet" href="<?= BASE_URL ?>/assets/dist/sobre.min.css">
 
 
 <section class="intro-section">

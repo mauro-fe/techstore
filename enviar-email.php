@@ -9,7 +9,7 @@ use PHPMailer\PHPMailer\Exception;
 
 // Carrega o PHPMailer
 require 'vendor/autoload.php';
-require_once 'Config/config.php';
+require_once 'config/config.php';
 
 // Função para limpar dados
 function limparDados($dados)

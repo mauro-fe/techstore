@@ -1,7 +1,7 @@
 <?php
 // Nome do arquivo original e do arquivo de destino
-$arquivo_original = 'assets/css/404.css';
-$arquivo_minificado = 'assets/dist/404.min.css';
+$arquivo_original = 'assets/css/sobre.css';
+$arquivo_minificado = 'assets/dist/sobre.min.css';
 
 // Função para criar diretório se não existir
 function criarDiretorio($caminho)
