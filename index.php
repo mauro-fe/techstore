@@ -174,7 +174,6 @@ $BASE_URL = $_SERVER['SERVER_NAME'] . $_SERVER['SCRIPT_NAME'];
         require_once 'Dados/Samsung.php';
         require_once 'Dados/Xiaomi.php';
         require_once 'Dados/Realme.php';
-        require_once 'Helpers/utils.php';
 
         $param = $_GET['param'] ?? '';
         $segments = explode('/', $param);
@@ -203,10 +202,10 @@ $BASE_URL = $_SERVER['SERVER_NAME'] . $_SERVER['SCRIPT_NAME'];
     </main>
 
     <style>
-        .footer-containt {
-            display: flex;
-            flex-direction: column !important;
-        }
+    .footer-containt {
+        display: flex;
+        flex-direction: column !important;
+    }
     </style>
     <button class="scroll-to-top" id="scrollToTop" title="Voltar ao topo"></button>
     <!-- Footer -->
