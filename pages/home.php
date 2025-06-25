@@ -103,24 +103,24 @@
         <p class="text-center text-muted m-2 paragrafo-padrao">Consertos rápidos, peças originais e garantia estendida para seu
             smartphone.</p>
     </div>
-    <img src="./assets/img/assistencia-tecnica1.jpeg" alt="Assitência Tecnica" class="w-100" data-aos="fade-up"
+    <img src="./assets/img/assistencia-tecnica1.jpeg" alt="Assitência Tecnica" class="w-100 img" data-aos="fade-up"
         data-aos-delay="200" fetchpriority="high" decoding="async">
     <div class="row g-4 details">
-        <div class="col-md-4">
+        <div class="col-12 col-md-6 col-lg-4">
             <div class="assistencia-box text-center" data-aos="fade-up" data-aos-delay="100">
                 <i class="fas fa-tools"></i>
                 <h5 class="mt-3">Reparos em celulares</h5>
                 <p>Troca de tela, bateria, conector de carga, botão power entre outros serviços.</p>
             </div>
         </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
             <div class="assistencia-box text-center">
                 <i class="fas fa-shield-alt"></i>
                 <h5 class="mt-3">Garantia e segurança</h5>
                 <p>Peças com garantia de até 12 meses. Serviço com nota fiscal e suporte técnico.</p>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-12 col-md-6 col-lg-4">
             <div class="assistencia-box text-center" data-aos="fade-up" data-aos-delay="300">
                 <i class="fas fa-headset"></i>
                 <h5 class="mt-3">Atendimento especializado</h5>
@@ -141,7 +141,7 @@
             <div class="swiper-wrapper pt-5 pb-5">
                 <?php foreach ($avaliacoes as $avaliacao): ?>
                     <div class="swiper-slide">
-                        <div class="card text-center h-100">+
+                        <div class="card text-center h-100">
                             <div class="card-body d-flex flex-column">
                                 <img src="<?= $avaliacao->imagem ?>" class="avatar m-3" alt="<?= $avaliacao->nome ?>">
                                 <div class="stars mb-2"><?= $avaliacao->estrela ?></div>
@@ -290,7 +290,7 @@
                         clearInterval(interval);
                         swiperAval.slideNext();
                         return;
-                    }
+                    }   
                     updateTimer(progress);
                 }, 10);
             };

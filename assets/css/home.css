@@ -17,7 +17,6 @@ p {
   margin-top: 45px;
 }
 
-
 .btn-comprar,
 .btn-saiba-mais {
   padding: 5px 15px;
@@ -105,7 +104,7 @@ p {
   width: 320px;
 }
 
-.title{
+.title {
   color: #000;
   font-size: 3em;
   font-weight: 500;
@@ -248,7 +247,7 @@ p {
 }
 .assistencia-section p {
   font-size: 24px;
-  }
+}
 
 .assistencia-section img {
   border-radius: 10px;
@@ -266,9 +265,10 @@ p {
   border-radius: 12px;
   background: white;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
   width: 400px;
   height: 220px;
+  margin: 0 auto;
+  transition: all 0.5s;
 }
 
 .assistencia-section .assistencia-box p {
@@ -282,6 +282,13 @@ p {
   font-size: 2.5rem;
   color: #0071e3;
 }
+
+@media (max-wight: 750px) {
+  .assistencia-section .img {
+    height: 300px !important;
+  }
+}
+
 /* --- CSS CORRIGIDO PARA A SEÇÃO DE AVALIAÇÕES --- */
 .avaliacoes {
   padding: 80px 0;
@@ -301,6 +308,7 @@ p {
   backdrop-filter: blur(10px);
   overflow: hidden;
   width: 380px;
+  margin: 0 auto;
 }
 
 .avaliacoes .card::before {
@@ -318,7 +326,7 @@ p {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
 
-.avaliacoes .card-body{
+.avaliacoes .card-body {
   height: 400px;
   display: flex;
   align-items: center;
@@ -358,7 +366,7 @@ p {
 
 /* Timer personalizado */
 .timer-container {
-  position: absolute;
+  position: relative;
   bottom: 60px;
   right: 110px;
   z-index: 10;
@@ -377,7 +385,7 @@ p {
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  cursor:progress;
+  cursor: progress;
 }
 
 .timer-progress {
@@ -393,16 +401,24 @@ p {
   position: relative;
   z-index: 2;
   font-weight: bold;
-  color:#000;
+  color: #000;
   font-size: 14px;
 }
 
+@media (min-width: 1000px) {
+  .avaliacoes .card {
+    width: 300px;
+  }
+  .avaliacoes .card-body {
+    height: 430px;
+  }
+}
+
 /* Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .timer-container {
-    top: 10px;
-    right: 10px;
-    gap: 10px;
+    top: -110px;
+    left: 440px;
   }
 
   .timer-circle {
@@ -506,3 +522,5 @@ p {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+
