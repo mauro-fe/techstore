@@ -42,7 +42,7 @@
                 </div>
 
                 <!-- Seu formulário com pequenos ajustes nos names (sem espaços/acentos) -->
-                <form action="enviar-email.php" method="post" class="contact-form" id="contactForm">
+                <form action="services/enviar-email.php" method="post" class="contact-form" id="contactForm">
                     <div class="form-row">
                         <div class="form-group form-floating-label">
                             <input type="text" id="fullName" name="nome_completo" class="form-control" placeholder=" ">
