@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<?= BASE_URL ?>/assets/dist/home.min.css">
+<link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/home.css">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
 
@@ -160,6 +160,8 @@
             <?php endforeach; ?>
 
         </div>
+        <div class="swiper-pagination"></div>
+
         <!-- Timer personalizado -->
         <div class="timer-container">
             <div class="timer-circle" id="timerCircle">
@@ -167,7 +169,6 @@
                 <div class="timer-number" id="timerNumber">5</div>
             </div>
         </div>
-        <div class="swiper-pagination"></div>
     </div>
     </div>
 </section>
