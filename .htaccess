@@ -1,7 +1,7 @@
 RewriteEngine On
 
 # Permitir acesso direto ao getImagens.php
-RewriteCond %{REQUEST_URI} ^/megatech2/getImagens\.php$
+RewriteCond %{REQUEST_URI} ^/techstore/getImagens\.php$
 RewriteRule ^ - [L]
 
 # Regras normais de rewrite

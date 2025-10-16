@@ -1,0 +1,11 @@
+# public/.htaccess
+Options -MultiViews
+RewriteEngine On
+
+# Ajuste a base para o caminho depois do host:
+RewriteBase /techstore/public/
+
+# Se o arquivo ou diretório não existir, envia para index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]

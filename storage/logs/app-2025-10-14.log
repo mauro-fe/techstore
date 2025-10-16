@@ -1,0 +1,55 @@
+[2025-10-14 21:19:49] [ERROR]: Controlador não encontrado {"controller":"App\\Controllers\\AuthController","rota":"login","callback":"AuthController@loginForm"}
+[2025-10-14 21:19:49] [CRITICAL]: Erro fatal no Router {"erro":"Controlador 'App\\Controllers\\AuthController' não encontrado.","rota":{"method":"GET","path":"login","callback":"AuthController@loginForm","middlewares":[]},"trace":"#0 C:\\xampp\\htdocs\\techstore\\App\\Core\\Router.php(40): App\\Core\\Router::executeCallback(Array, Array, Object(App\\Core\\Request))
+#1 C:\\xampp\\htdocs\\techstore\\public\\index.php(84): App\\Core\\Router::run('login', 'GET')
+#2 {main}"}
+[2025-10-14 21:20:33] [ERROR]: Controlador não encontrado {"controller":"App\\Controllers\\Admin\\AuthController","rota":"login","callback":"Admin\\AuthController@loginForm"}
+[2025-10-14 21:20:33] [CRITICAL]: Erro fatal no Router {"erro":"Controlador 'App\\Controllers\\Admin\\AuthController' não encontrado.","rota":{"method":"GET","path":"login","callback":"Admin\\AuthController@loginForm","middlewares":[]},"trace":"#0 C:\\xampp\\htdocs\\techstore\\App\\Core\\Router.php(40): App\\Core\\Router::executeCallback(Array, Array, Object(App\\Core\\Request))
+#1 C:\\xampp\\htdocs\\techstore\\public\\index.php(84): App\\Core\\Router::run('login', 'GET')
+#2 {main}"}
+[2025-10-14 21:20:59] [ERROR]: Controlador não encontrado {"controller":"App\\Controllers\\Admin\\AuthController","rota":"login","callback":"Admin\\AuthController@loginForm"}
+[2025-10-14 21:20:59] [CRITICAL]: Erro fatal no Router {"erro":"Controlador 'App\\Controllers\\Admin\\AuthController' não encontrado.","rota":{"method":"GET","path":"login","callback":"Admin\\AuthController@loginForm","middlewares":[]},"trace":"#0 C:\\xampp\\htdocs\\techstore\\App\\Core\\Router.php(40): App\\Core\\Router::executeCallback(Array, Array, Object(App\\Core\\Request))
+#1 C:\\xampp\\htdocs\\techstore\\public\\index.php(84): App\\Core\\Router::run('login', 'GET')
+#2 {main}"}
+[2025-10-14 21:21:23] [ERROR]: Controlador não encontrado {"controller":"App\\Controllers\\Admin\\AuthController","rota":"login","callback":"Admin\\AuthController@loginForm"}
+[2025-10-14 21:21:23] [CRITICAL]: Erro fatal no Router {"erro":"Controlador 'App\\Controllers\\Admin\\AuthController' não encontrado.","rota":{"method":"GET","path":"login","callback":"Admin\\AuthController@loginForm","middlewares":[]},"trace":"#0 C:\\xampp\\htdocs\\techstore\\App\\Core\\Router.php(40): App\\Core\\Router::executeCallback(Array, Array, Object(App\\Core\\Request))
+#1 C:\\xampp\\htdocs\\techstore\\public\\index.php(84): App\\Core\\Router::run('login', 'GET')
+#2 {main}"}
+[2025-10-14 21:22:01] [CRITICAL]: Erro fatal no Router {"erro":"Class \"App\\Admin\\Controllers\\Controller\" not found","rota":{"method":"GET","path":"login","callback":"Admin\\AuthController@loginForm","middlewares":[]},"trace":"#0 C:\\xampp\\htdocs\\techstore\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\xampp\\htdocs\\techstore\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}('C:\\\\xampp\\\\htdocs...')
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass('App\\\\Controllers...')
+#3 C:\\xampp\\htdocs\\techstore\\App\\Core\\Router.php(106): class_exists('App\\\\Controllers...')
+#4 C:\\xampp\\htdocs\\techstore\\App\\Core\\Router.php(40): App\\Core\\Router::executeCallback(Array, Array, Object(App\\Core\\Request))
+#5 C:\\xampp\\htdocs\\techstore\\public\\index.php(84): App\\Core\\Router::run('login', 'GET')
+#6 {main}"}
+[2025-10-14 21:22:35] [ERROR]: Controlador não encontrado {"controller":"App\\Controllers\\Admin\\AuthController","rota":"login","callback":"Admin\\AuthController@loginForm"}
+[2025-10-14 21:22:35] [CRITICAL]: Erro fatal no Router {"erro":"Controlador 'App\\Controllers\\Admin\\AuthController' não encontrado.","rota":{"method":"GET","path":"login","callback":"Admin\\AuthController@loginForm","middlewares":[]},"trace":"#0 C:\\xampp\\htdocs\\techstore\\App\\Core\\Router.php(40): App\\Core\\Router::executeCallback(Array, Array, Object(App\\Core\\Request))
+#1 C:\\xampp\\htdocs\\techstore\\public\\index.php(84): App\\Core\\Router::run('login', 'GET')
+#2 {main}"}
+[2025-10-14 21:22:53] [ERROR]: Controlador não encontrado {"controller":"App\\Controllers\\Admin\\AuthController","rota":"login","callback":"Admin\\AuthController@loginForm"}
+[2025-10-14 21:22:53] [CRITICAL]: Erro fatal no Router {"erro":"Controlador 'App\\Controllers\\Admin\\AuthController' não encontrado.","rota":{"method":"GET","path":"login","callback":"Admin\\AuthController@loginForm","middlewares":[]},"trace":"#0 C:\\xampp\\htdocs\\techstore\\App\\Core\\Router.php(40): App\\Core\\Router::executeCallback(Array, Array, Object(App\\Core\\Request))
+#1 C:\\xampp\\htdocs\\techstore\\public\\index.php(84): App\\Core\\Router::run('login', 'GET')
+#2 {main}"}
+[2025-10-14 21:23:38] [CRITICAL]: Erro fatal no Router {"erro":"Undefined variable $slug","rota":{"method":"GET","path":"login","callback":"Admin\\AuthController@loginForm","middlewares":[]},"trace":"#0 C:\\xampp\\htdocs\\techstore\\pages\\admin\\auth\\login.php(28): {closure}(2, 'Undefined varia...', 'C:\\\\xampp\\\\htdocs...', 28)
+#1 C:\\xampp\\htdocs\\techstore\\App\\Core\\View.php(11): require('C:\\\\xampp\\\\htdocs...')
+#2 C:\\xampp\\htdocs\\techstore\\App\\Controllers\\Admin\\AuthController.php(38): App\\Core\\View::render('admin/auth/logi...', Array)
+#3 [internal function]: App\\Controllers\\Admin\\AuthController->loginForm(Array)
+#4 C:\\xampp\\htdocs\\techstore\\App\\Core\\Router.php(128): call_user_func(Array, Array)
+#5 C:\\xampp\\htdocs\\techstore\\App\\Core\\Router.php(40): App\\Core\\Router::executeCallback(Array, Array, Object(App\\Core\\Request))
+#6 C:\\xampp\\htdocs\\techstore\\public\\index.php(84): App\\Core\\Router::run('login', 'GET')
+#7 {main}"}
+[2025-10-14 21:25:03] [CRITICAL]: Erro fatal no Router {"erro":"Undefined variable $slug","rota":{"method":"GET","path":"login","callback":"Admin\\AuthController@loginForm","middlewares":[]},"trace":"#0 C:\\xampp\\htdocs\\techstore\\pages\\admin\\auth\\login.php(28): {closure}(2, 'Undefined varia...', 'C:\\\\xampp\\\\htdocs...', 28)
+#1 C:\\xampp\\htdocs\\techstore\\App\\Core\\View.php(11): require('C:\\\\xampp\\\\htdocs...')
+#2 C:\\xampp\\htdocs\\techstore\\App\\Controllers\\Admin\\AuthController.php(38): App\\Core\\View::render('admin/auth/logi...', Array)
+#3 [internal function]: App\\Controllers\\Admin\\AuthController->loginForm(Array)
+#4 C:\\xampp\\htdocs\\techstore\\App\\Core\\Router.php(128): call_user_func(Array, Array)
+#5 C:\\xampp\\htdocs\\techstore\\App\\Core\\Router.php(40): App\\Core\\Router::executeCallback(Array, Array, Object(App\\Core\\Request))
+#6 C:\\xampp\\htdocs\\techstore\\public\\index.php(84): App\\Core\\Router::run('login', 'GET')
+#7 {main}"}
+[2025-10-14 22:02:54] [ERROR]: Controlador não encontrado {"controller":"App\\Controllers\\Admin\\DashboardController","rota":"admin","callback":"Admin\\DashboardController@index"}
+[2025-10-14 22:02:54] [CRITICAL]: Erro fatal no Router {"erro":"Controlador 'App\\Controllers\\Admin\\DashboardController' não encontrado.","rota":{"method":"GET","path":"admin","callback":"Admin\\DashboardController@index","middlewares":[]},"trace":"#0 C:\\xampp\\htdocs\\techstore\\App\\Core\\Router.php(40): App\\Core\\Router::executeCallback(Array, Array, Object(App\\Core\\Request))
+#1 C:\\xampp\\htdocs\\techstore\\public\\index.php(84): App\\Core\\Router::run('admin', 'GET')
+#2 {main}"}
+[2025-10-14 22:03:21] [ERROR]: Controlador não encontrado {"controller":"App\\Controllers\\Admin\\DashboardController","rota":"admin","callback":"Admin\\DashboardController@index"}
+[2025-10-14 22:03:21] [CRITICAL]: Erro fatal no Router {"erro":"Controlador 'App\\Controllers\\Admin\\DashboardController' não encontrado.","rota":{"method":"GET","path":"admin","callback":"Admin\\DashboardController@index","middlewares":[]},"trace":"#0 C:\\xampp\\htdocs\\techstore\\App\\Core\\Router.php(40): App\\Core\\Router::executeCallback(Array, Array, Object(App\\Core\\Request))
+#1 C:\\xampp\\htdocs\\techstore\\public\\index.php(84): App\\Core\\Router::run('admin', 'GET')
+#2 {main}"}
